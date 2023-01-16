@@ -2,8 +2,9 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-
+// count
 var tripCount = 0
+
 tripCount = 1
 tripCount = 2
 
