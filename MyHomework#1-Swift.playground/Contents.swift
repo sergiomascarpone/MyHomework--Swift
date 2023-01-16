@@ -567,3 +567,5 @@ var Apple = 12
 var Dog = 44
 print("Apple")
 print("Dog")
+    // count account
+
