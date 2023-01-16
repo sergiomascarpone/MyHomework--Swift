@@ -562,3 +562,8 @@ sub(Ihs: 1)
 sub(rhs: 1)
 sub(Ihs: 1 , rhs: 1)
 */
+
+var Apple = 12
+var Dog = 44
+print("Apple")
+print("Dog")
