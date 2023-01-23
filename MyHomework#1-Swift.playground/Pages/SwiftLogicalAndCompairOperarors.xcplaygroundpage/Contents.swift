@@ -133,6 +133,7 @@ inVar = -5 % 4
 //operator delenia po modulu
 inVar = 5 % -3
 */
+/*
 //Операторы сравнения и Логические операторы
 
 1 == 1
@@ -243,6 +244,9 @@ let anotherStudent: (Int, String) = (19, "John")
 student < anotherStudent
 20 < 19
 "Adam" < "John"
+ */
+
+
 //!!!!New tems  //Tuples*/
 
 /*
