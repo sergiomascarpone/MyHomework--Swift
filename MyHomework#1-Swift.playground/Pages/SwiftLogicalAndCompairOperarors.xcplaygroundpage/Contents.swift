@@ -1,5 +1,5 @@
 import UIKit
-/*
+    /*
 var greeting = "Hello, playground World"
 
 // count
@@ -24,6 +24,7 @@ var maxInt: Int8 = Int8.max
 var uinVar: UInt = 0
 var minUInt8: UInt8 = UInt8.min
 var maxUint8: UInt8 = UInt8.max
+
 //Float, Double 3.14, 0.4, -15.12
 var floatVar: Float = 3.14159111111
 var doubleVar: Double = 3.141591111111111
@@ -133,7 +134,8 @@ inVar = -5 % 4
 //operator delenia po modulu
 inVar = 5 % -3
 */
-/*
+
+ 
 //Операторы сравнения и Логические операторы
 
 1 == 1
@@ -244,7 +246,7 @@ let anotherStudent: (Int, String) = (19, "John")
 student < anotherStudent
 20 < 19
 "Adam" < "John"
- */
+
 
 
 //!!!!New tems  //Tuples*/
