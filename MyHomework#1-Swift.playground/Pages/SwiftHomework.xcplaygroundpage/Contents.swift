@@ -1,8 +1,6 @@
 import UIKit
 //1.Homework
 
-var greeting = "Hello, playground"
-
 
 let Name = "Sergio"
 let FirstName = "Bikov"
@@ -10,9 +8,44 @@ let LastName = "Olegovich"
 print(FirstName, Name, LastName)
 
 let Birdthdey = 1993
-let Grownh = "1.89sm"
+let Growth = "1.89sm"
 let Weight = "88kg"
-print(Birdthdey, Grownh, Weight)
+print(Birdthdey, Growth, Weight)
+
+
+let NameA = "Alexei"
+let LustNameB = "Varlamov"
+let FirstNameC = "Denisovich"
+print(FirstNameC, NameA, LustNameB)
+
+let GrowthD = "1.88cm"
+let weightF = "81kg"
+let BirdthdeyG = "1994"
+print(BirdthdeyG, weightF, GrowthD)
+
+
+let name = "Valentin"
+let lastName = "Petrenro"
+let firstName = "Aleksandrovich"
+print(lastName, name, firstName)
+
+let weight = "99kg"
+let growth = "1.78cm"
+let birdthdey = "1998"
+print(weight, growth, birdthdey)
+
+let a = "Dmitriy"
+let b = "Petrov"
+let c = "Aleksandrovich"
+print(b, a, c)
+
+let aa = "69kg"
+let bb = "1.88sm"
+let cc = "1998"
+print(aa, bb, cc)
+
+
+
 
 //2.Homework - Работа с базовыми типами
 /*
@@ -47,9 +80,28 @@ if Double(Four) < five {
 } else {
     print("No")
 }
+ */
+let Onee = 143
+let Twoo = 1.5599
+let Three: Float = 12.12
+
+let Fourr = Onee + Int(Twoo) + Int(Three)
+print(Fourr)
+
+let Fivee = Double(Onee) + Twoo + Double(Three)
+print(Fivee)
+
+let sixx = Float(Onee) + Float(Twoo) + Three
+print(sixx)
+
+if Double(Fourr) < Fivee {
+    print("Double right")
+} else {
+    print("no")
+}
 
 //3.Homework - Tuples
-
+/*
 let myTuple = ("January", "February", "March", "April", "May" )
 let (Январь, Февраль, Март, Апрель, Май) = ("Январь","Февраль", "Март", "Апрель", "Май" )
 
