@@ -1,7 +1,7 @@
 import UIKit
+
 //1.Homework
-
-
+/*
 let Name = "Sergio"
 let FirstName = "Bikov"
 let LastName = "Olegovich"
@@ -13,38 +13,25 @@ let Weight = "88kg"
 print(Birdthdey, Growth, Weight)
 
 
-let NameA = "Alexei"
-let LustNameB = "Varlamov"
-let FirstNameC = "Denisovich"
-print(FirstNameC, NameA, LustNameB)
-
-let GrowthD = "1.88cm"
-let weightF = "81kg"
-let BirdthdeyG = "1994"
-print(BirdthdeyG, weightF, GrowthD)
-
-
-let name = "Valentin"
-let lastName = "Petrenro"
-let firstName = "Aleksandrovich"
-print(lastName, name, firstName)
-
-let weight = "99kg"
-let growth = "1.78cm"
-let birdthdey = "1998"
-print(weight, growth, birdthdey)
-
-let a = "Dmitriy"
-let b = "Petrov"
-let c = "Aleksandrovich"
+let a = "Max"
+let b = "Fadeev"
+let c = "Astaxovich"
 print(b, a, c)
 
-let aa = "69kg"
-let bb = "1.88sm"
-let cc = "1998"
+let aa = "1993"
+let bb = "189sm"
+let cc = "99kg"
 print(aa, bb, cc)
 
+let Onne = "Danik"
+let Twwo = "Mokri"
+let Thrre = "Vladimirovich"
+print(Twwo, Onne, Thrre)
 
+let One1 = "1889"
+let Two2 = "169sm"
+let Thre3 = "104kg"
+print(One1, Two2, Thre3)
 
 
 //2.Homework - Работа с базовыми типами
@@ -81,6 +68,25 @@ if Double(Four) < five {
     print("No")
 }
 
+
+let Uno = 100
+let Duo = 1.8899477
+let Trea: Float = 12.12546
+
+let Cuatro = Uno + Int(Duo) + Int(Trea)
+print(Cuatro)
+let Cinqve = Double(Uno) + Duo + Double(Trea)
+print(Cinqve)
+let Sette = Float(Uno) + Float(Duo) + Trea
+print(Sette)
+
+if Double(Trea) < Cinqve {
+    print("Double right")
+} else {
+    print("No")
+}
+
+
 let Onee = 143
 let Twoo = 1.55998
 let Three: Float = 12.1277
@@ -102,22 +108,29 @@ if Double(Fourr) < Fivee {
 
 //3.Homework - Tuples
 
-let myTuple = ("January", "February", "March", "April", "May" )
-let (Январь, Февраль, Март, Апрель, Май) = ("Январь","Февраль", "Март", "Апрель", "Май" )
 
+let myTuple = ("January", "February", "March", "April", "May" )
 myTuple.0
 myTuple.1
 myTuple.2
 myTuple.3
 myTuple.4
 
+let (Январь, Февраль, Март, Апрель, Май) = ("Январь", "Февраль", "Март", "Апрель", "Май")
 Январь
 Февраль
 Март
 Апрель
 Май
 
-/*
+let myBoxes = ("Box1", "Box2", "Box3", "Box4")
+myBoxes.0
+myBoxes.1
+myBoxes.2
+myBoxes.3
+ 
+
+
 var myTuple = (maxPushUp:12, maxPullDown:13, maxSquats: 33)
 
 print(myTuple)
@@ -135,7 +148,8 @@ myBoostFrienfTuple.maxPushUp = myTuple.maxPushUp
 myBoostFrienfTuple.maxPullDown = myTuple.maxPullDown
 myBoostFrienfTuple.maxSquats = myTuple.maxSquats
 print("My new max: \(myTuple)")
-*/
+
+
 
 var myPhysicalTraining = (30, 10, 50, 70, 90)
 
@@ -144,15 +158,15 @@ var (pushUps, pullUps, sitUps, chestPress, legPress) = myPhysicalTraining
 
 //print(myPhysicalTraining)
 
-/*
+
 print("My maximum number of push-ups: \(pushUps)")
 print("My maximum number of pull-ups: \(myPhysicalTraining.1)")
 print("My maximum number of sit-ups: \(sitUps)")
 print("My maximum number of chest press: \(chestPress)")
 print("My maximum number of leg press: \(myPhysicalTraining.4)")
-*/
 
-/*
+ 
+ 
 var myPhysTrain1 = (pushUps1:30, pullUps1:10, sitUps1:50, chestPress1:70, legPress1:90)
 
 print(myPhysTrain1.pushUps1)
@@ -160,7 +174,7 @@ print(myPhysTrain1.pullUps1)
 print(myPhysTrain1.sitUps1)
 print(myPhysTrain1.chestPress1)
 print(myPhysTrain1.legPress1)
-*/
+
 
 var my_Son_Daniil_PhysicalTraining = (40, 13, 60, 85, 100)
 
@@ -169,15 +183,15 @@ var (Daniil_PushUps, Daniil_PullUps, Daniil_SitUps, Daniil_ChestPress, Daniil_Le
 
 //print(my_Son_Daniil_PhysicalTraining)
 
-/*
+
 print("Daniil maximum of push-ups: \(my_Son_Daniil_PhysicalTraining.0)")
 print("Daniil maximum of pull-ups: \(Daniil_PullUps)")
 print("Daniil maximum of sit-ups: \(my_Son_Daniil_PhysicalTraining.2)")
 print("Daniil maximum of chest press: \(Daniil_ChestPress)")
 print("Daniil maximum of leg press: \(my_Son_Daniil_PhysicalTraining.4)")
-*/
 
-/*
+ 
+ 
 myPhysicalTraining.0 = my_Son_Daniil_PhysicalTraining.2
 myPhysicalTraining.1 = my_Son_Daniil_PhysicalTraining.0
 myPhysicalTraining.3 = my_Son_Daniil_PhysicalTraining.4
@@ -213,5 +227,63 @@ if myPhysicalTraining.4 > my_Son_Daniil_PhysicalTraining.4 {
 } else if my_Son_Daniil_PhysicalTraining.4 > myPhysicalTraining.4 {
   print("Daniil does leg press \(my_Son_Daniil_PhysicalTraining.4 - myPhysicalTraining.4) kg more than me!")
 }
- */
+ 
+
+//4.Homework - Optionals
+
+//Задание 1:
+
+let a = "123"
+let b = "321"
+let c = "favorite"
+let d = "not favorite"
+let e = "-4"
+let f = "10.9"
+
+var sum = 0
+
+if var firstSum = Int(a) {
+    sum += firstSum
+}
+
+if var secondSum = Int (b) {
+    sum += secondSum
+}
+
+if var thirdSum = Int (c) {
+    sum += thirdSum
+}
+
+if Int(d) != nil {
+    sum += Int(d)!
+}
+
+if let fifthSum = Int(e), let sixthSum = Double(f) {
+    sum += fifthSum + Int(sixthSum)
+}
+
+print(Int(e))
+print(Int(f))
+print(sum)
+*/
+
+//Задание 2:
+
+let server: (statusCode: Int, message: String?, errorMessage: String?) = (100, nil, "error")
+if  server.statusCode >= 200 && server.statusCode <= 300 {
+    if let message = server.message {
+        print(message)
+    } else {
+        print("Таких вводных быть не должно ))")
+    }
+} else {
+    if let message = server.errorMessage {
+        print(message)
+    } else {
+        print("Таких вводных быть не должно")
+    }
+}
+
+//Задание 3:
+
 
