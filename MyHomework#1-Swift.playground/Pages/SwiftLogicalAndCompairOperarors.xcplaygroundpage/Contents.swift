@@ -155,13 +155,14 @@ inVar = 5 % -3
 "hello" != "bank"
 
 // if else
+/*
 if true {
     print("It's true")
 }
 if false {
     print("It's false")
 }
-
+*/
 let passcode = 1234
 let enteredPasscode = 3455
 let isPasscodeCorrect = enteredPasscode == passcode

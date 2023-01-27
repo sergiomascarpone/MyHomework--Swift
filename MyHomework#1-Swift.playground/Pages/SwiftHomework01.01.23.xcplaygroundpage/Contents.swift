@@ -48,7 +48,7 @@ print(aa, bb, cc)
 
 
 //2.Homework - Работа с базовыми типами
-/*
+
 Int8.min
 Int8.max
 Int16.min
@@ -62,17 +62,17 @@ Int.max
 UInt.max
 UInt.min
 
-let One = 144
-let Two = 1.44444
-let Three: Float = 12.123424554
+let One = 199 
+let Two = 1.444448988
+let Thre: Float = 12.12342
 
 let Four = One + Int(Two) + Int(Three)
 print(Four)
 
-let five = Double(One) + Two + Double(Three)
+let five = Double(One) + Two + Double(Thre)
 print(five)
 
-let six = Float(One) + Float(Two) + Three
+let six = Float(One) + Float(Two) + Thre
 print(six)
 
 if Double(Four) < five {
@@ -80,10 +80,10 @@ if Double(Four) < five {
 } else {
     print("No")
 }
- */
+
 let Onee = 143
-let Twoo = 1.5599
-let Three: Float = 12.12
+let Twoo = 1.55998
+let Three: Float = 12.1277
 
 let Fourr = Onee + Int(Twoo) + Int(Three)
 print(Fourr)
@@ -101,7 +101,7 @@ if Double(Fourr) < Fivee {
 }
 
 //3.Homework - Tuples
-/*
+
 let myTuple = ("January", "February", "March", "April", "May" )
 let (Январь, Февраль, Март, Апрель, Май) = ("Январь","Февраль", "Март", "Апрель", "Май" )
 
@@ -117,7 +117,7 @@ myTuple.4
 Апрель
 Май
 
-
+/*
 var myTuple = (maxPushUp:12, maxPullDown:13, maxSquats: 33)
 
 print(myTuple)
@@ -182,7 +182,7 @@ myPhysicalTraining.0 = my_Son_Daniil_PhysicalTraining.2
 myPhysicalTraining.1 = my_Son_Daniil_PhysicalTraining.0
 myPhysicalTraining.3 = my_Son_Daniil_PhysicalTraining.4
 print(myPhysicalTraining )
-*/
+
 
 if myPhysicalTraining.0 > my_Son_Daniil_PhysicalTraining.0 {
   print("I do \(myPhysicalTraining.0 - my_Son_Daniil_PhysicalTraining.0) push-ups more than Daniil!")
@@ -213,5 +213,5 @@ if myPhysicalTraining.4 > my_Son_Daniil_PhysicalTraining.4 {
 } else if my_Son_Daniil_PhysicalTraining.4 > myPhysicalTraining.4 {
   print("Daniil does leg press \(my_Son_Daniil_PhysicalTraining.4 - myPhysicalTraining.4) kg more than me!")
 }
-
+ */
 
