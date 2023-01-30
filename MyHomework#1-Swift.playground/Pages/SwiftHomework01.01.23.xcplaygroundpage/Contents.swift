@@ -265,7 +265,7 @@ if let fifthSum = Int(e), let sixthSum = Double(f) {
 print(Int(e))
 print(Int(f))
 print(sum)
-*/
+
 
 //Задание 2:
 
@@ -283,7 +283,70 @@ if  server.statusCode >= 200 && server.statusCode <= 300 {
         print("Таких вводных быть не должно")
     }
 }
+*/
+let server: (statusCode: Int, message: String?, errorMessage: String?) = (100, nil, "error")
+if server.statusCode >= 200 && server.statusCode <= 300 {
+    if let message = server.message {
+        print(message)
+    } else {
+        print("this Data not")
+    }
+} else {
+    if let message = server.errorMessage {
+        print(message)
+    } else {
+        print("Not Data")
+    }
+}
 
 //Задание 3:
+var responseTupleClone: (message: String?, errorMessage: String?) = ( nil, "It isn't okay at all!!!")
 
+//responseTupleClone.errorMessage = nil
+
+if let message = responseTupleClone.message {
+    print(message)
+} else if let errorMessage = responseTupleClone.errorMessage {
+    print(errorMessage)
+} else {
+    print("A-A-A-A!!")
+}
+
+var firstStudentTuple: (name: String?, carNumber: String?, controlScore: Int?)
+var secondStudentTuple: (name: String?, carNumber: String?, controlScore: Int?)
+var thirdStudentTuple: (name: String?, carNumber: String?, controlScore: Int?)
+var fourthStudentTuple: (name: String?, carNumber: String?, controlScore: Int?)
+var fifthStudentTuple: (name: String?, carNumber: String?, controlScore: Int?)
+
+firstStudentTuple.name = "Vanya"
+secondStudentTuple.name = "Sabina"
+thirdStudentTuple.name = "Gosha"
+fourthStudentTuple.name = "Masha"
+fifthStudentTuple.name = "Oleg"
+
+firstStudentTuple.carNumber = "UP14AC1417"
+thirdStudentTuple.carNumber = "AC41UP1714"
+fifthStudentTuple.carNumber = "PU41CA4171"
+
+firstStudentTuple.controlScore = 5
+secondStudentTuple.controlScore = 5
+fifthStudentTuple.controlScore = 4
+
+print ("5 people entered the driving school.")
+
+if firstStudentTuple.name != nil {
+    print("Name: " + firstStudentTuple.name!)
+}
+
+if firstStudentTuple.carNumber != nil {
+    print("Car number: " + firstStudentTuple.carNumber!)
+} else {
+    print("Student doesn't have a car")
+}
+
+if firstStudentTuple.controlScore != nil {
+    print("Score: \(firstStudentTuple.controlScore!)")
+} else {
+    print("Student missed exam")
+}
 
