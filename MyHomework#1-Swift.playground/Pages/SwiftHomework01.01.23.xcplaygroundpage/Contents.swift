@@ -108,7 +108,8 @@ if Double(Fourr) < Fivee {
 
 //3.Homework - Tuples
 
-
+ //Задание 1:
+ 
 let myTuple = ("January", "February", "March", "April", "May" )
 myTuple.0
 myTuple.1
@@ -116,6 +117,8 @@ myTuple.2
 myTuple.3
 myTuple.4
 
+ //Задание 2:
+ 
 let (Январь, Февраль, Март, Апрель, Май) = ("Январь", "Февраль", "Март", "Апрель", "Май")
 Январь
 Февраль
@@ -130,7 +133,8 @@ myBoxes.2
 myBoxes.3
  
 
-
+ //Задание 3:
+ 
 var myTuple = (maxPushUp:12, maxPullDown:13, maxSquats: 33)
 
 print(myTuple)
@@ -283,9 +287,9 @@ if  server.statusCode >= 200 && server.statusCode <= 300 {
         print("Таких вводных быть не должно")
     }
 }
-*/
+
 let server: (statusCode: Int, message: String?, errorMessage: String?) = (100, nil, "error")
-if server.statusCode >= 200 && server.statusCode <= 300 {
+if server.statusCode >= 100 && server.statusCode <= 200 {
     if let message = server.message {
         print(message)
     } else {
@@ -299,7 +303,9 @@ if server.statusCode >= 200 && server.statusCode <= 300 {
     }
 }
 
+
 //Задание 3:
+
 var responseTupleClone: (message: String?, errorMessage: String?) = ( nil, "It isn't okay at all!!!")
 
 //responseTupleClone.errorMessage = nil
@@ -349,4 +355,30 @@ if firstStudentTuple.controlScore != nil {
 } else {
     print("Student missed exam")
 }
+ */
 
+
+    //4.Homework - Loops
+
+let names: [String] = ["Pavel", "Ludmilaa", "Andrey", "Liza"]
+for name in names {
+    print("Welcome, \(name)")
+}
+
+let namesSet: [String] = ["Oliya", "Steave", "Bill", "Mark"]
+for name in namesSet {
+    print("Hello, \(name)")
+}
+
+let namesDictionary: [Int: String] = [0: "Poll", 1: "Matyu", 2: "Oivia", 3: "Blade"]
+for keyvalue in namesDictionary {
+    print("\(keyvalue.key) \(keyvalue.value)")
+}
+for (key, value) in namesDictionary {
+    print("\(key) \(value)")
+}
+
+let string = "Serjo"
+for chair in string {
+    print(chair)
+}
