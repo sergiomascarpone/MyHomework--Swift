@@ -8,5 +8,6 @@
         <page name='SwiftQuickCollectionsFunctions'/>
         <page name='SwiftLoops'/>
         <page name='SwiftOtherCollectionFunctions'/>
+        <page name='SwiftOperatorSwitch'/>
     </pages>
 </playground>

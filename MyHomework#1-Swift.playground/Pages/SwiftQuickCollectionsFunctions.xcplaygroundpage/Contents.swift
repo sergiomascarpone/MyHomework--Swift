@@ -3,7 +3,7 @@ var greating = "Hello, playground"
 
 let intArray: [Int] = [0, 1, 2, 3, 4, 5]
 
-//forEach
+// forEach
 for item in intArray {
     print(item)
 }
@@ -11,7 +11,7 @@ intArray.forEach { item in
     print("item from forEach: \(item)")
 }
 
-//filter
+// filter
 var evenNumbers: [Int] = []
 for item in intArray {
     if item % 2 == 0 {
@@ -37,7 +37,7 @@ moreThanTwo = intArray.filter { $0 > 2 }
 print("More than two items: \(moreThanTwo)") //более краткий код по сравнению со строкой 31 - 34.
 
 
-//map
+// map
 var names: [String] = ["Ben", "Stive", "Alex", "Matiy"]
 var uppercasedNames = names.map { name in
     name.uppercased()
@@ -73,9 +73,9 @@ array
 print(singleArray)
 
 singleArray = arrayOfArrays.flatMap({$0})
-print(singleArray)// короткая запись в отлии со строками 70 - 73.
+print(singleArray)// короткая запись в отличии со строками 70 - 73.
 
-//compactMap
+// compactMap
 let optionalsIntsArray: [Int?] = [0, nil, 3, 5, nil, 4, 8]
 var nonoptionalInstArray = optionalsIntsArray.compactMap { item in
     item
@@ -97,7 +97,7 @@ print(anotherEvenIntsArray)
 anotherEvenIntsArray = intArray.compactMap({($0 % 2 == 0) ? $0 : nil })
 print(anotherEvenIntsArray)
 
-//sort
+// sort
 var sortedSingleArray = singleArray.sorted()
 print(sortedSingleArray)
 sortedSingleArray = singleArray.sorted(by: {item1, item2 in
@@ -121,7 +121,7 @@ print(sortedIntDictionary)
 sortedIntDictionary = intDictionary.sorted(by: {$0.key > $1.key})
 print(sortedIntDictionary)//более короткая запись в сравнении со строками 117 - 119.
 
-//reduce
+// reduce
 var summ = intArray.reduce(0) { partialResult, item in
     partialResult + item
 }

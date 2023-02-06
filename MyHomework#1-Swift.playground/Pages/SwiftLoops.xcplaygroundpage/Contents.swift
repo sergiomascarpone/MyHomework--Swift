@@ -2,7 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-//for in - Работа с циклами. Операторы break, continue
+// for in - Работа с циклами. Операторы break, continue
 let names: [String] = ["Adam", "Chris", "John", "Sam"]
 for name in names {
     print("Welcome, \(name)")
@@ -74,7 +74,7 @@ for i in 0..<names.count {
     print("\(i)" + names[i])
 }
 
-//break - прерывает текущую эттерацию и сам цикл совсем
+// break - прерывает текущую эттерацию и сам цикл совсем
 for name in names {
     if name == "John" {
         print("Search completed \(name)")
@@ -83,7 +83,7 @@ for name in names {
     print("\(name) is not John")
 }
 
-//while
+// while
 var i = 0
 while i < names.count {
 let name = names[i]
@@ -121,7 +121,7 @@ while true {
     i += 1
 }
 
-//repeat while
+// repeat while
 i = 0
 repeat {
     let name = names[i]

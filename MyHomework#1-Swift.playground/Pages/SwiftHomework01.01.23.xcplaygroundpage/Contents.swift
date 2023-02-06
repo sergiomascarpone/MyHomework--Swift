@@ -1,6 +1,6 @@
 import UIKit
 
-//1.Homework
+// 1.Homework
 /*
 let Name = "Sergio"
 let FirstName = "Bikov"
@@ -34,7 +34,7 @@ let Thre3 = "104kg"
 print(One1, Two2, Thre3)
 
 
-//2.Homework - Работа с базовыми типами
+// 2.Homework - Работа с базовыми типами
 
 Int8.min
 Int8.max
@@ -106,9 +106,9 @@ if Double(Fourr) < Fivee {
     print("no")
 }
 
-//3.Homework - Tuples
+// 3.Homework - Tuples
 
- //Задание 1:
+// Задание 1:
  
 let myTuple = ("January", "February", "March", "April", "May" )
 myTuple.0
@@ -117,7 +117,7 @@ myTuple.2
 myTuple.3
 myTuple.4
 
- //Задание 2:
+// Задание 2:
  
 let (Январь, Февраль, Март, Апрель, Май) = ("Январь", "Февраль", "Март", "Апрель", "Май")
 Январь
@@ -133,7 +133,7 @@ myBoxes.2
 myBoxes.3
  
 
- //Задание 3:
+// Задание 3:
  
 var myTuple = (maxPushUp:12, maxPullDown:13, maxSquats: 33)
 
@@ -233,9 +233,9 @@ if myPhysicalTraining.4 > my_Son_Daniil_PhysicalTraining.4 {
 }
  
 
-//4.Homework - Optionals
+// 4.Homework - Optionals
 
-//Задание 1:
+// Задание 1:
 
 let a = "123"
 let b = "321"
@@ -271,7 +271,7 @@ print(Int(f))
 print(sum)
 
 
-//Задание 2:
+// Задание 2:
 
 let server: (statusCode: Int, message: String?, errorMessage: String?) = (100, nil, "error")
 if  server.statusCode >= 200 && server.statusCode <= 300 {
@@ -304,7 +304,7 @@ if server.statusCode >= 100 && server.statusCode <= 200 {
 }
 
 
-//Задание 3:
+// Задание 3:
 
 var responseTupleClone: (message: String?, errorMessage: String?) = ( nil, "It isn't okay at all!!!")
 
@@ -358,7 +358,7 @@ if firstStudentTuple.controlScore != nil {
  */
 
 
-    //4.Homework - Loops
+// 4.Homework - Loops
 
 let names: [String] = ["Pavel", "Ludmilaa", "Andrey", "Liza"]
 for name in names {

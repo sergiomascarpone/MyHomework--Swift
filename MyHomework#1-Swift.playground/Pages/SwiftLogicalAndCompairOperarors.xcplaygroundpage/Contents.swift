@@ -49,7 +49,7 @@ var oneTwo: Double = Double(one) + zeroTwo
 var carCanDrive = true
 var carCanFly: Bool = false
 
-//String
+// String
 
 var hello: String = "Hello, "
 var world: String = "World"
@@ -59,7 +59,7 @@ stringValue = "Pi is \(pi)"
 stringValue = "\(pi) less than \(four)"
 stringValue = "Can car fly? \(carCanFly)"
 
-//Touples
+// Touples
 var student = ("John", 21)
 print("Student name is \(student.0) age is \(student.1)")
 var anotherStudent: (String, Int) = ("Jack", 19)
@@ -71,7 +71,7 @@ print("Student name is \(thirdStudent.name) age is \(thirdStudent.age)")
 var oneMoreStudent: (name: String, age: Int) = ("Tom", 21)
 print("Student name is \(oneMoreStudent.name) age is \(oneMoreStudent.age)")
 
-//typealias
+// typealias
 typealias StudentName = String
 var lastStudent: (name: StudentName, age: Int) = ("Sammy", 32)
 print("Student name is \(lastStudent.name) age is \(lastStudent.age)")
@@ -80,7 +80,7 @@ typealias Student = (name: StudentName, age: Int)
 var studentFromTypealias: Student = ("Steve", 24)
 print("Student name is \(studentFromTypealias.name) age is \(studentFromTypealias.age)")
 
-//Операторы +, -, %,
+// Операторы +, -, %,
 var four = 2 + 2
 four = 7 - 3
 four = 2 * 2
@@ -121,7 +121,7 @@ helloWorld = "Hello " + world
 helloWorld = hello
 helloWorld += world
 
-//%
+// %
 inVar = 5 % 4
 4 + 1
 inVar = 5 % 2
@@ -131,12 +131,12 @@ inVar = 5 % 3
 inVar = -5 % 3
 inVar = -5 % 4
 
-//operator delenia po modulu
+// operator delenia po modulu
 inVar = 5 % -3
 */
 
  
-//Операторы сравнения и Логические операторы
+// Операторы сравнения и Логические операторы
 
 1 == 1
 2 != 1
@@ -197,7 +197,7 @@ if time > 17 {
     print("It's evening now")
 }
 
-//else if
+// else if
 time = 15
 if time <= 10 {
     print("It's morning now")
@@ -220,7 +220,7 @@ if enteredPasscode == passcode {
 }
 print(message)
 
-//&& - true
+// && - true
 if (time > 10) && (time < 18) {
     print("It's day now")
 }
@@ -228,7 +228,7 @@ if (time > 10) && (time < 18) {
 if (time <= 10) || (time >= 18) {
     print("It's not day now")
 }
-//!-true menzet na false i naoborot
+// !-true menzet na false i naoborot
 let itsTrue = true
 let itsFalse = !true
 if !isPasscodeCorrect {
@@ -250,7 +250,7 @@ student < anotherStudent
 
 
 
-//!!!!New tems  //Tuples*/
+// !!!!New tems  //Tuples*/
 
 /*
 let tupleValentine = (pushUp:30, pullUp:10, seatDown:100)

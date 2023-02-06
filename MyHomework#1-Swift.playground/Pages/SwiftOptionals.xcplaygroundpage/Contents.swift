@@ -2,7 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-//?
+// ?
 let passcode = 1234
 var enteredPasscode = 4321
 
@@ -15,7 +15,7 @@ if errorString != nil {
     print("Phone unlocked")
 }
 
-//Double -> Int
+// Double -> Int
 let three = Int(3.14)
 var intVar = Int("5")
 let invalidVar = Int("World")
@@ -43,7 +43,7 @@ if let intVar = intVar {
     }
 }
 
-//Force unwrap !
+// Force unwrap !
 
 if errorString != nil {
     print(errorString!)
@@ -109,7 +109,7 @@ if let studentName = student?.name, let studentAge = student?.age {
     print("Name is \(studentName), Age is \(studentAge)")
 }
 
-//String count
+// String count
 let fiveString: String = "five"
 print("\(fiveString) lenght = \(fiveString.count)")
 

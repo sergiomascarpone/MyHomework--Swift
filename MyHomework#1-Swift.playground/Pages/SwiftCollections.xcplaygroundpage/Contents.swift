@@ -2,7 +2,7 @@ import UIKit
 
 var greating = "Hello, world!"
 
-//Array массив
+// Array - массив
 
 let intArray: [Int] = [0, 1, 3, 1, 2]
 let fullIntsArray: Array<Int> = [4, 5, 6]
@@ -152,7 +152,7 @@ if setC.isStrictSubset(of: setA) {
 let arrayFromSet = Array(setC)
 let setFromArray = Set(arrayFromSet)
 
-//DICTIONARY-словари, неупорядоченая коллекция
+// DICTIONARY - словари, неупорядоченая коллекция
 var stringDictionary: [String: Int] = ["three": 3, "four": 4]
 var anotherStringDictionary: Dictionary<String, Int> = [:]
 var oneMoreStringDictionary = Dictionary<String, Int>()
