@@ -18,7 +18,7 @@ for item in intArray {
         evenNumbers.append(item)
     }
 }
-print("Even nymbers: \(evenNumbers)")
+print("Even numbers: \(evenNumbers)")
 
 evenNumbers = intArray.filter { item in
     item % 2 == 0
@@ -26,7 +26,7 @@ evenNumbers = intArray.filter { item in
 
 print("Even nymbers: \(evenNumbers)")
 evenNumbers = intArray.filter { $0 % 2 == 0 }
-print("Even nymbers: \(evenNumbers)")
+print("Even numbers: \(evenNumbers)")
 
 var moreThanTwo = intArray.filter { item in
     item > 2

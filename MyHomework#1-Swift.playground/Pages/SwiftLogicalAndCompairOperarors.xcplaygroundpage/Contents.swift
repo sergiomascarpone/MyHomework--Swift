@@ -20,12 +20,12 @@ var intVar: Int = 0
 var minInt: Int8 = Int8.min
 var maxInt: Int8 = Int8.max
 
-//UInt 0, 1, 2,...
+// UInt 0, 1, 2,...
 var uinVar: UInt = 0
 var minUInt8: UInt8 = UInt8.min
 var maxUint8: UInt8 = UInt8.max
 
-//Float, Double 3.14, 0.4, -15.12
+// Float, Double 3.14, 0.4, -15.12
 var floatVar: Float = 3.14159111111
 var doubleVar: Double = 3.141591111111111
 
@@ -45,7 +45,7 @@ var oneThree = 1 + 0.3
 
 var oneTwo: Double = Double(one) + zeroTwo
 
-//Bool - true, false
+// Bool - true, false
 var carCanDrive = true
 var carCanFly: Bool = false
 
@@ -156,6 +156,7 @@ inVar = 5 % -3
 
 // if else
 /*
+ 
 if true {
     print("It's true")
 }
@@ -163,6 +164,7 @@ if false {
     print("It's false")
 }
 */
+
 let passcode = 1234
 let enteredPasscode = 3455
 let isPasscodeCorrect = enteredPasscode == passcode
@@ -253,6 +255,7 @@ student < anotherStudent
 // !!!!New tems  //Tuples*/
 
 /*
+ 
 let tupleValentine = (pushUp:30, pullUp:10, seatDown:100)
 
 tupleValentine.0
@@ -452,7 +455,9 @@ if tupleAndry.pushUp > tupleOlga.pushUp {
     print("Andry и Olga приседают одинаково на \(pushUpResults) раз")
 }
     /*
+     
 5 Тема опциональные типы
+     
      */
 // продажи
 /*
@@ -574,4 +579,4 @@ sub()
 sub(Ihs: 1)
 sub(rhs: 1)
 sub(Ihs: 1 , rhs: 1)
-*/
+
