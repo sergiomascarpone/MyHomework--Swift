@@ -10,5 +10,6 @@
         <page name='SwiftOtherCollectionFunctions'/>
         <page name='SwiftSwitchOperator'/>
         <page name='SwiftFunctions'/>
+        <page name='SwiftStringsAndCharacters'/>
     </pages>
 </playground>
