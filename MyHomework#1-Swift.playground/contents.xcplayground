@@ -11,5 +11,6 @@
         <page name='SwiftSwitchOperator'/>
         <page name='SwiftFunctions'/>
         <page name='SwiftStringsAndCharacters'/>
+        <page name='SwiftLineInterpolation'/>
     </pages>
 </playground>

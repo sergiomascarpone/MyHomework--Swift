@@ -80,7 +80,7 @@ typealias Student = (name: StudentName, age: Int)
 var studentFromTypealias: Student = ("Steve", 24)
 print("Student name is \(studentFromTypealias.name) age is \(studentFromTypealias.age)")
 
-// Операторы +, -, %,
+// Операторы +, -, /, * - арифметические операторы
 var four = 2 + 2
 four = 7 - 3
 four = 2 * 2
@@ -101,7 +101,7 @@ var rectangleP = rectangleA + rectangleB + rectangleA + rectangleB
 rectangleP = 2 * rectangleA * rectangleB
 rectangleP = 2 * (rectangleA + rectangleB)
 
-// +=, -=, *=, /=
+// +=, -=, *=, /= - составные операторы
 var inVar = 3
 inVar = inVar + 2
 //idet posledovatelno
@@ -121,7 +121,7 @@ helloWorld = "Hello " + world
 helloWorld = hello
 helloWorld += world
 
-// %
+// % - оператор остатка
 inVar = 5 % 4
 4 + 1
 inVar = 5 % 2
@@ -133,10 +133,16 @@ inVar = -5 % 4
 
 // operator delenia po modulu
 inVar = 5 % -3
+
+// оператор заменяющий nil ??
+     let defaultName = "Steve"
+     var name: String? = "Ivan"
+     let myName = ?? defaultName
 */
 
+
  
-// Операторы сравнения и Логические операторы
+// <=, >=, !=, ==, *= Операторы сравнения
 
 1 == 1
 2 != 1
@@ -221,7 +227,7 @@ if enteredPasscode == passcode {
     message = "Invalid unlocked"
 }
 print(message)
-
+// Логические операторы &&, ||, !
 // && - true
 if (time > 10) && (time < 18) {
     print("It's day now")
@@ -230,7 +236,7 @@ if (time > 10) && (time < 18) {
 if (time <= 10) || (time >= 18) {
     print("It's not day now")
 }
-// !-true menzet na false i naoborot
+// ! - true меняет на обратное значение
 let itsTrue = true
 let itsFalse = !true
 if !isPasscodeCorrect {
@@ -250,6 +256,9 @@ student < anotherStudent
 20 < 19
 "Adam" < "John"
 
+// Операторы диапазона ..., ..<
+1...10
+1..<10
 
 
 // !!!!New tems  //Tuples*/
