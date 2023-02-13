@@ -424,3 +424,26 @@ if (point.x + point.y) % 2 == 0 {
 
 // Задание 1:
 
+//Завершите решение так, чтобы оно изменило переданную в него строку.
+//'world'  =>  'dlrow'
+//'word'   =>  'drow'
+
+func reverse(_ str: String) -> String {
+    return String(str.reversed())
+}
+
+//Реализуйте функцию, которая преобразует данное логическое значение в строковое представление.
+//Примечание: Будут предоставлены только действительные входные данные.
+
+func booleanToString(_ b: Bool) -> String {
+  return String(b)
+}
+
+//Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+//Примеры (вход -> вывод)
+//6, "I"     -> "IIIIII"
+//5, "Hello" -> "HelloHelloHelloHelloHello"
+
+func repeatStr(_ n: Int, _ string: String) -> String {
+  return String(repeating: string, count: n)
+}
