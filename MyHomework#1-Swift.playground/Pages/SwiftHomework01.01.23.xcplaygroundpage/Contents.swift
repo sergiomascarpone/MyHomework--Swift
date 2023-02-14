@@ -422,7 +422,149 @@ if (point.x + point.y) % 2 == 0 {
 
 // 5.Homework - Strings.
 
+// Задание 1: Нужно создать 5 переменных строковых, где какие-то переменные будут цифрами, а какие-то нет. И найти сумму этих переменных различая nil оператором "??". Так же вывести строку, где видно процесс сложения двумя способами: через интерполяцию строк и конкатанацию
+/*
+var firstStr = "Anton"
+var twoStr = "30"
+var threeStr = "New-York"
+var fourStr = "66"
+var fifthStr = "Dallas"
+
+var sum = Int(firstStr) ?? 0
+sum = Int(twoStr) ?? 0
+sum = Int(threeStr) ?? 0
+sum = Int(fourStr) ?? 0
+sum = Int(fifthStr) ?? 0
+
+print("\(Int(firstStr)) + \(Int(twoStr)!) + \(Int(threeStr)) + \(Int(fourStr)!) + \(Int(fifthStr)) = \(sum)")
+
+let concatStr = "\(Int(firstStr))" + " + \(Int(twoStr)!)" + " + \(Int(threeStr))" + " + \(Int(fourStr)!)" + " + \(Int(fifthStr))" + " + = \(sum)"
+print(concatStr)
+
+// Задание 2: Выбрать 5 классных симоволов, вывести ее и посчитать количество символов
+let omgSimbol = "\u{1F62E}"
+let worriedFaceSimbol = "\u{1F61F}"
+let confusedFaceSimbol = "\u{1F615}"
+let nerdFaceSimbol = "\u{1F913}"
+let partyingFaceSimbol = "\u{1F973}"
+
+let amazingSimbols = omgSimbol + worriedFaceSimbol + confusedFaceSimbol + nerdFaceSimbol + partyingFaceSimbol
+amazingSimbols.count
+
+// Задание 3: Создать строку из английского алфавита (маленькие буквы). Используя цикл найти индекс буквы в алфавите
+let alphabet = "abcdefghijklmnopqrstuvwxvyz"
+var findChar: Character = "s"
+var index = 1
+for i in alphabet {
+    if i == findChar {
+        print(i, "is", index)
+    } else {
+        index += 1
+    }
+}
+*/
+// 6.Homework - Collection Types.
+
 // Задание 1:
+//1. Создать массив с 12 элементами, каждый элемент - число дней в месяцеВывести весь массив
+//2. Создать втрой массив с названиями месяцев и вывести на экран название + количество дней в месяце
+//3. Массив тюплов (название + количество дней). Так же вывести
+//4. Вывести в обратном порядке массив тюплов
+//5. Посчитать сколько дней от начала года до дня рождения используя массив
+let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+let nameMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "Semptember", "October", "November", "December"]
+
+for item in days {
+    print(item)
+}
+
+for i in 0..<nameMonth.count {
+    print(nameMonth[i], "-", days[i])
+}
+
+var tupleArray = [(String, Int)]()
+
+for i in 0..<nameMonth.count {
+    tupleArray.append((nameMonth[i],days[i]))
+}
+
+for item in tupleArray {
+    print(item)
+}
+
+for index in stride(from: tupleArray.count - 1, through: 0, by: -1) {
+    print(tupleArray[index])
+}
+
+let myBirthday = (day: 1, mouth: "April")
+
+var daysToBirthday = 0
+
+for item in tupleArray {
+    if item.0 == myBirthday.mouth {
+        daysToBirthday += myBirthday.day - 1
+        break
+    } else {
+        daysToBirthday += item.1
+    }
+}
+print("Days from January to my Birthday",daysToBirthday)
+
+// Задание 2:
+//1. Создать массив опциональных integer  и заполнить его константами строковыми и в цикле посчиать и вывести сумму 3-мя способами: используя optional binding, forced unwrapping, оператор "??" (nil-coalescing operator)
+var arrayOptInt = [Int?] ()
+
+let firstConst = "125"
+let secondConst = "3 years"
+let thirsConst = String()
+let fourthConst = "25"
+let fifthConst = "150"
+
+arrayOptInt.append(Int(firstConst))
+arrayOptInt.append(Int(secondConst))
+arrayOptInt.append(Int(thirsConst))
+arrayOptInt.append(Int(fourthConst))
+arrayOptInt.append(Int(fifthConst))
+
+var optSum = 0
+
+//optional binding
+for item in arrayOptInt {
+    if let i = item {
+        optSum += i
+    }
+}
+
+optSum = 0
+
+//forced unwrapping
+
+for item in arrayOptInt {
+    if item != nil {
+        optSum += item!
+    }
+}
+
+optSum = 0
+
+for item in arrayOptInt {
+    optSum += item ?? 0
+}
+
+print("Sum of optional integer array:", optSum)
+// Задание 3: 1. Создать строку - алфавит. Создать второй массив - пустой массив строк. Пройтись циклом по массиву символов, заполняя массив строк так, чтобы получился алфавит с конца
+let mas : [Character] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+let empty = [String]()
+let masNo = String(mas)
+for i in 0..<mas.count {
+    let k = (mas.count - 1) - i
+    
+    print (mas[k])
+}
+
+
+
+
 
 //Завершите решение так, чтобы оно изменило переданную в него строку.
 //'world'  =>  'dlrow'
