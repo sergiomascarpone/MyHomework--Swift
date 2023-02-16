@@ -467,7 +467,7 @@ for i in alphabet {
 // 6.Homework - Collection Types.
 
 // Задание 1:
-//1. Создать массив с 12 элементами, каждый элемент - число дней в месяцеВывести весь массив
+//1. Создать массив с 12 элементами, каждый элемент - число дней в месяце.Вывести весь массив
 //2. Создать втрой массив с названиями месяцев и вывести на экран название + количество дней в месяце
 //3. Массив тюплов (название + количество дней). Так же вывести
 //4. Вывести в обратном порядке массив тюплов
@@ -618,14 +618,40 @@ func quarter(of month: Int) -> Int {
     default : return 4
   }
 }
-//    ..или вот так 
+//    ..или вот так
 //func quarter(of month: Int) -> Int {
 //return (month + 2) / 3
 //}
 
+// Создайте функцию, которая вернет оператор приветствия, использующий ввод; ваша программа должна вернуть "Hello, <name> how are you doing today?".
+func greet(_ name: String) -> String {
+  return "Hello, \(name) how are you doing today?"
+}
 
+// Ваша цель - вернуть таблицу умножения для number, которое всегда является целым числом от 1 до 10. For example, a multiplication table (string) for number == 5 looks like below:
+func multi_table(_ number: Int) -> String {
+    var multiplicationTable = ""
+    for num in 1...10 {
+        multiplicationTable += ("\(num) * \(number) = \(number * num)\(num != 10 ? "\n" : "")")
+    }
+    return multiplicationTable
+}
 
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+func great(_ name: String, _ owner: String) -> String {
+  if name == owner {
+    return "Hello boss"
+  } else {
+    return "Hello guest"
+  }
+}
 
+// Нам нужна функция, которая может преобразовать число (целое число) в строку. Какие способы достижения этого вы знаете?
+func numberToString(number: Int) -> String {
+  String(number)
+}
 
-
-
+// Учитывая массив целых чисел в виде строк и чисел, верните сумму значений массива, как если бы все они были числами. Верните свой ответ в виде цифры.
+func sumMix(_ arr: [Any]) -> Int {
+    return arr.reduce(0) { $0 + (Int("\($1)") ?? 0) }
+}
