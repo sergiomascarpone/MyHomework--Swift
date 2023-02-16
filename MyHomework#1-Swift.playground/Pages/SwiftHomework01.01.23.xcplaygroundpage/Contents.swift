@@ -463,6 +463,7 @@ for i in alphabet {
     }
 }
 */
+
 // 6.Homework - Collection Types.
 
 // Задание 1:
@@ -528,7 +529,7 @@ arrayOptInt.append(Int(fifthConst))
 
 var optSum = 0
 
-//optional binding
+// optional binding
 for item in arrayOptInt {
     if let i = item {
         optSum += i
@@ -537,7 +538,7 @@ for item in arrayOptInt {
 
 optSum = 0
 
-//forced unwrapping
+// forced unwrapping
 
 for item in arrayOptInt {
     if item != nil {
@@ -552,7 +553,8 @@ for item in arrayOptInt {
 }
 
 print("Sum of optional integer array:", optSum)
-// Задание 3: 1. Создать строку - алфавит. Создать второй массив - пустой массив строк. Пройтись циклом по массиву символов, заполняя массив строк так, чтобы получился алфавит с конца
+
+// Задание 3: 1. Создать строку - алфавит. Создать второй массив - пустой массив строк. Пройтись циклом по массиву символов, заполняя массив строк так, чтобы получился алфавит с конца.
 let mas : [Character] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
 let empty = [String]()
 let masNo = String(mas)
@@ -566,7 +568,7 @@ for i in 0..<mas.count {
 
 
 
-//Завершите решение так, чтобы оно изменило переданную в него строку.
+// Завершите решение так, чтобы оно изменило переданную в него строку.
 //'world'  =>  'dlrow'
 //'word'   =>  'drow'
 
@@ -574,18 +576,56 @@ func reverse(_ str: String) -> String {
     return String(str.reversed())
 }
 
-//Реализуйте функцию, которая преобразует данное логическое значение в строковое представление.
-//Примечание: Будут предоставлены только действительные входные данные.
+// Реализуйте функцию, которая преобразует данное логическое значение в строковое представление.
+// Примечание: Будут предоставлены только действительные входные данные.
 
 func booleanToString(_ b: Bool) -> String {
   return String(b)
 }
 
-//Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
-//Примеры (вход -> вывод)
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+// Примеры (вход -> вывод)
 //6, "I"     -> "IIIIII"
 //5, "Hello" -> "HelloHelloHelloHelloHello"
-
 func repeatStr(_ n: Int, _ string: String) -> String {
   return String(repeating: string, count: n)
 }
+
+
+// Завершите функцию квадратной суммы так, чтобы она возвела в квадрат каждое переданное в нее число, а затем суммировала результаты вместе.
+func squareSum(_ vals: [Int]) -> Int {
+  return vals.reduce(0) { $0 + $1 * $1 }
+}
+
+// Учитывая непустой массив целых чисел, верните результат умножения значений по порядку. Пример: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+func grow(_ arr: [Int]) -> Int {
+return arr.reduce(1) {$0 * $1}
+}
+
+// Первый век охватывает от 1 года до 100 года включительно, второй век - от 101 года до 200 года включительно и т. д. Учитывая год, верните век, в котором он находится.
+func century(_ year: Int) -> Int {
+    let century = year % 100 == 0 ? (year / 100) : (year / 100) + 1
+    return century
+}
+
+// Учитывая месяц в виде целого числа от 1 до 12, верните, к какой четверти года он принадлежит в виде целого числа.
+// Например: месяц 2 (февраль) является частью первого квартала; месяц 6 (июнь) является частью второго квартала; и месяц 11 (ноябрь) является частью четвертого квартала.
+func quarter(of month: Int) -> Int {
+  switch month {
+    case 0...3: return 1
+    case 3...6: return 2
+    case 6...9: return 3
+    default : return 4
+  }
+}
+//    ..или вот так 
+//func quarter(of month: Int) -> Int {
+//return (month + 2) / 3
+//}
+
+
+
+
+
+
+
