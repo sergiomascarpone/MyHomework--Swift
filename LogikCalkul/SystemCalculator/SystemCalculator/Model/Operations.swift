@@ -1,8 +1,8 @@
 //
 //  Operations.swift
-//  SystemCalculate
+//  SystemCalculator
 //
-//  Created by Sergio Mascarpone on 19.02.23.
+//  Created by Sergio Mascarpone on 20.02.23.
 //
 
 import Foundation

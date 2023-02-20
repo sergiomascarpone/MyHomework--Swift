@@ -1,15 +1,15 @@
 //
 //  CalcService.swift
-//  SystemCalculate
+//  SystemCalculator
 //
-//  Created by Sergio Mascarpone on 19.02.23.
+//  Created by Sergio Mascarpone on 20.02.23.
 //
 
 import Foundation
 
 class CalcService {
     
-    //Mark: properties
+    // Mark: variables
     var isRunning = true
     var currentNumber = "0"
     var firstNumber  = 0.0
@@ -22,7 +22,7 @@ class CalcService {
         self.displayView = displayView
     }
     
-    //Mark: methods
+    // Mark: functions
     func updateDisplay(text: String) {
         print(text)
     }

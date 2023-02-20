@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  SystemCalculate
+//  SystemCalculator
 //
-//  Created by Sergio Mascarpone on 17.02.23.
+//  Created by Sergio Mascarpone on 20.02.23.
 //
 
 import UIKit
@@ -13,13 +13,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
         //1. Захват сцены
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        //2. Создание UIWindow м использованием конструктора который принимает сцену
         let window = UIWindow(windowScene: windowScene)
-        let viewViewController = ViewController()
-        window.rootViewController = viewViewController
+        
+        //3. Програмно создаем основной контроллер и интегрируем в него NavigationController
+        let viewController = ViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        //4. Определяем navigationController as rootViewController
+        window.rootViewController = navigationController
+        
+        //5. Настройка window
+        self .window = window
         window.makeKeyAndVisible()
-        self.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
