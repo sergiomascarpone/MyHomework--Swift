@@ -9,7 +9,7 @@ import Foundation
 
 class CalcService {
     
-    // Mark: variables
+    // Mark: properties
     var isRunning = true
     var currentNumber = "0"
     var firstNumber  = 0.0
@@ -22,7 +22,7 @@ class CalcService {
         self.displayView = displayView
     }
     
-    // Mark: functions
+    // Mark: methods
     func updateDisplay(text: String) {
         print(text)
     }
