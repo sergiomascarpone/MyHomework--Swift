@@ -23,9 +23,17 @@ class CalcService {
     }
     
     // Mark: methods
-    func updateDisplay(text: String) {
-        print(text)
+    
+    func numberAction(number: Int) {
+        if currentNumber != "0" {
+            currentNumber.append(String(number))
+            displayView.updateDisplay(text: currentNumber)
+        } else {
+            currentNumber = String(number)
+            displayView.updateDisplay(text: currentNumber)
+        }
     }
+    
     func makeCalculation(operation: Operations) {
         if currentOperation != .noAction {
             if currentNumber != "" {
@@ -42,11 +50,19 @@ class CalcService {
                 default:
                     break
                 }
+                
+                firstNumber = Double(result)!
+                if Double(result)!.truncatingRemainder(dividingBy: 1) == 0 {
+                    result = String(Int(Double(result)!))
+                }
+                currentNumber = result
+                displayView.updateDisplay(text: currentNumber)
+                currentOperation = .noAction
             }
         } else {
             firstNumber = Double(currentNumber) ?? 0.0
             currentNumber = ""
-            updateDisplay(text: currentNumber)
+            displayView.updateDisplay(text: currentNumber)
             currentOperation = operation
         }
         print(
@@ -80,6 +96,33 @@ result = \(result)
         secondNumber = 0.0
         result = ""
         currentOperation = Operations.noAction
-        updateDisplay(text: currentNumber)
+        displayView.updateDisplay(text: "0")
+    }
+    func changeSign() {
+        var temp = currentNumber
+        if temp.contains("-") {
+            let sign = ["-"]
+            temp = String(temp.filter { !sign.contains(String($0)) })
+            displayView.updateDisplay(text: temp)
+            currentNumber = temp
+        } else {
+            temp = "-" + currentNumber
+            displayView.updateDisplay(text: temp)
+            currentNumber = temp
+        }
+    }
+    func percent() {
+        currentNumber = String(Double(currentNumber)! / 100)
+        displayView.updateDisplay(text: currentNumber)
+        result = currentNumber
+        firstNumber = Double(result)!
+    }
+    func dot() {
+        if currentNumber.contains(",") {
+            return
+        } else {
+            currentNumber += ","
+            displayView.updateDisplay(text: currentNumber)
+        }
     }
 }
