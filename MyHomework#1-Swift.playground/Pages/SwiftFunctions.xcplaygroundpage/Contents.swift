@@ -5,14 +5,12 @@ import UIKit
 func greatings() {
     print("Hello, swift!")
 }
-
 greatings()
 
 // принимать
 func square(number: Int) {
     print(number * number)
 }
-
 square(number: 8)
 
 // возвращать
