@@ -1,4 +1,5 @@
 import UIKit
+
 var greating = "Hello, playground"
 
 let intArray: [Int] = [0, 1, 2, 3, 4, 5]
