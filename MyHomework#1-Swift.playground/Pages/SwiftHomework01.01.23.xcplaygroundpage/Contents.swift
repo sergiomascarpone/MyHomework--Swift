@@ -355,12 +355,12 @@ if firstStudentTuple.controlScore != nil {
 } else {
     print("Student missed exam")
 }
- */
+
 
 
 // 4.Homework - Loops. Basic operators.
 
-/*
+
 // Задание 1:
 let names: [String] = ["Pavel", "Ludmilaa", "Andrey", "Liza"]
 for name in names {
@@ -384,7 +384,6 @@ let string = "Serjo"
 for chair in string {
     print(chair)
 }
-*/
 
 // Задание 1: сколько секунд от начала года до моего дня рождения.
 let hourseInDay = 24
@@ -420,10 +419,10 @@ if (point.x + point.y) % 2 == 0 {
     print("It`s a white point")
 }
 
+
 // 5.Homework - Strings.
 
 // Задание 1: Нужно создать 5 переменных строковых, где какие-то переменные будут цифрами, а какие-то нет. И найти сумму этих переменных различая nil оператором "??". Так же вывести строку, где видно процесс сложения двумя способами: через интерполяцию строк и конкатанацию
-/*
 var firstStr = "Anton"
 var twoStr = "30"
 var threeStr = "New-York"
@@ -462,16 +461,14 @@ for i in alphabet {
         index += 1
     }
 }
-*/
 
 // 6.Homework - Collection Types.
-
 // Задание 1:
-//1. Создать массив с 12 элементами, каждый элемент - число дней в месяце.Вывести весь массив
-//2. Создать втрой массив с названиями месяцев и вывести на экран название + количество дней в месяце
-//3. Массив тюплов (название + количество дней). Так же вывести
-//4. Вывести в обратном порядке массив тюплов
-//5. Посчитать сколько дней от начала года до дня рождения используя массив
+// 1. Создать массив с 12 элементами, каждый элемент - число дней в месяце.Вывести весь массив
+// 2. Создать втрой массив с названиями месяцев и вывести на экран название + количество дней в месяце
+// 3. Массив тюплов (название + количество дней). Так же вывести
+// 4. Вывести в обратном порядке массив тюплов
+// 5. Посчитать сколько дней от начала года до дня рождения используя массив
 let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 let nameMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "Semptember", "October", "November", "December"]
 
@@ -563,8 +560,71 @@ for i in 0..<mas.count {
     
     print (mas[k])
 }
+ */
+ 
+// 7.Homework - Dictionary.
+// Задание 1. Создать dictionary как журнал студентов, где ключ это имя и фамилия, а значение оценка. В журнале сразу есть отметки, затем нужно повысить оценку нескольким существующим студентам, затем некоторые студенты были отчислены. Посчитать общий бал группы и средний бал группы.
+var dictExam = ["Sergio Mascarpone" : 2,
+                "Alexey Varlamov" : 3,
+                "Egor Takoy" : 4,
+                "Andrey Pavlov" : 3]
 
+dictExam.updateValue(5, forKey: "Sergio Mascarpone")
+dictExam["Alexey Varlamov"] = 4
 
+dictExam.removeValue(forKey: "Andrey Pavlov")
+dictExam["Egor Takoy"] = nil
+
+var sum = 0
+var average : Double = 0
+
+dictExam.values
+for value in dictExam.values {
+    sum += value
+}
+
+average = Double(sum)/Double(dictExam.count)
+
+print("Common sum of point: \(sum),\nGrade point average: \(average)")
+
+// Задание 2. Создать dictionary дней в месяцах, где месяц это ключ, а количество дней - значение. Вывести dictionary на экран с помощью цикла и тюпла, затем вывести на экран с помощью цикла, проходясь по ключам
+let days = [31, 28, 31, 30, 31, 30, 31, 30, 31, 31, 30, 31]
+let nameMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"]
+var dictMonth : [String:Int] = [:]
+
+for i in 0..<nameMonth.count {
+    dictMonth[nameMonth[i]] = days[i]
+}
+
+for (key,value) in dictMonth {
+    print(key,"-",value)
+}
+for key in dictMonth.keys {
+    if let value = dictMonth[key] {
+        print("\(key) - \(value)")
+    }
+}
+
+// Задание 3. Созать dictionary доска шахмат, где ключ это адрес ячейки (А1, А2 ...), а значение - это булевое знаечние ( true - белый цвет ячейки, false - черный цвет ячейки). Для создания dictionary нужно использовать массив букв от "А" до "H". Для каждой буквы должен быть отдельный цикл. Нужно использовать цикл в цикле для того, чтобы заполнить значения dictionary
+var pointDict : [String:Bool] = [:]
+
+let letters = "ABCDEFGH"
+let seriesOfLetters = Array(letters)
+
+for (item, value) in
+        seriesOfLetters.enumerated() {
+    //print(item+1,value)
+    for (i,_) in seriesOfLetters.enumerated() {
+        //print(i,v)
+        let str = String(value) + String(i+1)
+        if (i+item)%2 == 0 {
+            pointDict[str] = false
+        } else {
+            pointDict[str] = true
+        }
+    }
+}
+print(pointDict)
 
 
 
@@ -727,4 +787,9 @@ func digitize(_ num:Int) -> [Int] {
   let numb = String(num)
   let digits = numb.compactMap{ $0.wholeNumberValue }
   return digits.reversed()
+}
+
+// Это конец учебного года, роковой момент вашего школьного отчета. Средние значения должны быть рассчитаны. Все студенты приходят к вам и умят вас рассчитать их среднее значение для них. Легко! Вам просто нужно написать сценарий. Возвращает среднее значение данного массива, округленное до ближайшего целого числа. Массив никогда не будет пустым.
+func getAverage(_ marks: [Int]) -> Int {
+    return marks.reduce(0, +) / marks.count // OK
 }
