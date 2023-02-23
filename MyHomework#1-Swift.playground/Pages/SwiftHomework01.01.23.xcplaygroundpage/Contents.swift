@@ -560,7 +560,7 @@ for i in 0..<mas.count {
     
     print (mas[k])
 }
- */
+
  
 // 7.Homework - Dictionary.
 // Задание 1. Создать dictionary как журнал студентов, где ключ это имя и фамилия, а значение оценка. В журнале сразу есть отметки, затем нужно повысить оценку нескольким существующим студентам, затем некоторые студенты были отчислены. Посчитать общий бал группы и средний бал группы.
@@ -625,7 +625,40 @@ for (item, value) in
     }
 }
 print(pointDict)
+ */
+ 
+// 8.Homework. Оператор switch.
+// Задание 1. Создать строку произвольного текста в 200 символов и посчитать количество гласных, количество согласных, символов, цифр с помощью switch внутри цикла
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+var text = """
+The action of The Time Cycle - Consequences continues the story of the first book "After successfully eliminating an anomaly" protagonists Matthew Madex and Lee Gran Moss receive a message from an unknown source stating the imminent and total destruction of planet Earth Who sent this ominous message that spoke of genocide?
+"""
+text.count
+var vowelCount = 0
+var consonantCount = 0
+var numberCount = 0
+var simbolsCount = 0
+for i in text.lowercased() {
+    switch i {
+        // y - is it a vowel?
+    case "a", "e", "i", "o", "u", "y":
+        vowelCount += 1
+        case i where alphabet.contains(i):
+        consonantCount += 1
+    case i where i.isHexDigit:
+        numberCount += 1
+    default: simbolsCount += 1
+    }
+}
+print("Text has \(vowelCount) vowels, \(consonantCount) consonants, \(numberCount) numbers, \(simbolsCount) other simbols")
+
+
+// Задание 2. Создать switch, который принимает возврат человека и выводить описание жизни человека
+
+// Задание 3. У студента есть имя, фамилия и отчество. Если имя начиается с "А" или с "О", то обращаться к студенту по имени, если отчество начинается буквы "Д"/"В", то обращаться к студенту по имени и отчеству, если фамилия начинается с буквы "Е"/"З", то обращаться только по фамилии, по дефолту обращаться по имени, отчеству и фамилии
+
+// Задание 4. Поле морского боя 10х10, есть побитые корабли, есть целые корабли. Создать switch  с точкой, где требуется вернуть либо "мимо", либо "ранил", либо "убил"
 
 
 // Завершите решение так, чтобы оно изменило переданную в него строку.
