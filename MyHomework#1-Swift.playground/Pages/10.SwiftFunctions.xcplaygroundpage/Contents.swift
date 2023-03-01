@@ -82,6 +82,7 @@ func sayHelloWorld() -> String {
 print(sayHelloWorld())
 
 // Функции с несколькими параметрами: - Функции могут иметь несколько входных параметров, которые записываются в круглых скобках функции, разделенных запятыми.
+/*
 func greet(person: String, alreadyGreeted: Bool) -> String {
     if alreadyGreeted {
         return greetAgain(person: person)
@@ -90,6 +91,7 @@ func greet(person: String, alreadyGreeted: Bool) -> String {
     }
 }
 print(greet(person: "Tim", alreadyGreeted: true))
+*/
 
 // Функции без возвращаемых значений: - Функции не обязаны определять тип возвращаемого значения.
 func greet(person: String) {
