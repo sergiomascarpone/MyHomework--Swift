@@ -2,9 +2,56 @@
 
 import Foundation
 
-var greeting = "Hello, playground"
-
 // Closures: Замыкания — это автономные блоки функций, которые можно передавать и использовать в вашем коде. Замыкания в Swift аналогичны блокам в C и Objective-C, а также лямбда-выражениям в других языках программирования. Замыкания могут захватывать и хранить ссылки на любые константы и переменные из контекста, в котором они определены. Это известно как закрытие этих констант и переменных. Swift берет на себя всю работу по управлению памятью при захвате.
+
+// Обьявление замыкания
+let closure =
+{
+    print("Hello from closure!")
+}
+// Вызов замыкания
+closure()
+
+// Замыкание с параметром без возвращаемого значения:
+var dogBark = { (name: String) in
+    print("\(name) Bark!")
+}
+dogBark("Lessie")
+
+// Замыкание с возвращаемым значением:
+let findSquare = { (num: Int) -> (Int) in
+    let square = num * num
+    return square
+}
+
+print(findSquare(2))
+
+let findSquare2: (Int) -> (Int) = { $0*$0 }
+
+print(findSquare2(3))
+
+// Замыкание в качестве параметра для функции:
+func getPizzaPlace(search: () -> ()) {
+    print("Lets go for some pizza")
+    // вызов замыкания
+    search()
+}
+// передаем замыкание в функцию
+getPizzaPlace(search: {
+    print("Dodo pizza is 1 km away")
+})
+
+// Захват значений из области видимости:
+func someFunc(x: Int) -> (() -> Int) {
+    let closure = { x } //захват x
+    return closure
+}
+
+let capture1 = someFunc(x: 5)
+let capture2 = someFunc(x: 8)
+
+capture1()
+capture2()
 
 // Global functions - это замыкания, которые имеют имя и не фиксируют никаких значений.
 // Nested functions - это замыкания, которые имеют имя и могут захватывать значения из включающей их функции.
