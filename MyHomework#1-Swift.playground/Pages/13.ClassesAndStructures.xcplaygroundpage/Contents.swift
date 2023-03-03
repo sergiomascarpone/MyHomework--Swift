@@ -39,7 +39,10 @@ class Transport {
     init(year:Int, numbers:Int) {
         self.year = year
         self.numberOfSeats = numbers
+        
     }
+    func move(){}
+
 }
 
 let transport = Transport(year: 2000, numbers: 5)
@@ -55,10 +58,18 @@ class Car: Transport {
         self.vin = vin
         super.init(year: year, numbers: numbers)
     }
+    override func move() {
+        print("BIBI go!")
+    }
+    func sound(){
+        print("Fafafa")
+    }
 }
 
 let car = Car(vin: "urnv33uf94", year: 2022, numbers: 4)
-
+transport.move()
+car.move()
+car.sound()
 
 
 
