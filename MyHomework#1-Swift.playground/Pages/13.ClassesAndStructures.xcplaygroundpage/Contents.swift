@@ -25,6 +25,7 @@ anotherDog.owner = "Peter"
 anotherDog.bark()
  */
 
+/*
 enum Color: String{
     case red
     case black
@@ -70,6 +71,70 @@ let car = Car(vin: "urnv33uf94", year: 2022, numbers: 4)
 transport.move()
 car.move()
 car.sound()
+*/
+
+// Structures - Struct, Value Type VS Referense Type
+
+struct Car{
+    let numberOfSeats: Int
+    let year: Int
+    var mileage: Int
+    var isCrash: Bool = false
+    
+    mutating func crash() {
+        print("Crash")
+        self.isCrash = true
+    }
+}
+
+class CarClass {
+    let numberOfSeats: Int
+    let year: Int
+    var mileage: Int
+    var isCrash: Bool = false
+    
+    init(numberOfSeats: Int, year: Int, mileage: Int) {
+    self.numberOfSeats = numberOfSeats
+    self.year = year
+    self.mileage = mileage
+    }
+}
+
+var car = Car(numberOfSeats: 2, year: 2022, mileage: 0)
+car.mileage = 1200
+
+var car2 = car
+
+car.mileage = 1000
+car.mileage = 3000
+//print(car.mileage)
+//print(car2.mileage)
+
+let carClass = CarClass(numberOfSeats: 2, year: 2022, mileage: 0)
+carClass.mileage = 2100
+
+let carClass2 = carClass
+
+carClass.mileage = 1200
+
+print(carClass.mileage)
+print(carClass2.mileage)
+
+func changeMileage(car: CarClass, newMileage: Int) {
+    car.mileage = newMileage
+}
+
+func changeMileage(car: Car, newMileage: Int) -> Car {
+    var carInside = car
+    carInside.mileage = newMileage
+    return carInside
+}
+
+//changeMileage(car: carClass, newMileage: 5000)
+//print(carClass.mileage)
+
+car = changeMileage(car: car, newMileage: 6000)
+print(car.mileage)
 
 
 
