@@ -826,3 +826,62 @@ func digitize(_ num:Int) -> [Int] {
 func getAverage(_ marks: [Int]) -> Int {
     return marks.reduce(0, +) / marks.count // OK
 }
+
+
+// Герой направляется в замок, чтобы завершить свою миссию. Однако ему сказали, что замок окружен парой могущественных драконов! каждый дракон берет 2 пули, чтобы победить, наш герой понятия не имеет, сколько пуль он должен нести. Предполагая, что он возьмет определенное количество пуль и будет двигаться вперед, чтобы сражаться с другим определенным количеством драконов, выживет ли он? Верните True, если да, False в противном случае :)
+func hero(bullets: Int, dragons: Int) -> Bool {
+  return bullets >= dragons * 2
+}
+
+//Очень просто, учитывая целое число или число с плавающей запятой, найдите его противоположность. Примеры:
+// 1: -1
+// 14: -14
+// -34: 34
+func opposite(number: Double) -> Double {
+ return -number
+}
+
+// Функция не возвращает правильные значения. Ты можешь понять почему? Пример (Вход --> Вывод):
+// 3 --> "Earth" неправильный ответ:
+/*
+func getPlanetName(id: Int) -> String {
+  var name:String
+  switch id {
+    case 1:
+      name = "Mercury"
+    case 2:
+      name = "Venus"
+    case 3:
+      name = "Earth"
+    case 4:
+      name = "Mars"
+    case 5:
+      name = "Jupiter"
+    case 6:
+      name = "Saturn"
+    case 7:
+      name = "Uranus"
+    case 8:
+      name = "Neptune"
+    default:
+      name = ""
+      return name
+  }
+}
+*/
+// Правильный ответ:
+func getPlanetName(_ id: Int) -> String {
+  switch id {
+    case 1: return "Mercury"
+    case 2: return "Venus"
+    case 3: return "Earth"
+    case 4: return "Mars"
+    case 5: return "Jupiter"
+    case 6: return "Saturn"
+    case 7: return "Uranus"
+    case 8: return "Neptune"
+    default: return ""
+  }
+}
+
+
