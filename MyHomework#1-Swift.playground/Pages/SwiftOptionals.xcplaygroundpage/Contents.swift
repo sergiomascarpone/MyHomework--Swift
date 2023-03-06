@@ -1,8 +1,6 @@
 import UIKit
 
-var greeting = "Hello, playground"
-
-// ?
+// ? - Optional type
 let passcode = 1234
 var enteredPasscode = 4321
 
@@ -42,8 +40,24 @@ if let intVar = intVar {
         print("ErrorString = \(errorString)")
     }
 }
+// explicity unwrap -  явная безопасная распаковка.
+let a: Int = 1
+let b: Int? = 1
+let c: Int? = nil
 
-// Force unwrap !
+if let b {
+   print(a + b)
+} else {
+    print("B b нет значения!")
+}
+
+if let c {
+    print(a + c)
+} else {
+    print("B c  нет значения!")
+}
+
+// Force unwrap ! - явная не безопасная распаковка.
 if errorString != nil {
     print(errorString!)
 }
@@ -68,7 +82,16 @@ print(messageString!)
 messageString  = errorString != nil ? errorString : "Phone unlocked"
 print(messageString!)
 
-// ??
+// implicity unwrap -  неявная небезопасная распаковка.
+
+// ?? - значение по умолчанию.
+let d: Int = 2
+let e: Int? = nil
+let f: Int? = nil
+
+let g = e ?? 0
+
+
 let oneInt: Int? = Int("1")
 var oneOrTwo: Int = oneInt ?? 2
 
