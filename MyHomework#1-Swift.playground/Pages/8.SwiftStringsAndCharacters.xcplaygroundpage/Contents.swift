@@ -2,7 +2,6 @@ import UIKit
 // String
 
 //var str = String()
-
 var str = "c"
 
 str = str + "a"
@@ -18,7 +17,6 @@ str1
 str2
 
 //str1 = ""
-
 str1
 str2
 
@@ -33,7 +31,6 @@ for c in "Hello world!" {
 str1.append(char1)
 
 // Unicode
-
 let heart = "\u{1F496}"
 
 let eAcute: Character = "\u{E9}"

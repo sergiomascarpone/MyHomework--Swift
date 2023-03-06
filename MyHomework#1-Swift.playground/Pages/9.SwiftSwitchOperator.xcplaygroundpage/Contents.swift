@@ -1,13 +1,19 @@
 import UIKit
-
+// if -> else if -> else - только в такой последовательности!
 /*
-if age == 21 {
-    
-} else if age == 22 {
-
-} else {
-    
-}
+let age = 23
+let name = "Dima"
+ print("Привет незнакомец")
+ 
+ if age < 20 {
+ print("К сожалению ты слишком молод!")
+ } else if age => 20 && age <= 25 {
+ print("Отличный возраст!")
+ } else if name == "Dima" {
+ print("Отличное имя!")
+ } else {
+ print("К сожалению ты слишком стар!")
+ }
 //
 switch age {
     case 21: //.....
@@ -17,7 +23,7 @@ default:
 }
 //
  
-//
+ // switch operator
 for i in 0..<20 {
     
     if (i < 15) {
@@ -33,12 +39,12 @@ for i in 0..<20 {
  
  */
 
-var age = 67
+var age = 20
 var name = "Alex"
 
 switch age {
     case 0...16: print("Baby")
-    case 17...21: print("Boy")
+    case 17...25: print("Boy")
     case 22...50: break
     
 default: break
@@ -54,7 +60,6 @@ default: break
 }
 
 // Switch in Tuples, optionalBiending, wellYouByinding
-
 /*
 var optional : Int? = 5
 
@@ -79,7 +84,6 @@ default: break
 }
 
 // Совподение патернов
-
 let point = (5, -5)
 
 switch point {
@@ -95,7 +99,6 @@ default: break
 }
 
 // Printable
-
 let array: [CustomStringConvertible] = [5, 5.4, Float(5.4)]
 
 switch array[2] {

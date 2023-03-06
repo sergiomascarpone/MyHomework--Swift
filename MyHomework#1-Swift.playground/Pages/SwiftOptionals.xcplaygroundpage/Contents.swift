@@ -44,7 +44,6 @@ if let intVar = intVar {
 }
 
 // Force unwrap !
-
 if errorString != nil {
     print(errorString!)
 }

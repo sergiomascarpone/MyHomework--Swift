@@ -52,7 +52,6 @@ var carCanDrive = true
 var carCanFly: Bool = false
 
 // String
-
 var hello: String = "Hello, "
 var world: String = "World"
 var helloWorld = hello + world

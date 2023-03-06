@@ -8,7 +8,6 @@ import Foundation
 */
 
 // <=, >=, !=, ==, *= Операторы сравнения
-
 1 == 1
 2 != 1
 1 != 1
@@ -92,15 +91,18 @@ if enteredPasscode == passcode {
     message = "Invalid unlocked"
 }
 print(message)
+
 // Логические операторы &&, ||, !
 // && - true
 if (time > 10) && (time < 18) {
     print("It's day now")
 }
+
 // || - ili
 if (time <= 10) || (time >= 18) {
     print("It's not day now")
 }
+
 // ! - true меняет на обратное значение
 let itsTrue = true
 let itsFalse = !true
