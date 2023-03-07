@@ -19,5 +19,11 @@
         <page name='11.Closurese'/>
         <page name='12.Enumerations'/>
         <page name='13.ClassesAndStructures'/>
+        <page name='14.Properties'/>
+        <page name='15.Methods'/>
+        <page name='16.Subscripts'/>
+        <page name='17.Inheritance'/>
+        <page name='18.Initialization'/>
+        <page name='19.Deinitialization'/>
     </pages>
 </playground>
