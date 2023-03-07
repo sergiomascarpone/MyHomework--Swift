@@ -689,7 +689,84 @@ for i in students {
     }
 }
 // Задание 4. Поле морского боя 10х10, есть побитые корабли, есть целые корабли. Создать switch  с точкой, где требуется вернуть либо "мимо", либо "ранил", либо "убил"
+let valueList: [Int: Character] = [0: "\u{1F30A}", 1: "\u{26F5}", 2: "\u{2693}"]
 
+var seaBatle = Array(repeating: Array(repeating: 0, count: 10), count: 10)
+// one deck
+seaBatle[2][2] = 1
+seaBatle[4][1] = 1
+seaBatle[8][2] = 1
+seaBatle[8][5] = 2
+
+// two deck
+seaBatle[5][4] = 1; seaBatle[6][4] = 1
+seaBatle[6][7] = 1; seaBatle[6][8] = 1
+seaBatle[8][7] = 2; seaBatle[9][7] = 2
+
+// three deck
+seaBatle[0][2] = 1; seaBatle[0][3] = 1; seaBatle[0][4] = 1
+seaBatle[6][0] = 1; seaBatle[7][0] = 1; seaBatle[8][0] = 1;
+
+// four deck
+seaBatle[2][5] = 1; seaBatle[2][6] = 1; seaBatle[2][7] = 2; seaBatle[2][8] = 1
+
+for i in 0..<seaBatle[0].count {
+    for j in 0..<seaBatle[1].count {
+        if let simbol = valueList[seaBatle[i][j]] {
+            print(simbol, terminator: " ")
+        }
+    }
+    print(String())
+}
+func checkShip (y: Int, x: Int) -> Bool {
+    //Check up
+    if y - 1 >= 0 {
+        if seaBatle[y - 1][x] == 1 {
+            return true
+        }
+    }
+    //Check down
+    if y + 1 < seaBatle[0].count {
+        if seaBatle[y + 1][x] == 1 {
+            return true
+        }
+    }
+    //Check left
+    if x - 1 >= 0 {
+        if seaBatle[y][x - 1] == 1 {
+            return true
+        }
+    }
+    //Check right
+    if x + y < seaBatle[1].count {
+        if seaBatle[y][x + 1] == 1 {
+            return true
+        }
+    }
+    return false
+}
+
+var seaPoint = (2,2)
+switch seaPoint {
+case let (y,x) where seaBatle[y][x] == 1 && checkShip(y: y, x: x):
+    seaBatle[y][x] = 2
+    print("You hited!")
+    case
+    let (y,x) where seaBatle[y][x] == 1:
+    seaBatle[y][x] = 2
+    print("You killed!")
+default:
+    print("You missed!")
+}
+
+for i in 0..<seaBatle[0].count {
+    for j in 0..<seaBatle[1].count {
+        if let simbol = valueList[seaBatle[i][j]] {
+            print(simbol, terminator:  " ")
+        }
+    }
+    print(String())
+}
 
 // 9.Homework - Функции.
 // 1. Создать пару функций (3-4), которые возвращают строку с каким-то символом, вывести все это одним принтом.
