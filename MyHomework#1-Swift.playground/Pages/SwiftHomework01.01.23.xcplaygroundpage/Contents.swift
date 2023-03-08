@@ -836,6 +836,45 @@ func modifyString(originalString: String) -> (String) {
 var a = modifyString(originalString: "text with big vowels and small consonants, numbers like 1,2,3,4...9 are words without any simbols")
 print(a)
 
+// 10.Homework - Closures.
+// 1. Написать функцию, которая принимает один closure, а сам closure ничего не принимает и ничего не возвращает, в тело функции добавить цикл for от 1 до 10, с выводом этих значений, после выхода из цикла вызвать closure. В самом closure вывести что-нибудь на экран.
+func someFunction(closure: () -> Void) -> () {
+    for i in 1...10 {
+        print("Current value is \(i)")
+    }
+    closure()
+}
+someFunction {
+    print ("I called closure function")
+}
+// 2. Создать массив integer и отсортировать массив по возрастанию и по убыванию, используя встроенную функцию  (sorted).
+var someIntArray = [100, 22, 90, 17, 54, 66, 80, 1, 12, 14]
+//Sorting in ascending order
+someIntArray.sorted()
+//Sorting by descending order
+someIntArray.sorted(by: >)
+// 3. Создать функцию, которая принимает массив integer и closure, возвращает integer. Closure должен принимать два integer (один из них опциональный) и возвращать булевое значение. В самой функции будет опциональная переменная и цикл по массиву integer, где сравнивается опциональная переменная с элементом массива, но сравнение будет идти через вызов closure, если closure возвращает true, то значение массива записывается в переменную. Таким образом, в каждом витке цикла вызывается closure, в который передается значение переменной и элемента массива. После прохождения цикла вернуть значение opt переменной. Организовать closure так, чтобы вернуть максимальное значение массива/минимальное значение массива.
+func findInt(intArray: [Int], closure: (Int, Int?) -> Bool) -> Int? {
+    var optVariable: Int?
+    for i in intArray {
+        if closure(i,optVariable) {
+            optVariable = i
+        }
+    }
+    return optVariable
+}
+// 4*. Сделать то же самое для массива букв.
+//MinValue
+findInt(intArray: someIntArray, closure: {$1 == nil || $1! > $0})
+//MaxValue
+findInt(intArray: someIntArray, closure: {$1 == nil || $1! < $0})
+// 5. Создать строку, преобразить его в массив символов, используя метод sorted, отсортировать его так, чтобы в строке сначала шли гласные в алфавитном порядке, затем согласные в алфавитном порядке, затем цифры, затем символы.
+let alphabets = "abcdefghijklmnopqrstuvwxyz"
+
+
+
+
+
 
 // Завершите решение так, чтобы оно изменило переданную в него строку.
 //'world'  =>  'dlrow'
