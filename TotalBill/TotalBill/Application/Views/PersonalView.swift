@@ -4,7 +4,6 @@
 //
 //  Created by Sergio Mascarpone on 13.03.23.
 //
-
 import UIKit
 
 class PersonalView: UIView {
