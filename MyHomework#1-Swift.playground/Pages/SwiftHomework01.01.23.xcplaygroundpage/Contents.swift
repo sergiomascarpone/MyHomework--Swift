@@ -894,28 +894,31 @@ var piecesOnTheChessboard = [whiteRock, blackKing, whiteKing]
 // 2. Сделайте таĸ, чтобы энумовсĸие значения имели rawValue типа String. Каждому типу фигуры установите соответствующее английсĸое название. Создайте фунĸцию, ĸоторая выводит в ĸонсоль (теĸстово, без юниĸода) название фигуры, цвет и расположение. Используя эту фунĸцию распечатайте все фигуры в массиве.
 func printChess(_ piece: ChessPiece) {
     switch piece {
-    case let .king(c, 1, n):
-        print("\(c.rawValue) king on \(1)\(n)")
-    case let .rock(c, 1, n):
-        print("\(c.rawValue) rock on \(1)\(n)")
-    case let .bishop(c, 1, n):
-        print("\(c.rawValue) bishop on \(1)\(n)")
-    case let .knight(c, 1, n):
-        print("\(c.rawValue) knight on \(1)\(n)")
-    case let .queen(c, 1, n):
-        print("\(c.rawValue) queen on \(1)\(n)")
-    case let .pawn(c, 1, n):
-        print("\(c.rawValue) pawn on \(1)\(n)")
+    case let .king(c, I, n):
+        print("\(c.rawValue) king on \(I)\(n)")
+    case let .rock(c, I, n):
+        print("\(c.rawValue) rock on \(I)\(n)")
+    case let .bishop(c, I, n):
+        print("\(c.rawValue) bishop on \(I)\(n)")
+    case let .knight(c, I, n):
+        print("\(c.rawValue) knight on \(I)\(n)")
+    case let .queen(c, I, n):
+        print("\(c.rawValue) queen on \(I)\(n)")
+    case let .pawn(c, I, n):
+        print("\(c.rawValue) pawn on \(I)\(n)")
     }
 }
 for piece in piecesOnTheChessboard {
     printChess(piece)
 }
+
+
 func printChessboard (piecesOnTheChessboard: [ChessPiece]) {
     let letters = "ABCDEFGH"
     
     for number in stride(from: 8, through: 1, by: -1) {
         for letter in letters {
+            
             
             var imagePiece = checkPiece(chessBoard: piecesOnTheChessboard, letter: letter, number: number)
             if imagePiece.isEmpty {
