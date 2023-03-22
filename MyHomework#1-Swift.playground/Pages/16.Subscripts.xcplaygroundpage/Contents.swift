@@ -63,6 +63,30 @@ family.kids[1]
 family[3]
 family[3, "the great"]!
 
+struct Field {
+    
+    var dict = [String: String]()
+    
+    func keyForColumn(column: String, andRow row: Int) -> String {
+        return column + String(row)
+    }
+    
+    subscript(column: String, row: Int) -> String? {
+        get {
+            return dict[keyForColumn(column: column, andRow: row)]
+        }
+        set {
+            dict[keyForColumn(column: column, andRow: row)] = newValue
+        }
+    }
+}
+
+var field = Field()
+field["a", 5]
+field["a", 5] = "X"
+field["a", 5]
+
+
 
 
 
