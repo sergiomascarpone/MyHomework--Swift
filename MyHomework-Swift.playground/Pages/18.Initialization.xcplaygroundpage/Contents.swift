@@ -87,15 +87,35 @@ class Human {
     convenience init() {
         self.init(weight: 0)
     }
+    func test() {}
 }
 
 let h1 = Human(weight: 85, age: 28)
 let h2 = Human(weight: 90, age: 25)
 let h3 = Human()
 
+class Student: Human {
+    var firstName: String
+    var lastName: String
+    
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init(weight: 0, age: 0)
+        
+        test()
+        self.weight = 60
+        test()
+    }
+    convenience init(firstName: String) {
+        self.init(firstName: firstName, lastName: "")
+        self.age = 28
+        test()
+    }
+}
 
-
-
+let strudent1 = Student(firstName: "a")
+let student2 = Student(firstName: "a", lastName: "")
 
 
 
