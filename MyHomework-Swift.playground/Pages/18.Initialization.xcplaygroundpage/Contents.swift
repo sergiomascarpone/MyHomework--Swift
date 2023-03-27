@@ -2,6 +2,7 @@
 
 import Foundation
 
+//Part-1. Designated Initializers and Convenience Initializers
 class Student1 {
     var firstName: String
     var lastName: String
@@ -69,15 +70,15 @@ let s5 = Student5()
 let s7 = Student7(firstName: "a", lastName: "b")
 
 
-
 class Human {
     var weight: Int
     var age: Int
     
-    init(weight: Int, age: Int) {
+    init(weight: Int, age: Int) { //Designated Initializers
         self.weight = weight
         self.age = age
     }
+    //Convenience Initializers
     convenience init(age: Int) {
         self.init(weight: 0, age: age)
     }
@@ -98,6 +99,7 @@ class Student: Human {
     var firstName: String
     var lastName: String
     
+    //Designated Initializers
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
@@ -107,6 +109,7 @@ class Student: Human {
         self.weight = 60
         test()
     }
+    //Convenience Initializers
     convenience init(firstName: String) {
         self.init(firstName: firstName, lastName: "")
         self.age = 28
@@ -118,6 +121,48 @@ let strudent1 = Student(firstName: "a")
 let student2 = Student(firstName: "a", lastName: "")
 
 
+//Part-2. Initializer Inheritance and Overriding
+class Doctor: Student {
+    var fieldOfStudy: String
+    
+    init(fieldOfStudy: String) {
+        self.fieldOfStudy = fieldOfStudy
+        super.init(firstName: "Doctor", lastName: "House")
+    }
+    
+    override init(firstName: String, lastName: String) {
+        self.fieldOfStudy = "Health"
+        super.init(firstName: firstName, lastName: lastName)
+    }
+    /*
+    override init(weight: Int, age: Int) {
+        self.fieldOfStudy = ""
+        self.init(weight: weight, age: age)
+    }
+    */
+    /*
+    convenience init(fieldOfStudy: String) {
+        self.init(firstName: "Doctor", lastName: "House")
+        self.fieldOfStudy = fieldOfStudy
+    }
+     */
+}
+ 
+let d1 = Doctor(firstName: "aaa")
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Part-3.
 
 
 
