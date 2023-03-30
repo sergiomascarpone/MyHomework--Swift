@@ -1,14 +1,3 @@
-//: [Previous](@previous)
-
-import Foundation
-
-
-
-
-
-
-
-//Part-3. Failable Initializers. Required Initializers.
 
 
 
