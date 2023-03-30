@@ -1,6 +1,5 @@
-import Foundation
-
 //Part-2. Initializer Inheritance and Overriding
+
 class Doctor: Student {
     var fieldOfStudy: String
     
