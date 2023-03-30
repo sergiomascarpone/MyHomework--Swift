@@ -1,5 +1,5 @@
 //Part-2. Initializer Inheritance and Overriding
-
+/*
 class Doctor: Student {
     var fieldOfStudy: String
     
@@ -27,3 +27,4 @@ class Doctor: Student {
 }
  
 let d1 = Doctor(firstName: "aaa")
+*/
