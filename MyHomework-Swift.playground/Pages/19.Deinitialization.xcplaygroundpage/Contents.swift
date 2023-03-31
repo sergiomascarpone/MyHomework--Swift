@@ -21,18 +21,22 @@ class Human {
     func test(){}
 }
 
-enum Color: Int {
+enum Color : Int {
 case Black
 case White
     
-    init?(_value: Int) {
-        switch _value {
+    init?(_ value: Int) {
+        switch value {
         case 0: self = Color.Black
         case 1: self = Color.White
         default: return nil
         }
     }
 }
+
+let a = Color(2)
+//let b = Color(rawValue: 0)
+
 
 struct Size {
     var width: Int
@@ -47,19 +51,18 @@ struct Size {
     }
 }
 
-class Friend: Human {
+class Friend : Human {
     
     var name: String!
     
-    let skin: Color = {
+    let skin : Color = {
         let random = Int(arc4random_uniform(2))
         return Color(random)!
     }()
     
     init?(name: String) {
         self.name = name
-        
-        super .init(weight: 0, age: 0)
+        super.init(weight: 0, age: 0)
         if name.isEmpty {
             return nil
         }
@@ -67,11 +70,11 @@ class Friend: Human {
     required init() {
         self.name = "Hi"
         super.init(weight: 0, age: 0)
-    }
+        }
     }
 let f = Friend(name: "a")
 
-class BestFriend: Friend {
+class BestFriend : Friend {
     
     override init?(name: String) {
         
@@ -85,3 +88,5 @@ class BestFriend: Friend {
         super.init()
     }
 }
+
+let b = BestFriend(name: "")
