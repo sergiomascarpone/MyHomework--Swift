@@ -19,6 +19,11 @@ class Human {
         self.init(weight: 0)
     }
     func test(){}
+    
+    //Deinitializator
+    deinit {
+        print("Human deinitialized")
+    }
 }
 
 enum Color : Int {
@@ -71,12 +76,18 @@ class Friend : Human {
         self.name = "Hi"
         super.init(weight: 0, age: 0)
         }
+    
+    //Deinitializator
+    deinit {
+        print("Friend deinitialized")
+        }
     }
+
 let f = Friend(name: "a")
 
 class BestFriend : Friend {
     
-    override init?(name: String) {
+    override init(name: String) {
         
         if name.isEmpty {
             super.init()
@@ -87,6 +98,22 @@ class BestFriend : Friend {
     required init() {
         super.init()
     }
+    
+    //Deinitializator
+    deinit {
+        print("Best friend deinitialized")
+    }
 }
 
 let b = BestFriend(name: "")
+b.name
+
+struct Test {
+    var bestFriend : BestFriend? = BestFriend(name: "")
+}
+
+var test : Test? = Test()
+
+test!.bestFriend = nil
+
+var f5 = Friend(name: "")
