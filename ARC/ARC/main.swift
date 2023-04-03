@@ -2,7 +2,7 @@ var playground = true
 
 class Student {
     
-    weak var teacher : Teacher? //weak - слабая ссылка
+    weak var teacher : Teacher? //weak - слабая ссылка, всегда должна быть var.
     
     deinit {
         print("goodbye student")
