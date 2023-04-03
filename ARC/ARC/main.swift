@@ -18,6 +18,13 @@ class Teacher {
     
     var student : Student!
     
+    var test : (() -> ())? //closure - который мы держим стронг ссылкой
+    
+    lazy var test2 : (Bool) -> () = {
+        [unowned self] (a: Bool) in
+        print(self.student)
+    }
+    
     init() {
         student = Student(teacher: self)
     }
@@ -27,14 +34,31 @@ class Teacher {
     }
 }
 
+var closure3 : (() -> ())?
+
 if playground {
     
     var teacher = Teacher()
+    
+    teacher.test2(true)
+    
+    /*
+    teacher.test = {
+        [unowned teacher] in
+        print(teacher)
+    }*/
     
    /*
     if playground {
         let student = Student(teacher: teacher)
         teacher.student = student
+    }*/
+    
+    /*
+    var student = teacher.student
+    closure = {
+        [unowned student] in
+        print(student)
     }*/
     
     print("exit playground")
@@ -55,7 +79,7 @@ var closure : () -> () = {
     print("\(x) \(y)")
 }
 
-var closure2 : (Int) -> Int = {[x,y] (a: Int) -> Int in
+var closure2 : (Int) -> Int = {[x,y,h] (a: Int) -> Int in
     print("\(x) \(y) \(h.name)")
     return a
 }
