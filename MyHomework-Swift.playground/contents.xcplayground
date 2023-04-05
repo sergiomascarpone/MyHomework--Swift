@@ -27,6 +27,6 @@
         <page name='19.Deinitialization'/>
         <page name='20.Automatic Reference Counting'/>
         <page name='21.Optional Chaining'/>
-        <page name='22.'/>
+        <page name='22.Type Casting'/>
     </pages>
 </playground>

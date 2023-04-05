@@ -3,7 +3,7 @@ var playground = true
 class Student {
     
     //weak var teacher : Teacher? //weak - слабая ссылка, всегда должна быть var.
-    unowned let teacher : Teacher? //неопциональный проперти
+    unowned var teacher : Teacher? //неопциональный проперти
     
     deinit {
         print("goodbye student")
