@@ -44,14 +44,14 @@ extension String {
     init(_ value: Bool) {
         self.init(value ? 1 : 0)
     }
-    
+    /*
     subscript(start: Int, lenght: Int) -> String {
         let start = advance(self.startIndex, start)
         let end   = advance(start, lenght)
         let range = Range(start: start, end: end)
         return self[range]
     }
-    
+    */
     
 }
 

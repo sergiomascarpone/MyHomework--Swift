@@ -194,7 +194,73 @@ while currentValue != 0 {
 print("zero!")
 
 
+// 9.Homework - Функции.
+// 1. Создать пару функций (3-4), которые возвращают строку с каким-то символом, вывести все это одним принтом.
+func party() -> Character {
+    "\u{1F973}"
+}
+func ghost() -> Character {
+    "\u{1F47B}"
+}
+func purpleHeart() -> Character {
+    "\u{1F49C}"
+}
+print(party(),ghost(),purpleHeart())
+// 2. Создать функцию, которая принимает строку и номер (клетку на шахматной доске), а возвращает ответ какого клетка цвета. Распечатать выходной параметр, через переменную
+func checkChessPoint(letter: Character, number: Int) -> String {
+    let letters = "ABCDEFGH"
+    
+    //find index
+    if let i = letters.lastIndex(of: letter) {
+        var index: Int = letters.distance(from: letters.startIndex, to: i)
+        return(index + number)%2 == 0 ? "White":"Black"
+    }
+    return String()
+}
 
+var colorPoint = checkChessPoint(letter: "F", number: 5)
+print(colorPoint)
+// 3. Создать массив, создать функцию, которая принимает массив и возвращает его в обратном порядке.
+var arrayInt = [1, 3, 5, 7, 7, 8, 9, 10]
+
+func inverseArray(originalArray: [Int]) -> [Int] {
+    var modArray : [Int] = []
+    
+    for i in stride(from: originalArray.count - 1, through: 0, by:  -1) {
+        modArray.append(originalArray[i])
+    }
+    return modArray
+}
+print(inverseArray(originalArray: arrayInt))
+// 4. Функция принимает массив, и меняет сам массив внутри функции ( в обратном порядке).
+func reallyInverseArray(originalArray: inout [Int] ) -> () {
+    originalArray = originalArray.reversed()
+}
+reallyInverseArray(originalArray: &arrayInt)
+print(arrayInt)
+// 5.Функция принимает строку, а возвращает строку где, строка без знаков препинания, все гласные - заглавные, все согласные - маленькие, цифры изменены на слова
+func modifyString(originalString: String) -> (String) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    var numbersDictionary = [0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "fife", 6: "six", 7: "seven", 8: "eight", 9: "nine"]
+    var newString = String()
+    for i in originalString.lowercased() {
+        switch i {
+            // y - is it a vowel?
+        case "a", "e", "i", "o", "u":
+            newString.append(i.uppercased())
+            // other letters in alphabet are consonant
+        case i where alphabet.contains(i) : newString.append(i)
+        case i where Int(String(i)) != nil:
+            if let simbolNum = numbersDictionary[Int(String(i))!] {
+                newString.append(simbolNum)
+            }
+        default: break
+        }
+    }
+    return newString
+}
+var a = modifyString(originalString: "text with big vowels and small consonants, numbers like 1,2,3,4...9 are words without any simbols")
+print(a)
 
 
 
