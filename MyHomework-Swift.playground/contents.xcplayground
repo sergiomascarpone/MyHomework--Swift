@@ -28,5 +28,8 @@
         <page name='20.Automatic Reference Counting'/>
         <page name='21.Optional Chaining'/>
         <page name='22.Type Casting'/>
+        <page name='23.Extensions'/>
+        <page name='24.'/>
+        <page name='25.'/>
     </pages>
 </playground>
