@@ -98,12 +98,43 @@ b.binary()
 a.binary()
 (~a).binary()
 
+//чтение бита
 b = 0b00010000
 a.binary()
 b.binary()
 (a & b).binary()
 
+//УСТАновка бита
+b = 0b00000010
+a.binary()
+b.binary()
+(a | b).binary()
 
+//ИНВЕсия одного бита
+a.binary()
+b.binary()
+(a ^ b).binary()
 
+//СБрос бита
+b = 0b00010000
+a.binary()
+(~b).binary()
+(a & ~b).binary()
 
+enum CheckList : UInt8 {
+    case Bread   = 0b00000001
+    case Chicken = 0b0000010
+    case Apples  = 0b00000100
+    case Pears   = 0b00001000
+}
+
+let checkList : UInt8 = 0b00001001
+let bread = checkList & CheckList.Bread.rawValue
+bread.binary()
+
+let chicken = checkList & CheckList.Chicken.rawValue
+chicken.binary()
+
+let pears = checkList & CheckList.Pears.rawValue
+pears.binary()
 
