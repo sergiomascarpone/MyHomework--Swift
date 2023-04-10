@@ -30,6 +30,7 @@
         <page name='22.Type Casting'/>
         <page name='23.Extensions'/>
         <page name='24.AdvancedOperators'/>
-        <page name='25.'/>
+        <page name='25.Operator Functions'/>
+        <page name='26.'/>
     </pages>
 </playground>
