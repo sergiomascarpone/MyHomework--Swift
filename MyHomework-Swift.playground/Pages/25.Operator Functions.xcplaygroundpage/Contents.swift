@@ -59,11 +59,41 @@ postfix func ++ ( a: inout Point) -> Point {
 p1 = Point(x: 2, y: 3)
 p2 = Point(x: 3, y: 5)
 
+p1++
+p1
+++p1
+p1
 
 
+p1.x = 7
 
+if (p1++).x == 8 {
+    print("8")
+} else {
+    print("not 8")
+}
+p1.x
 
+//упражнение на проверку нашей реализации
+p1 = Point(x: 2, y: 3)
+p2 = Point(x: 3, y: 5)
 
+p1++ + p2++
+
+p1 = Point(x: 2, y: 3)
+p2 = Point(x: 3, y: 5)
+
+++p1 + ++p2
+
+p1 = Point(x: 2, y: 3)
+p2 = Point(x: 3, y: 5)
+
+p1++ + ++p2
+
+p1 = Point(x: 2, y: 3)
+p2 = Point(x: 3, y: 5)
+
+++p1 + p2++
 
 
 
