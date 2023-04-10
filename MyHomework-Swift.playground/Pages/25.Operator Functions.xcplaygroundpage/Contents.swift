@@ -95,10 +95,25 @@ p2 = Point(x: 3, y: 5)
 
 ++p1 + p2++
 
+//%%%
+infix operator %%%
 
+func %%% ( a: inout Point, b: Point) -> Point {
+    a.x += b.y
+    a.y -= b.x
+    return a
+}
 
+p1
+p2
+p1 %%% p2
 
+var j = 5
 
+i
+j
+
+i * 5 / j
 
 
 
