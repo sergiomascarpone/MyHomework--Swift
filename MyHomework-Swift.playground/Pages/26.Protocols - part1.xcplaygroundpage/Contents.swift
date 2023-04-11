@@ -1,4 +1,11 @@
-class Student {
+
+protocol EntryName {
+    var label: String { get }
+}
+
+
+
+class Student: EntryName {
     
     var firstSname: String
     var lastName: String
@@ -11,14 +18,29 @@ class Student {
         self.firstSname = firstName
         self.lastName = lastName
     }
+    var label: String {
+        return fullName
+    }
 }
 
-class Cow {
+class Animal {
+    
+}
+
+class Cow: Animal, EntryName {
     var name: String?
+    
+    var label: String {
+        return name ?? "a cow"
+    }
 }
 
-struct Grass {
+struct Grass: EntryName {
     var type: String
+    
+    var label: String {
+        return "Grass " + type
+    }
 }
 
 let student1 = Student(firstName: "Bob", lastName: "Saddy")
@@ -32,10 +54,12 @@ let cow2 = Cow()
 let grass1 = Grass(type: "Bermuda")
 let grass2 = Grass(type: "Marshall")
 
-var array: [Any] =
+var array: [EntryName] =
 [cow1, student1, grass2, cow2, student3, grass1, student2]
 
+/*
 for value in array {
+    
     if let grass = value as? Grass {
         print(grass.type)
     } else if let student = value as? Student {
@@ -43,7 +67,7 @@ for value in array {
     } else if let cow = value as? Cow {
         print(cow.name ?? "a cow")
     }
-    
+     
     
      switch value {
      case let grass as Grass: print(grass.type)
@@ -51,9 +75,15 @@ for value in array {
      case let cow as Cow: print(cow.name ?? "a cow")
      default: break
      }
-     
-}
+ }*/
 
+func printFarm(array: [EntryName]) {
+    
+    for value in array {
+        print(value.label)
+    }
+}
+printFarm(array: array)
 
 
 
