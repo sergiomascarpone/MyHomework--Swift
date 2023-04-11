@@ -1,5 +1,10 @@
+import Foundation
+protocol Priority {
+    var order: Int { get }
+}
 
-protocol EntryName {
+
+protocol EntryName : Priority {
     var label: String { get }
 }
 
@@ -21,6 +26,8 @@ class Student: EntryName {
     var label: String {
         return fullName
     }
+    
+    let order = 1
 }
 
 class Animal {
@@ -33,6 +40,8 @@ class Cow: Animal, EntryName {
     var label: String {
         return name ?? "a cow"
     }
+    
+    let order = 2
 }
 
 struct Grass: EntryName {
@@ -41,6 +50,8 @@ struct Grass: EntryName {
     var label: String {
         return "Grass " + type
     }
+    
+    let order = 3
 }
 
 let student1 = Student(firstName: "Bob", lastName: "Saddy")
@@ -54,8 +65,6 @@ let cow2 = Cow()
 let grass1 = Grass(type: "Bermuda")
 let grass2 = Grass(type: "Marshall")
 
-var array: [EntryName] =
-[cow1, student1, grass2, cow2, student3, grass1, student2]
 
 /*
 for value in array {
@@ -77,13 +86,28 @@ for value in array {
      }
  }*/
 
-func printFarm(array: [EntryName]) {
+func printFarm(`var` array: [EntryName]) {
+    
+    
+    
+    array.sort({a, b in
+        if a.order == b.order {
+            return a.label.lowercased(with: String) < b.label.lowercased(with: String)
+        } else {
+            return a.order < b.order
+        }
+    })
     
     for value in array {
         print(value.label)
     }
 }
-printFarm(array: array)
+
+
+var array: [EntryName] =
+[cow1, student1, grass2, cow2, student3, grass1, student2]
+
+printFarm(var: array)
 
 
 
