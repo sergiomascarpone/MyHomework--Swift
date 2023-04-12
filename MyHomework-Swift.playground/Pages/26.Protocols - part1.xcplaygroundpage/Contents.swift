@@ -84,7 +84,7 @@ for value in array {
      case let cow as Cow: print(cow.name ?? "a cow")
      default: break
      }
- }*/
+ }
 
 func printFarm(`var` array: [EntryName]) {
     
@@ -108,7 +108,7 @@ var array: [EntryName] =
 [cow1, student1, grass2, cow2, student3, grass1, student2]
 
 printFarm(var: array)
-
+ */
 
 
 
