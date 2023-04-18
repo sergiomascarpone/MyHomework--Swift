@@ -70,3 +70,67 @@ intArray.max()
 stringArray = ["A", "AB", "C", "B", "BA", "0", "7"]
 stringArray.min()
 stringArray.max()
+
+// 7.Homework - Dictionary.
+// Задание 1. Создать dictionary как журнал студентов, где ключ это имя и фамилия, а значение оценка. В журнале сразу есть отметки, затем нужно повысить оценку нескольким существующим студентам, затем некоторые студенты были отчислены. Посчитать общий бал группы и средний бал группы.
+var dictExam = ["Sergio Mascarpone" : 2,
+                "Alexey Varlamov" : 3,
+                "Egor Takoy" : 4,
+                "Andrey Pavlov" : 3]
+
+dictExam.updateValue(5, forKey: "Sergio Mascarpone")
+dictExam["Alexey Varlamov"] = 4
+
+dictExam.removeValue(forKey: "Andrey Pavlov")
+dictExam["Egor Takoy"] = nil
+
+var sum = 0
+var average : Double = 0
+
+dictExam.values
+for value in dictExam.values {
+    sum += value
+}
+
+average = Double(sum)/Double(dictExam.count)
+
+print("Common sum of point: \(sum),\nGrade point average: \(average)")
+
+// Задание 2. Создать dictionary дней в месяцах, где месяц это ключ, а количество дней - значение. Вывести dictionary на экран с помощью цикла и тюпла, затем вывести на экран с помощью цикла, проходясь по ключам
+let days = [31, 28, 31, 30, 31, 30, 31, 30, 31, 31, 30, 31]
+let nameMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"]
+var dictMonth : [String:Int] = [:]
+
+for i in 0..<nameMonth.count {
+    dictMonth[nameMonth[i]] = days[i]
+}
+
+for (key,value) in dictMonth {
+    print(key,"-",value)
+}
+for key in dictMonth.keys {
+    if let value = dictMonth[key] {
+        print("\(key) - \(value)")
+    }
+}
+
+// Задание 3. Созать dictionary доска шахмат, где ключ это адрес ячейки (А1, А2 ...), а значение - это булевое знаечние ( true - белый цвет ячейки, false - черный цвет ячейки). Для создания dictionary нужно использовать массив букв от "А" до "H". Для каждой буквы должен быть отдельный цикл. Нужно использовать цикл в цикле для того, чтобы заполнить значения dictionary
+var pointDict : [String:Bool] = [:]
+
+let letters = "ABCDEFGH"
+let seriesOfLetters = Array(letters)
+
+for (item, value) in
+        seriesOfLetters.enumerated() {
+    //print(item+1,value)
+    for (i,_) in seriesOfLetters.enumerated() {
+        //print(i,v)
+        let str = String(value) + String(i+1)
+        if (i+item)%2 == 0 {
+            pointDict[str] = false
+        } else {
+            pointDict[str] = true
+        }
+    }
+}
+print(pointDict)

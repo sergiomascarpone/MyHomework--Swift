@@ -136,7 +136,104 @@ let anotherDictionaryFromArray = intArray.reduce(into: [Int: String]()) { partia
 }
 print(anotherDictionaryFromArray)
 
+// 6.Homework - Collection Types.
+// Задание 1:
+// 1. Создать массив с 12 элементами, каждый элемент - число дней в месяце.Вывести весь массив
+// 2. Создать втрой массив с названиями месяцев и вывести на экран название + количество дней в месяце
+// 3. Массив тюплов (название + количество дней). Так же вывести
+// 4. Вывести в обратном порядке массив тюплов
+// 5. Посчитать сколько дней от начала года до дня рождения используя массив
+let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+let nameMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "Semptember", "October", "November", "December"]
 
+for item in days {
+    print(item)
+}
+
+for i in 0..<nameMonth.count {
+    print(nameMonth[i], "-", days[i])
+}
+
+var tupleArray = [(String, Int)]()
+
+for i in 0..<nameMonth.count {
+    tupleArray.append((nameMonth[i],days[i]))
+}
+
+for item in tupleArray {
+    print(item)
+}
+
+for index in stride(from: tupleArray.count - 1, through: 0, by: -1) {
+    print(tupleArray[index])
+}
+
+let myBirthday = (day: 1, mouth: "April")
+
+var daysToBirthday = 0
+
+for item in tupleArray {
+    if item.0 == myBirthday.mouth {
+        daysToBirthday += myBirthday.day - 1
+        break
+    } else {
+        daysToBirthday += item.1
+    }
+}
+print("Days from January to my Birthday",daysToBirthday)
+
+// Задание 2:
+//1. Создать массив опциональных integer  и заполнить его константами строковыми и в цикле посчиать и вывести сумму 3-мя способами: используя optional binding, forced unwrapping, оператор "??" (nil-coalescing operator)
+var arrayOptInt = [Int?] ()
+
+let firstConst = "125"
+let secondConst = "3 years"
+let thirsConst = String()
+let fourthConst = "25"
+let fifthConst = "150"
+
+arrayOptInt.append(Int(firstConst))
+arrayOptInt.append(Int(secondConst))
+arrayOptInt.append(Int(thirsConst))
+arrayOptInt.append(Int(fourthConst))
+arrayOptInt.append(Int(fifthConst))
+
+var optSum = 0
+
+// optional binding
+for item in arrayOptInt {
+    if let i = item {
+        optSum += i
+    }
+}
+
+optSum = 0
+
+// forced unwrapping
+
+for item in arrayOptInt {
+    if item != nil {
+        optSum += item!
+    }
+}
+
+optSum = 0
+
+for item in arrayOptInt {
+    optSum += item ?? 0
+}
+
+print("Sum of optional integer array:", optSum)
+
+// Задание 3: 1. Создать строку - алфавит. Создать второй массив - пустой массив строк. Пройтись циклом по массиву символов, заполняя массив строк так, чтобы получился алфавит с конца.
+let mas : [Character] = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+let empty = [String]()
+let masNo = String(mas)
+for i in 0..<mas.count {
+    let k = (mas.count - 1) - i
+    
+    print (mas[k])
+}
 
 
 

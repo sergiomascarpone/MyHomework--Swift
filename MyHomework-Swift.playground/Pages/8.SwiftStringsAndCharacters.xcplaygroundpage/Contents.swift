@@ -110,3 +110,45 @@ let attributes: [NSAttributedString.Key: Any] = [
 let attributedString = NSAttributedString(string: "Touches: 0", attributes: attributes)
 touchLabel.attributedText = attributedString
  */
+
+
+// 5.Homework - Strings.
+// Задание 1: Нужно создать 5 переменных строковых, где какие-то переменные будут цифрами, а какие-то нет. И найти сумму этих переменных различая nil оператором "??". Так же вывести строку, где видно процесс сложения двумя способами: через интерполяцию строк и конкатанацию
+var firstStr = "Anton"
+var twoStr = "30"
+var threeStr = "New-York"
+var fourStr = "66"
+var fifthStr = "Dallas"
+
+var sum = Int(firstStr) ?? 0
+sum = Int(twoStr) ?? 0
+sum = Int(threeStr) ?? 0
+sum = Int(fourStr) ?? 0
+sum = Int(fifthStr) ?? 0
+
+print("\(Int(firstStr)) + \(Int(twoStr)!) + \(Int(threeStr)) + \(Int(fourStr)!) + \(Int(fifthStr)) = \(sum)")
+
+let concatStr = "\(Int(firstStr))" + " + \(Int(twoStr)!)" + " + \(Int(threeStr))" + " + \(Int(fourStr)!)" + " + \(Int(fifthStr))" + " + = \(sum)"
+print(concatStr)
+
+// Задание 2: Выбрать 5 классных симоволов, вывести ее и посчитать количество символов
+let omgSimbol = "\u{1F62E}"
+let worriedFaceSimbol = "\u{1F61F}"
+let confusedFaceSimbol = "\u{1F615}"
+let nerdFaceSimbol = "\u{1F913}"
+let partyingFaceSimbol = "\u{1F973}"
+
+let amazingSimbols = omgSimbol + worriedFaceSimbol + confusedFaceSimbol + nerdFaceSimbol + partyingFaceSimbol
+amazingSimbols.count
+
+// Задание 3: Создать строку из английского алфавита (маленькие буквы). Используя цикл найти индекс буквы в алфавите
+let alphabet = "abcdefghijklmnopqrstuvwxvyz"
+var findChar: Character = "s"
+var index = 1
+for i in alphabet {
+    if i == findChar {
+        print(i, "is", index)
+    } else {
+        index += 1
+    }
+}
