@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 
-
 import Foundation
+
 /*
 let array = ["a", "b", "c"]
 array[0]
@@ -130,19 +130,20 @@ class TicTacToe {
         case horizontal = "\u{0336}"
         case diagonal = "\u{0338}"
     }
-    private var stateGame: TicTacState
-    private var rowsAndColumns: Int = 0
     
-    private var field: [[TicTacValue]] = []
+    private var stateGame: TicTacState
+    private var rowsAndColumns: Int
+    
+    private var field: [[TicTacValue]]
     
     private func printField() {
         
         switch stateGame {
         case .winZiro(how: let h, were: let w):
-            print("Zero won!")
+            print("Zero win!")
             winPrintField(typeWinLine: h, startPosition: w)
         case .winCross(how: let h, were: let w):
-            print("Cross won!")
+            print("Cross win!")
             winPrintField(typeWinLine: h, startPosition: w)
         default:
             for i in 0..<field.count {
@@ -229,7 +230,8 @@ class TicTacToe {
             }
         }
     }
-    private func checkWin() {
+    
+    private func checkWin() -> TicTacState {
         
         //For check rows
         var sumRows = 0
@@ -269,19 +271,21 @@ class TicTacToe {
                 //Fil in Diagonal from the right corner
                 if i + j == field.count - 1 {
                     sumDiagonalRightCorner += field[i][j].rawValue
-                    sumDiagonalRightCorner *= field[i][j].rawValue
+                    multDiagonalRightCorner *= field[i][j].rawValue
                 }
                 if field[i][j] == .empty {isHaveEmptyCell = true}
             }
             
             //Check rows
             if multRows == 1 {return .winCross(how: .horizontal, were: i)}
-            if sumRows == 0 {return .winZiro(how: horizontal, were: i)}
+            if sumRows == 0 {return .winZiro(how: .horizontal, were: i)}
+            multRows = 1
+            sumRows = 0
         }
         
         //Check columns
         for i in 0..<field.count {
-            if arraySumColoms[i] == 0 {return .winZiro(how: vertical, were: i)}
+            if arraySumColoms[i] == 0 {return .winZiro(how: .vertical, were: i)}
             if arrayMultColoms[i] == 1 {return .winCross(how: .vertical, were: i)}
         }
         
@@ -290,12 +294,13 @@ class TicTacToe {
         if sumDiagonalLeftCorner == 0 {return .winZiro(how: .diagonal, were: 0)}
         if multDiagonalLeftCorner == 1 {return .winCross(how: .diagonal, were: 0)}
         if sumDiagonalRightCorner == 0 {return .winZiro(how: .diagonal, were: field.count - 1)}
-        if multDiagonalRightCorner == 1 {return .winCross(how: diagonal, were: field.count - 1)}
+        if multDiagonalRightCorner == 1 {return .winCross(how: .diagonal, were: field.count - 1)}
         
         //Check draw
         if !isHaveEmptyCell {return .draw}
         
         return .gameInProcess
+    }
         
         private func checkBound(_ row: Int, _ column: Int) -> Bool {
             if (0..<rowsAndColumns).contains(row) && (0..<rowsAndColumns).contains(column) {
@@ -303,9 +308,14 @@ class TicTacToe {
             } else {return false}
         }
         
-        subsscript(row: int, column: int) -> TicTacValue? {
+        subscript(row: Int, column: Int) -> TicTacValue? {
             get {
-                if !checkBound(row,column) {return}
+                if checkBound(row,column) {return field[row][column]}
+                return nil
+            }
+            
+            set {
+                if !checkBound(row, column) {return}
                 switch stateGame {
                 case .gameInProcess:
                     //Set value
@@ -323,6 +333,7 @@ class TicTacToe {
                 }
             }
         }
+    
         init (rowsAndColumns: Int = 3) {
             self.rowsAndColumns = rowsAndColumns
             self.field = Array(repeating: Array(repeating: TicTacValue.empty, count: self.rowsAndColumns), count: self.rowsAndColumns)
@@ -330,7 +341,18 @@ class TicTacToe {
             self.printField()
         }
     }
-}
+
+var tictactoe = TicTacToe()
+
+tictactoe[0,0] = .ziro
+tictactoe[2,0] = .cross
+tictactoe[0,1] = .ziro
+tictactoe[0,2] = .cross
+tictactoe[1,1] = .ziro
+tictactoe[2,1] = .cross
+tictactoe[2,2] = .cross
+
+
 
 // Морсĸой бой (Тяжелый уровень)
 // 1. Создайте тип ĸорабль, ĸоторый будет представлять собой прямоугольниĸ. В нем может быть внутренняя одномерная система ĸоординат (попахивает сабсĸриптом). Корабль должен принимать выстрелы по лоĸальным ĸоординатам и вычислять ĸогда он убит
