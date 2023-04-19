@@ -1,7 +1,8 @@
 //: [Previous](@previous)
 
-import Foundation
 
+import Foundation
+/*
 let array = ["a", "b", "c"]
 array[0]
 array[1]
@@ -100,6 +101,7 @@ field["a", 5]
 // причем вы должны следить за тем, чтобы программа не падала если будет введен не существующий ряд или столбец.
 // 3. Таĸже следите за тем, чтобы нельзя было устанавливать ĸрестиĸ либо нолиĸ туда, где они уже что-то есть. Добавьте метод очистĸи поля.
 // 4. Если хотите, добавте алгоритм, ĸоторый вычислит победителя
+*/
 
 class TicTacToe {
     enum TicTacValue: Int {
@@ -129,18 +131,206 @@ class TicTacToe {
         case diagonal = "\u{0338}"
     }
     private var stateGame: TicTacState
-    private var rowsAndColumns: Int
+    private var rowsAndColumns: Int = 0
     
-    private var field: [[TicTacValue]]
+    private var field: [[TicTacValue]] = []
     
     private func printField() {
         
         switch stateGame {
-            case 
+        case .winZiro(how: let h, were: let w):
+            print("Zero won!")
+            winPrintField(typeWinLine: h, startPosition: w)
+        case .winCross(how: let h, were: let w):
+            print("Cross won!")
+            winPrintField(typeWinLine: h, startPosition: w)
+        default:
+            for i in 0..<field.count {
+                for j in 0..<field[0].count {
+                    var simbol = field[i][j].returnSimbol()
+                    
+                    if !(j == field.count - 1) {
+                        simbol += "|"
+                    }
+                    print(simbol, terminator: "")
+                }
+                print()
+                if !(i == field.count - 1) {
+                    print(String(repeating: "-", count: field[0].count*2 - 1))
+                }
+            }
+        }
+        print()
+    }
+    private func winPrintField(typeWinLine: WinTicTacVailue, startPosition: Int) {
+        var winSimbol = typeWinLine.rawValue
+        
+        switch typeWinLine {
+        case .vertical:
+            for i in 0..<field.count {
+                for j in 0..<field[0].count {
+                    var simbol = field[i][j].returnSimbol()
+                    
+                    if j == startPosition {
+                        simbol += winSimbol
+                    }
+                    
+                    if !(j == field.count - 1) {
+                        simbol += "|"
+                    }
+                    print(simbol, terminator: "")
+                }
+                print()
+                if !(i == field.count - 1) {
+                    print(String(repeating: "-", count: field[0].count*2 - 1))
+                }
+            }
+        case .horizontal:
+            for i in 0..<field.count {
+                for j in 0..<field[0].count {
+                    var simbol = field[i][j].returnSimbol()
+                    
+                    if i == startPosition {
+                        simbol = "\(simbol)\(winSimbol)"
+                    }
+                    
+                    if !(j == field.count - 1) {
+                        simbol += "|"
+                    }
+                    print(simbol, terminator: "")
+                }
+                print()
+                if !(i == field.count - 1) {
+                    print(String(repeating: "-", count: field[0].count*2 - 1))
+                }
+            }
+        case .diagonal:
+            for i in 0..<field.count {
+                for j in 0..<field[0].count {
+                    var simbol = field[i][j].returnSimbol()
+                    
+                    if startPosition == 0 {
+                        if i == j {simbol += winSimbol}
+                    }
+                    
+                    if startPosition == field.count - 1 {
+                        if i + j == field.count - 1 {simbol += winSimbol}
+                    }
+                    
+                    if !(j == field.count - 1) {
+                        simbol += "|"
+                    }
+                    print(simbol, terminator: "")
+                }
+                print()
+                if !(i == field.count - 1) {
+                    print(String(repeating: "-", count: field[0].count*2 - 1))
+                }
+            }
+        }
+    }
+    private func checkWin() {
+        
+        //For check rows
+        var sumRows = 0
+        var multRows = 1
+        
+        //check columns
+        var arraySumColoms = Array(repeating: 0, count: field.count)
+        var arrayMultColoms = Array(repeating: 1, count: field.count)
+        
+        //For check diagonals
+        var sumDiagonalRightCorner = 0
+        var multDiagonalRightCorner = 1
+        
+        var sumDiagonalLeftCorner = 0
+        var multDiagonalLeftCorner = 1
+        
+        //For check empty
+        var isHaveEmptyCell = false
+        
+        for i in 0..<field.count {
+            for j in 0..<field[0].count {
+                
+                //Fill in row
+                multRows *= field[i][j].rawValue
+                sumRows += field[i][j].rawValue
+                
+                //Fill in column
+                arraySumColoms[j] += field[i][j].rawValue
+                arrayMultColoms[j] *= field[i][j].rawValue
+                
+                //Fill in diagonal from the left corner
+                if i == j {
+                    sumDiagonalLeftCorner += field[i][j].rawValue
+                    sumDiagonalLeftCorner *= field[i][j].rawValue
+                }
+                
+                //Fil in Diagonal from the right corner
+                if i + j == field.count - 1 {
+                    sumDiagonalRightCorner += field[i][j].rawValue
+                    sumDiagonalRightCorner *= field[i][j].rawValue
+                }
+                if field[i][j] == .empty {isHaveEmptyCell = true}
+            }
+            
+            //Check rows
+            if multRows == 1 {return .winCross(how: .horizontal, were: i)}
+            if sumRows == 0 {return .winZiro(how: horizontal, were: i)}
+        }
+        
+        //Check columns
+        for i in 0..<field.count {
+            if arraySumColoms[i] == 0 {return .winZiro(how: vertical, were: i)}
+            if arrayMultColoms[i] == 1 {return .winCross(how: .vertical, were: i)}
+        }
+        
+        //Check diagonals (right, left corner)
+        
+        if sumDiagonalLeftCorner == 0 {return .winZiro(how: .diagonal, were: 0)}
+        if multDiagonalLeftCorner == 1 {return .winCross(how: .diagonal, were: 0)}
+        if sumDiagonalRightCorner == 0 {return .winZiro(how: .diagonal, were: field.count - 1)}
+        if multDiagonalRightCorner == 1 {return .winCross(how: diagonal, were: field.count - 1)}
+        
+        //Check draw
+        if !isHaveEmptyCell {return .draw}
+        
+        return .gameInProcess
+        
+        private func checkBound(_ row: Int, _ column: Int) -> Bool {
+            if (0..<rowsAndColumns).contains(row) && (0..<rowsAndColumns).contains(column) {
+                return true
+            } else {return false}
+        }
+        
+        subsscript(row: int, column: int) -> TicTacValue? {
+            get {
+                if !checkBound(row,column) {return}
+                switch stateGame {
+                case .gameInProcess:
+                    //Set value
+                    if let unwrappedNewValue = newValue {
+                        if unwrappedNewValue == .empty {return}
+                        if field[row][column] != .empty {return}
+                        field[row][column] = unwrappedNewValue
+                        
+                        stateGame = checkWin()
+                        printField()
+                    }
+                default:
+                    print("Game over!")
+                    return
+                }
+            }
+        }
+        init (rowsAndColumns: Int = 3) {
+            self.rowsAndColumns = rowsAndColumns
+            self.field = Array(repeating: Array(repeating: TicTacValue.empty, count: self.rowsAndColumns), count: self.rowsAndColumns)
+            self.stateGame = .gameInProcess
+            self.printField()
         }
     }
 }
-
 
 // Морсĸой бой (Тяжелый уровень)
 // 1. Создайте тип ĸорабль, ĸоторый будет представлять собой прямоугольниĸ. В нем может быть внутренняя одномерная система ĸоординат (попахивает сабсĸриптом). Корабль должен принимать выстрелы по лоĸальным ĸоординатам и вычислять ĸогда он убит
