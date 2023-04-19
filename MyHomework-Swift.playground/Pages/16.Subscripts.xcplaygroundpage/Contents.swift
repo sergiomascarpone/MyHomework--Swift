@@ -108,7 +108,35 @@ class TicTacToe {
         case empty
         
         func returnSimbol() -> String {
-            
+            switch self {
+            case .ziro: return "\u{25CB}"
+            case .cross: return "x"
+            case .empty: return " "
+            }
+        }
+    }
+    
+    enum TicTacState {
+        case gameInProcess
+        case winZiro(how: WinTicTacVailue, were: Int)
+        case winCross(how: WinTicTacVailue, were: Int)
+        case draw
+    }
+    
+    enum WinTicTacVailue: String {
+        case vertical = "\u{20D2}"
+        case horizontal = "\u{0336}"
+        case diagonal = "\u{0338}"
+    }
+    private var stateGame: TicTacState
+    private var rowsAndColumns: Int
+    
+    private var field: [[TicTacValue]]
+    
+    private func printField() {
+        
+        switch stateGame {
+            case 
         }
     }
 }
