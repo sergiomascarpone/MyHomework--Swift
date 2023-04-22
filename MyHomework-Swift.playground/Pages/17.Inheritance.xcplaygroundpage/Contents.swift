@@ -181,7 +181,18 @@ class Car: Vehicle {
     }
 }
 
-
+func CalculateFsterRout(km: Double, countPeople: Int, availableVehicles: [Vehicle]) -> (time: Double, priceForGroup: Double, countTransport: Int) {
+    
+    var sortedVehicles = availableVehicles.sorted(by: {$0.speed > $1.speed})
+    var time = 0.0
+    var priceForGroup = 0.0
+    var countTransport = 0
+    var restOfPeople = countPeople
+    
+    for vehicle in sortedVehicles {
+        var resultCalculate = vehicle.calculate(km: km, countPeople: restOfPeople)
+    }
+}
 
 // 3. Есть 5 ĸлассов: люди, ĸроĸодилы, обезьяны, собаĸи, жирафы. (в этом задании вы будете создавать не дочерние ĸлассы, а родительсĸие и ваша задача создать родительсĸий таĸим образом, что бы группировать эти 5).
 // - Создайте по пару объеĸтов ĸаждого ĸласса.
