@@ -153,6 +153,20 @@ class Plan: Vehicle {
     }
 }
 
+class Ship: Vehicle {
+    override var speed: Double {
+        return 43
+    }
+    
+    override var numberPeople: Int {
+        return 900
+    }
+    
+    override var priceForPerson: Double {
+        return 7053.3/1000.0
+    }
+}
+
 class Helicopter: Vehicle {
     override var speed: Double {
         return 280
@@ -181,19 +195,35 @@ class Car: Vehicle {
     }
 }
 
-func CalculateFsterRout(km: Double, countPeople: Int, availableVehicles: [Vehicle]) -> (time: Double, priceForGroup: Double, countTransport: Int) {
+func CalculateFsterRout(km: Double, countPeople: Int, availableVehicles: [Vehicle]) -> (time: Double, priceForGroup: Double, countTransports: Int) {
     
     var sortedVehicles = availableVehicles.sorted(by: {$0.speed > $1.speed})
     var time = 0.0
     var priceForGroup = 0.0
-    var countTransport = 0
+    var countTransports = 0
     var restOfPeople = countPeople
     
     for vehicle in sortedVehicles {
         var resultCalculate = vehicle.calculate(km: km, countPeople: restOfPeople)
+        time += resultCalculate.time
+        priceForGroup += resultCalculate.priceForGroup
+        countTransports += 1
+        restOfPeople = resultCalculate.restOfPeople
+        if restOfPeople == 0 {
+            break
+        }
     }
+    return (time.rounded(), priceForGroup.rounded(), countTransports)
 }
 
+let plane = Plan()
+let ship = Ship()
+let helicopter = Helicopter()
+let car = Car()
+let availableVihicles = [plane, ship, helicopter, car]
+
+let result = CalculateFsterRout(km: 9000, countPeople: 605, availableVehicles: availableVihicles)
+print("ВРЕМЯ в пути \(result.time) часа, цена путешествия для группы из 605 человек \(result.priceForGroup) рублей, количество транспортировок - \(result.countTransports)")
 // 3. Есть 5 ĸлассов: люди, ĸроĸодилы, обезьяны, собаĸи, жирафы. (в этом задании вы будете создавать не дочерние ĸлассы, а родительсĸие и ваша задача создать родительсĸий таĸим образом, что бы группировать эти 5).
 // - Создайте по пару объеĸтов ĸаждого ĸласса.
 // - Посчитайте присмыĸающихся (создайте масив, поместите туда присмыĸающихся и сĸажите сĸольĸо в нем объеĸтов)
