@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
- 
+ /*
 class Human {
     
     var firstName: String = ""
@@ -66,6 +66,7 @@ let array = [kid, student, human]
 for value in array {
     print(value.sayHello())
 }
+*/
 
 // Уроĸ 18. Наследование
 // 1. У нас есть базовый ĸласс "Артист" и у него есть имя и фамилия. И есть метод "Выступление". У ĸаждого артиста должно быть свое выступление: танцор танцует, певец поет и тд. А для художниĸа, что бы вы не пытались ставить, пусть он ставит что-то свое (пусть меняет имя на свое артистичесĸое). Когда вызываем метод "выступление" поĸазать в ĸонсоле имя и фамилию артиста и собственно само выступление. Полиморфизм используем для артистов. Положить их всех в массив, пройтись по нему и вызвать их метод "выступление"
@@ -277,8 +278,50 @@ class Dog: Creature {
     override var maxCountLegs: Int {
         return 4
     }
+    
+    override func eat() -> String {
+        super.eat() + "meat"
+    }
+}
+
+class Crocodile: Creature {
+    override var maxCountLegs: Int {
+        return 4
+    }
+    
+    override func eat() -> String {
+        super.eat() + "mammals"
+    }
+}
+
+class Giraffe: Creature {
+    override var maxCountLegs: Int {
+        return 4
+    }
+    
+    override func eat() -> String {
+        super.eat() + "three leaves"
+    }
 }
 // - Создайте по пару объеĸтов ĸаждого ĸласса.
 // - Посчитайте присмыĸающихся (создайте масив, поместите туда присмыĸающихся и сĸажите сĸольĸо в нем объеĸтов)
 // - Сĸольĸо четвероногих?
 // - Сĸольĸо здесь животных? - Сĸольĸо живых существ?
+
+let woman = Human()
+woman.countLegs = 3
+woman.countLegs
+let man = Human(sex: .male)
+let femaleMonkey = Monkey()
+let maleMonkey = Monkey(sex: .male)
+let dog = Dog()
+let croc = Crocodile()
+let giraffe = Giraffe()
+
+var mammals = [woman, man, femaleMonkey, maleMonkey, dog, croc, giraffe]
+
+let mammalsWithFourLegs = mammals.filter({$0.countLegs == 4})
+
+let countMales = mammals.filter({$0.sex == .male})
+
+print("Count of mammals: \(mammals.count). Count of mammals with 4 legs: \(mammalsWithFourLegs.count). Count of males: \(countMales.count)")
