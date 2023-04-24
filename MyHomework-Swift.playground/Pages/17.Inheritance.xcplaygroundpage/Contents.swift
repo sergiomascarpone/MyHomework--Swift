@@ -225,6 +225,59 @@ let availableVihicles = [plane, ship, helicopter, car]
 let result = CalculateFsterRout(km: 9000, countPeople: 605, availableVehicles: availableVihicles)
 print("ВРЕМЯ в пути \(result.time) часа, цена путешествия для группы из 605 человек \(result.priceForGroup) рублей, количество транспортировок - \(result.countTransports)")
 // 3. Есть 5 ĸлассов: люди, ĸроĸодилы, обезьяны, собаĸи, жирафы. (в этом задании вы будете создавать не дочерние ĸлассы, а родительсĸие и ваша задача создать родительсĸий таĸим образом, что бы группировать эти 5).
+class Creature {
+    enum Sex {
+        case female, male
+    }
+    var countLegs: Int = 0 {
+        didSet {
+            countLegs = min(countLegs, maxCountLegs)
+        }
+    }
+    
+    var maxCountLegs : Int {
+        return 0
+    }
+    
+    var countChildren = 0
+    var sex: Sex
+    
+    func eat() -> String {
+        "\(Self.self) usuallly eats: "
+    }
+    
+    init(sex: Sex = .female) {
+        self.sex = sex
+        self.countLegs = maxCountLegs
+    }
+}
+
+class Human: Creature {
+    
+    override var maxCountLegs: Int {
+        return 2
+    }
+    
+    override func eat() -> String {
+        super.eat() + "everything"
+    }
+}
+
+class Monkey: Creature {
+    override var maxCountLegs: Int {
+        return 2
+    }
+    
+    override func eat() -> String {
+        super.eat() + "fruits"
+    }
+}
+
+class Dog: Creature {
+    override var maxCountLegs: Int {
+        return 4
+    }
+}
 // - Создайте по пару объеĸтов ĸаждого ĸласса.
 // - Посчитайте присмыĸающихся (создайте масив, поместите туда присмыĸающихся и сĸажите сĸольĸо в нем объеĸтов)
 // - Сĸольĸо четвероногих?
