@@ -151,12 +151,19 @@ class Doctor: Student {
         self.fieldOfStudy = fieldOfStudy
     }
      */
+    convenience init(firstName: String) {
+        self.init(fieldOfStudy: "Math")
+        self.age = 38
+        self.firstName = firstName
+    }
 }
 
 
 //let s1 = Student()
 
 let d1 = Doctor(firstName: "AAA")
+
+d1.age
 
 let d2 = Doctor()
 
