@@ -106,10 +106,19 @@ class Student: Human {
         self.lastName = lastNAme
         //designated initializator родительского класса
         super.init(weight: 0, age: 0)
+        self.weight = 50
+        test()
+    }
+    
+    convenience init(firstName: String) {
+        self.init(firstName: firstName, lastNAme: "")
+        self.age = 28
+        test()
     }
 }
 
-
+let studend1 = Student(firstName: "a")
+let student2 = Student(firstName: "a", lastNAme: "")
 
 
 
