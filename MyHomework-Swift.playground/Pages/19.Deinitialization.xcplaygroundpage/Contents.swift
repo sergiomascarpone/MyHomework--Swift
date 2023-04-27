@@ -4,11 +4,11 @@ class Human {
     var weight: Int
     var age: Int
     
-    init(weight: Int, age: Int) { //Designated Initializers
+    init(weight: Int, age: Int) { //Designated Initializator
         self.weight = weight
         self.age = age
     }
-    //Convenience Initializers
+    //Convenience Initializator
     convenience init(age: Int) {
         self.init(weight: 0, age: age)
     }

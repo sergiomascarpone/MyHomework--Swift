@@ -49,16 +49,16 @@ class Student6: Student5 {
 
 struct Student7 {
     var firstName: String
-    var lastNAme: String
+    var lastName: String
     
     init() {
         firstName = ""
-        lastNAme = ""
+        lastName = ""
     }
     
-    init(firstName: String, lastNAme: String) {
+    init(firstName: String, lastName: String) {
         self.firstName = firstName
-        self.lastNAme = lastNAme
+        self.lastName = lastName
     }
 }
 
@@ -66,7 +66,7 @@ let s1 = Student1()
 let s2 = Student2()
 let s3 = Student3(firstName: "a", lastName: "b")
 let s5 = Student5()
-let s7 = Student7(firstName: "a", lastNAme: "b")
+let s7 = Student7(firstName: "a", lastName: "b")
 
 class Human {
     var weight: Int
@@ -101,29 +101,64 @@ class Student: Human {
     var firstName: String
     var lastName: String
     
-    init(firstName: String, lastNAme: String) {
+    init(firstName: String, lastName: String) {
         self.firstName = firstName
-        self.lastName = lastNAme
+        self.lastName = lastName
         //designated initializator родительского класса
         super.init(weight: 0, age: 0)
         self.weight = 50
         test()
     }
     
+    override convenience init(weight: Int, age: Int) {
+        self.init(firstName: "")
+        self.weight = weight
+        self.age = age
+    }
+    
     convenience init(firstName: String) {
-        self.init(firstName: firstName, lastNAme: "")
+        self.init(firstName: firstName, lastName: "")
         self.age = 28
         test()
     }
 }
 
 let studend1 = Student(firstName: "a")
-let student2 = Student(firstName: "a", lastNAme: "")
+let student2 = Student(firstName: "a", lastName: "")
+
+class Doctor: Student {
+    
+    var fieldOfStudy: String
+    
+    init(fieldOfStudy: String) {
+        self.fieldOfStudy = fieldOfStudy
+        super.init(firstName: "Doctor", lastName: "House")
+    }
+    /*
+    override init(weight: Int, age: Int) {
+        self.fieldOfStudy = ""
+        super.init(weight: weight, age: age)
+    }*/
+    
+    override init(firstName: String, lastName: String) {
+        self.fieldOfStudy = "House"
+        super.init(firstName: firstName, lastName: lastName )
+    }
+    
+    /*
+    convenience init(fieldOfStudy: String) {
+        self.init(firstName: "Doctor", lastNAme: "House")
+        self.fieldOfStudy = fieldOfStudy
+    }
+     */
+}
 
 
+//let s1 = Student()
 
+let d1 = Doctor(firstName: "AAA")
 
-
+let d2 = Doctor()
 
 
 
