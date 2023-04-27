@@ -80,36 +80,110 @@ for chair in string {
     print(chair)
 }
 
-// Задание 1: сколько секунд от начала года до моего дня рождения.
-let hourseInDay = 24
-let minuteInHourse = 60
-let secondInMinute = 60
-
-var daysBeforeBirthday = 365 - 31 - 30 - 31 - 30 - 31 - 31 - 30 - 31
-
-var secondToMyBirnhday = daysBeforeBirthday * hourseInDay * minuteInHourse * secondInMinute
-
-// Задание 2: My Birthday в каком квартале родился.
-let dayQuarter1 = 31 + 28 + 31
-let dayQuarter2 = 30 + 31 + 30
-let dayQuarter3 = 31 + 31 + 30
-let dayQuarter4 = 31 + 30 + 31
-
-if daysBeforeBirthday <= dayQuarter1 {
-    print("I was born in first quarter!")
-} else if daysBeforeBirthday <= dayQuarter1 + dayQuarter2 {
-    print("I was born in second quarter!")
-} else if daysBeforeBirthday <= dayQuarter1 + dayQuarter2 + dayQuarter3 {
-    print("I was born in third qarter!")
-} else {
-    print("I was born in fourth qarter!")
-}
-
-// Задание 3: Chess указать какое поле чёрное, а какое поле черное.
-var point = (x: 1, y: 8)
-
-if (point.x + point.y) % 2 == 0 {
-    print("It`s a black point")
-} else {
-    print("It`s a white point")
-}
+/*
+ // Задание 1: сколько секунд от начала года до моего дня рождения.
+ let hourseInDay = 24
+ let minuteInHourse = 60
+ let secondInMinute = 60
+ 
+ var daysBeforeBirthday = 365 - 31 - 30 - 31 - 30 - 31 - 31 - 30 - 31
+ 
+ var secondToMyBirnhday = daysBeforeBirthday * hourseInDay * minuteInHourse * secondInMinute
+ 
+ // Задание 2: My Birthday в каком квартале родился.
+ let dayQuarter1 = 31 + 28 + 31
+ let dayQuarter2 = 30 + 31 + 30
+ let dayQuarter3 = 31 + 31 + 30
+ let dayQuarter4 = 31 + 30 + 31
+ 
+ if daysBeforeBirthday <= dayQuarter1 {
+ print("I was born in first quarter!")
+ } else if daysBeforeBirthday <= dayQuarter1 + dayQuarter2 {
+ print("I was born in second quarter!")
+ } else if daysBeforeBirthday <= dayQuarter1 + dayQuarter2 + dayQuarter3 {
+ print("I was born in third qarter!")
+ } else {
+ print("I was born in fourth qarter!")
+ }
+ 
+ // Задание 3: Chess указать какое поле чёрное, а какое поле черное.
+ var point = (x: 1, y: 8)
+ 
+ if (point.x + point.y) % 2 == 0 {
+ print("It`s a black point")
+ } else {
+ print("It`s a white point")
+ }
+ 
+ // 2.Homework - Работа с базовыми типами
+ Int8.min
+ Int8.max
+ Int16.min
+ Int16.max
+ Int32.min
+ Int32.max
+ UInt64.min
+ UInt64.max
+ Int.min
+ Int.max
+ UInt.max
+ UInt.min
+ 
+ let One = 199
+ let Two = 1.444448988
+ let Thre: Float = 12.12342
+ 
+ let Four = One + Int(Two) + Int(Three)
+ print(Four)
+ 
+ let five = Double(One) + Two + Double(Thre)
+ print(five)
+ 
+ let six = Float(One) + Float(Two) + Thre
+ print(six)
+ 
+ if Double(Four) < five {
+ print("Double точнее")
+ } else {
+ print("No")
+ }
+ 
+ 
+ let Uno = 100
+ let Duo = 1.8899477
+ let Trea: Float = 12.12546
+ 
+ let Cuatro = Uno + Int(Duo) + Int(Trea)
+ print(Cuatro)
+ let Cinqve = Double(Uno) + Duo + Double(Trea)
+ print(Cinqve)
+ let Sette = Float(Uno) + Float(Duo) + Trea
+ print(Sette)
+ 
+ if Double(Trea) < Cinqve {
+ print("Double right")
+ } else {
+ print("No")
+ }
+ 
+ 
+ let Onee = 143
+ let Twoo = 1.55998
+ let Three: Float = 12.1277
+ 
+ let Fourr = Onee + Int(Twoo) + Int(Three)
+ print(Fourr)
+ 
+ let Fivee = Double(Onee) + Twoo + Double(Three)
+ print(Fivee)
+ 
+ let sixx = Float(Onee) + Float(Twoo) + Three
+ print(sixx)
+ 
+ if Double(Fourr) < Fivee {
+ print("Double right")
+ } else {
+ print("no")
+ }
+ 
+*/

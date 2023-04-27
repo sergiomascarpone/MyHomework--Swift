@@ -80,3 +80,37 @@ print("Student name is \(lastStudent.name) age is \(lastStudent.age)")
 typealias Student = (name: StudentName, age: Int)
 var studentFromTypealias: Student = ("Steve", 24)
 print("Student name is \(studentFromTypealias.name) age is \(studentFromTypealias.age)")
+
+
+// 1.Homework
+/*
+let Name = "Sergio"
+let FirstName = "Bikov"
+let LastName = "Olegovich"
+print(FirstName, Name, LastName)
+
+let Birdthdey = 1993
+let Growth = "1.89sm"
+let Weight = "88kg"
+print(Birdthdey, Growth, Weight)
+
+
+let a = "Max"
+let b = "Fadeev"
+let c = "Astaxovich"
+print(b, a, c)
+
+let aa = "1993"
+let bb = "189sm"
+let cc = "99kg"
+print(aa, bb, cc)
+
+let Onne = "Danik"
+let Twwo = "Mokri"
+let Thrre = "Vladimirovich"
+print(Twwo, Onne, Thrre)
+
+let One1 = "1889"
+let Two2 = "169sm"
+let Thre3 = "104kg"
+print(One1, Two2, Thre3)
