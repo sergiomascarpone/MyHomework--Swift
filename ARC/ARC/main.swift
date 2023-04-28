@@ -38,7 +38,7 @@ var closure3 : (() -> ())?
 
 if playground {
     
-    var teacher = Teacher()
+    let teacher = Teacher()
     
     teacher.test2(true)
     
