@@ -76,6 +76,7 @@ secondStudentTuple.name = "Olga"
 firstStudentTuple.carNumber = "U12AD445U8"
 
 firstStudentTuple.score = 4
+secondStudentTuple.score = 5
 
 if firstStudentTuple.name != nil {
     print("Name: " + firstStudentTuple.name!)
@@ -90,14 +91,26 @@ if firstStudentTuple.carNumber != nil {
 if firstStudentTuple.score != nil {
     print("Score: \(firstStudentTuple.score!)")
 } else {
-    print("Student missed exam")
+    print("Student missed exam!")
 }
 
 
 
+if secondStudentTuple.name != nil {
+    print("Name: " + secondStudentTuple.name!)
+}
 
+if secondStudentTuple.carNumber != nil {
+    print("Car number: " + secondStudentTuple.carNumber!)
+} else {
+    print("Student doesn`t have a car!")
+}
 
-
+if secondStudentTuple.score != nil {
+    print("Score: \(secondStudentTuple.score!)")
+} else {
+    print("Student missed exam!")
+}
 
 
 
