@@ -65,15 +65,33 @@ if let message = cloneTupleClone.message {
     print("A_A_A_A_A_A!!")
 }
 
+//3
 
+var firstStudentTuple: (name: String?, carNumber: String?, score: Int?)
+var secondStudentTuple: (name: String?, carNumber: String?, score: Int?)
 
+firstStudentTuple.name = "Ivan"
+secondStudentTuple.name = "Olga"
 
+firstStudentTuple.carNumber = "U12AD445U8"
 
+firstStudentTuple.score = 4
 
+if firstStudentTuple.name != nil {
+    print("Name: " + firstStudentTuple.name!)
+}
 
+if firstStudentTuple.carNumber != nil {
+    print("Car number: " + firstStudentTuple.carNumber!)
+} else {
+    print("Student doesn`t have a car")
+}
 
-
-
+if firstStudentTuple.score != nil {
+    print("Score: \(firstStudentTuple.score!)")
+} else {
+    print("Student missed exam")
+}
 
 
 
