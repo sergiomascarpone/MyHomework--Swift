@@ -1,5 +1,24 @@
 import UIKit
 
+var x = Int("123")
+
+if let unwrapedX = x {
+    print(unwrapedX)
+} else {
+    
+}
+
+// Int != Int?
+if x != nil {
+    
+}
+
+// true && true
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+
 // ? - Optional type
 let passcode = 1234
 var enteredPasscode = 4321
@@ -57,7 +76,7 @@ if let c {
     print("B c  нет значения!")
 }
 
-// Force unwrap ! - явная не безопасная распаковка.
+// Force unwrap ! - явная небезопасная распаковка.
 if errorString != nil {
     print(errorString!)
 }
@@ -84,13 +103,19 @@ print(messageString!)
 
 // implicity unwrap -  неявная небезопасная распаковка.
 
+// guard - разворачивание применяется только с функциями
+func ff() {
+    guard var e = Int("fjdsndf") else {
+        return }
+    e += 1
+}
+
 // ?? - значение по умолчанию.
 let d: Int = 2
 let e: Int? = nil
 let f: Int? = nil
 
-let g = e ?? 0
-
+let g = Int("123") ?? 0
 
 let oneInt: Int? = Int("1")
 var oneOrTwo: Int = oneInt ?? 2
