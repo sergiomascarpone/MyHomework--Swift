@@ -4,6 +4,14 @@ import Foundation
 
 var greeting = "Hello, playground"
 
+var threeDoubles = Array(repeating: 0.0, count: 5)
+let anotherDouble = Array(repeating: 2.8, count: 4)
+var sixDouble = threeDoubles + anotherDouble
+
+anotherDouble.count
+threeDoubles.count
+anotherDouble.capacity
+
 // DICTIONARY - словари, неупорядоченая коллекция
 var stringDictionary: [String: Int] = ["three": 3, "four": 4]
 var anotherStringDictionary: Dictionary<String, Int> = [:]
