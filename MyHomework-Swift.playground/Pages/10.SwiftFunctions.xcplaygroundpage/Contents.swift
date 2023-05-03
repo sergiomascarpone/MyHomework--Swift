@@ -18,6 +18,7 @@ enum CompassPoint: String {
 var value = CompassPoint.north
 
 print(value)
+//
 
 //varFunc = { return $0 + $1 }
 //
