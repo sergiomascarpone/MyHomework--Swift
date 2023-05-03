@@ -1,5 +1,22 @@
 
 import UIKit
+
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+
+var varFunc = addTwoInts
+
+varFunc = { a, b  in
+    return a + b
+}
+
+varFunc = { return $0 + $1 }
+
+varFunc = { $0 + $1 }
+
+
+
 /*
 func calculateMoney(wallet: [Int], type: Int) -> (total: Int, count: Int) {
     
