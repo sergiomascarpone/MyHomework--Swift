@@ -5,19 +5,27 @@ func addTwoInts(_ a: Int, _ b: Int) -> Int {
     return a + b
 }
 
-var varFunc = addTwoInts
+var varFunc: (Int, Int, Int, Int) -> Void
 
-varFunc = { a, b  in
-    return a + b
+varFunc = { a, b, c, d in
+    // a + b
 }
 
-varFunc = { return $0 + $1 }
-
-varFunc = { $0 + $1 }
-
-var result = [12, 2, 3].reduce(0) { a, b in
-    return a + b
+enum CompassPoint: String {
+    case north, south, east, west
 }
+
+var value = CompassPoint.north
+
+print(value)
+
+//varFunc = { return $0 + $1 }
+//
+//varFunc = { $0 + $1 }
+//
+//var result = [12, 2, 3].reduce(0) { a, b in
+//    return a + b
+//}
 
 /*
 func calculateMoney(wallet: [Int], type: Int) -> (total: Int, count: Int) {
@@ -29,7 +37,7 @@ func calculateMoney(wallet: [Int], type: Int) -> (total: Int, count: Int) {
         
         if (type == nil) || (type != nil && value == type) {
             sum += value
-            count+=1
+            count +=1
         }
     }
   return (sum, count)
