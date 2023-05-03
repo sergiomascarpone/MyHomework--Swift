@@ -15,7 +15,9 @@ varFunc = { return $0 + $1 }
 
 varFunc = { $0 + $1 }
 
-
+var result = [12, 2, 3].reduce(0) { a, b in
+    return a + b
+}
 
 /*
 func calculateMoney(wallet: [Int], type: Int) -> (total: Int, count: Int) {
