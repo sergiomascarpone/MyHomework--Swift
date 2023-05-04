@@ -1,8 +1,17 @@
 // Классы - Classes
 
+struct MyClass {
+    var radius:  Double = 4.5
+    
+    mutating func increaseRadius() {
+        self.radius += 1
+//        print("temp \(radius * 3.12 * 2)")
+    }
+}
 
-
-
+var ff = MyClass()
+ff.increaseRadius()
+print(ff.radius)
 
 
 
@@ -106,6 +115,24 @@ varClass.name = "Ira"
 
 print(constantClass.name)
 
+struct FixedLenghtRange {
+    var firstValue: Int = 1
+    let lenght: Int = 2
+    
+    var compProperty: Int {
+        get {
+            return 4
+        }
+        set(newNumber) {
+            firstValue = newNumber
+            print(newNumber)
+        }
+    }
+}
+
+var lenghtClass = FixedLenghtRange()
+lenghtClass.compProperty
+lenghtClass.compProperty = 15
 
 
 
