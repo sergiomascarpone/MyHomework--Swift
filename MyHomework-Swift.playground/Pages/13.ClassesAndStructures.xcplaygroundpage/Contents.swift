@@ -1,4 +1,13 @@
 // Классы - Classes
+
+
+
+
+
+
+
+
+
 /*
 class Dog {
     var name = ""
@@ -74,6 +83,32 @@ car.sound()
 */
 
 // Structures - Struct, Value Type VS Referense Type
+struct Resolution {
+    var width = 0
+    var height = 0
+
+}
+
+let constantStruct = Resolution()
+//constantStruct.width = 14 - не можем, так как это константа.
+var varStruct = Resolution()
+varStruct.width = 12
+
+class ViewMode {
+    var frameRate = 0.0
+    var name: String?
+}
+
+let constantClass = ViewMode()
+constantClass.name = "Ludmila"
+var varClass = constantClass
+varClass.name = "Ira"
+
+print(constantClass.name)
+
+
+
+
 
 struct Car{
     let numberOfSeats: Int
