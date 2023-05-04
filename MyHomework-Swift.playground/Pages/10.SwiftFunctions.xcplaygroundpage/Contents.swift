@@ -17,7 +17,20 @@ enum CompassPoint: String {
 
 var value = CompassPoint.north
 
-print(value)
+var rawValue = value.rawValue
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+//switch Planet.saturn {
+//case .earth:
+//   print(value)
+//    default:
+//  break
+//}
+print(Planet.uranus.rawValue)
+
 //
 
 //varFunc = { return $0 + $1 }
