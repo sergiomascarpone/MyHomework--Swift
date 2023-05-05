@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  Lection3
+//  Lection3HW
 //
-//  Created by Sergio Mascarpone on 2.05.23.
+//  Created by Sergio Mascarpone on 5.05.23.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
