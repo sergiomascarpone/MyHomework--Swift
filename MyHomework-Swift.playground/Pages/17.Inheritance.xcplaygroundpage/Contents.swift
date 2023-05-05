@@ -1,6 +1,40 @@
 //: [Previous](@previous)
 
 import Foundation
+
+class Vehicle {
+    var currentSpeed = 0.0 {
+        didSet {
+            print("1219382913")
+        }
+    }
+    var description: String {
+        return "\(currentSpeed) км/ч"
+    }
+    func makeNoise() {
+        
+    }
+}
+
+class Car: Vehicle {
+    var gear = 1
+    override var description: String {
+        return super.description + " in gear \(gear)"
+    }
+}
+
+class AutomaticCar: Car {
+    override var currentSpeed: Double {
+        didSet {
+            gear = Int(currentSpeed / 10.0) + 1
+        }
+    }
+}
+
+let automatic = AutomaticCar()
+automatic.currentSpeed = 35.0
+print("AutomaticCar: \(automatic.description)")
+
  /*
 class Human {
     
@@ -68,6 +102,7 @@ for value in array {
 }
 */
 
+/*
 // Уроĸ 18. Наследование
 // 1. У нас есть базовый ĸласс "Артист" и у него есть имя и фамилия. И есть метод "Выступление". У ĸаждого артиста должно быть свое выступление: танцор танцует, певец поет и тд. А для художниĸа, что бы вы не пытались ставить, пусть он ставит что-то свое (пусть меняет имя на свое артистичесĸое). Когда вызываем метод "выступление" поĸазать в ĸонсоле имя и фамилию артиста и собственно само выступление. Полиморфизм используем для артистов. Положить их всех в массив, пройтись по нему и вызвать их метод "выступление"
 class Artist {
@@ -98,7 +133,7 @@ class Singer: Artist {
 
 class Painter: Artist {
     override func performance() -> String {
-        super.performance() + "The artist draws his name @\(firstName)\u{034B}@"
+        super.performance() + " The artist draws his name @\(firstName)\u{034B}@"
     }
 }
 
@@ -325,3 +360,4 @@ let mammalsWithFourLegs = mammals.filter({$0.countLegs == 4})
 let countMales = mammals.filter({$0.sex == .male})
 
 print("Count of mammals: \(mammals.count). Count of mammals with 4 legs: \(mammalsWithFourLegs.count). Count of males: \(countMales.count)")
+*/
