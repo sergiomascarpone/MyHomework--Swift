@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 
-import Foundation
+import UIKit
 
 class Vehicle {
     var currentSpeed = 0.0 {
@@ -34,7 +34,7 @@ class AutomaticCar: Car {
 let automatic = AutomaticCar()
 automatic.currentSpeed = 35.0
 print("AutomaticCar: \(automatic.description)")
-
+ 
  /*
 class Human {
     
