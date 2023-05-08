@@ -62,7 +62,7 @@ class MAinViewController: UIViewController {
     }
     
     func setupViews() { // настройка обьектов
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         
         view.addSubview(titleLabel)
         view.addSubview(logoImageView)

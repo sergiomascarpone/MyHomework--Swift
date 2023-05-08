@@ -17,6 +17,7 @@ class TipsView: UIView {
         return label
     }()
     
+    
     let collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
@@ -26,6 +27,7 @@ class TipsView: UIView {
     
     let tipsArray = ["0%", "10%", "15%", "20%"]
     var tipsCount = 0
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
