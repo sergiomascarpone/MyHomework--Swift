@@ -13,6 +13,7 @@
 		1B3BDBE82A0BCCC200D70199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBE62A0BCCC200D70199 /* Main.storyboard */; };
 		1B3BDBEA2A0BCCC300D70199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */; };
 		1B3BDBED2A0BCCC300D70199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBEB2A0BCCC300D70199 /* LaunchScreen.storyboard */; };
+		1B3BDC002A0E7EB200D70199 /* registrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B3BDBEC2A0BCCC300D70199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B3BDBEE2A0BCCC300D70199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				1B3BDBE02A0BCCC200D70199 /* AppDelegate.swift */,
 				1B3BDBE22A0BCCC200D70199 /* SceneDelegate.swift */,
 				1B3BDBE42A0BCCC200D70199 /* MainViewController.swift */,
+				1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */,
 				1B3BDBE62A0BCCC200D70199 /* Main.storyboard */,
 				1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */,
 				1B3BDBEB2A0BCCC300D70199 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				1B3BDBE52A0BCCC200D70199 /* MainViewController.swift in Sources */,
 				1B3BDBE12A0BCCC200D70199 /* AppDelegate.swift in Sources */,
 				1B3BDBE32A0BCCC200D70199 /* SceneDelegate.swift in Sources */,
+				1B3BDC002A0E7EB200D70199 /* registrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

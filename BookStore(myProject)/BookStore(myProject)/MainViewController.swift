@@ -20,10 +20,10 @@ class MainViewController: UIViewController {
         return label
     }()
    
-    
+
     /// Создание и размещение imageView
     let imageView: UIImageView = {
-        let imageView = UIImageView()
+        let imageView = UIImageView(frame: UIScreen.main.bounds)
         imageView.image = UIImage(named: "viewLogo")
         imageView.contentMode = .scaleAspectFill // изображение на всю вью
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,20 +34,39 @@ class MainViewController: UIViewController {
     /// Создание и размещение кнопки
     let springButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .darkText
+        button.backgroundColor = .magenta
         button.setTitle("Let`s go!", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
+        button.addTarget(self, action: #selector(springButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+
+    
+    private var springButtonContraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         setConstraints()
+        
+        // springButton
+        springButtonContraint.constant -= view.bounds.width
+    }
+    
+    //springButton
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //появление кнопки настройка
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
+            self.springButtonContraint.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }
     }
     
     /// Настройка обьектов
@@ -58,12 +77,25 @@ class MainViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(springButton)
     }
+    
+    
+    /// Открытие окна регистрации
+    @objc private func springButtonTapped() {
+        let registrationView = registrationView()
+        self.present(registrationView, animated: true)
+    }
 }
 
 extension MainViewController {
     
+    
     /// Расположение обьектов
     func setConstraints() {
+        
+        //springButton
+        springButtonContraint = NSLayoutConstraint(item: springButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        self.view.addConstraint(springButtonContraint)
+
         NSLayoutConstraint.activate([
             
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
@@ -75,12 +107,14 @@ extension MainViewController {
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), //расположение текста по центру по оси Х
             titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
             
-            springButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 700),
+            //springButton
             springButton.heightAnchor.constraint(equalToConstant: 50),
             springButton.widthAnchor.constraint(equalToConstant: 240),
-            springButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+            springButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120)
     
     ])
       
   }
+  
 }
+
