@@ -31,7 +31,7 @@ class registrationView: UIViewController {
     let emailNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .black
-        button.setTitle("First name...", for: .normal)
+        button.setTitle("Email...", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
@@ -43,7 +43,7 @@ class registrationView: UIViewController {
     let passwordNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .black
-        button.setTitle("Last name...", for: .normal)
+        button.setTitle("Password...", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20

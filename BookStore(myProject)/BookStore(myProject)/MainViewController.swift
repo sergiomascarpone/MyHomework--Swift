@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
         let label = UILabel()
         label.text = "Book store"
         label.textColor = .white
-        label.font = UIFont(name: "Avenir Next Bold", size: 40)
+        label.font = UIFont(name: "AmericanTypewriter", size: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
