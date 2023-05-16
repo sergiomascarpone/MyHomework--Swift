@@ -31,10 +31,11 @@ class registrationView: UIViewController {
     let emailNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .black
-        button.setTitle("Email...", for: .normal)
+        button.setTitle("Enter email...", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
+//        button.addTarget(self, action: #selector(emailNameButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -43,10 +44,11 @@ class registrationView: UIViewController {
     let passwordNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .black
-        button.setTitle("Password...", for: .normal)
+        button.setTitle("Enter password...", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
+//        button.addTarget(self, action: #selector(passwordNameButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -62,7 +64,7 @@ class registrationView: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,9 +81,9 @@ class registrationView: UIViewController {
         setupEmailButton()
         setupPasswordButton()
         setupLoginButton()
-
         
     }
+    
     
     //настроки блюра
     fileprivate func setupBlurView() {
