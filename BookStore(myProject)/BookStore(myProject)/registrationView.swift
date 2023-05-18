@@ -35,7 +35,7 @@ class registrationView: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
-//        button.addTarget(self, action: #selector(emailNameButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -65,9 +65,14 @@ class registrationView: UIViewController {
         return button
     }()
     
+    
+    private var emailNameButtonContraint: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //passwordNameButton
         
         setupImageView()
         let blurEffect = UIBlurEffect(style: .light)
@@ -82,6 +87,7 @@ class registrationView: UIViewController {
         setupPasswordButton()
         setupLoginButton()
         
+       // emailNameButtonContraint.constant -= view.bounds.width
     }
     
     
@@ -101,7 +107,7 @@ class registrationView: UIViewController {
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
-    
+
     //разместили кнопку setupEmailButton
     fileprivate func setupEmailButton() {
         emailNameButton.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
@@ -124,5 +130,10 @@ class registrationView: UIViewController {
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
        
+    }
+    /// Открытие окна регистрации
+    @objc private func emailButtonTapped() {
+        let EmailView = EmailView()
+        self.present(EmailView, animated: true)
     }
 }
