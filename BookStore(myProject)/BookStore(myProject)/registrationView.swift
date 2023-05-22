@@ -40,30 +40,30 @@ class registrationView: UIViewController {
         return button
     }()
     
-    //создали кнопку passwordNameButton
-    let passwordNameButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .black
-        button.setTitle("Enter password...", for: .normal)
-        button.tintColor = .white
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.layer.cornerRadius = 20
-//        button.addTarget(self, action: #selector(passwordNameButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+//    //создали кнопку passwordNameButton
+//    let passwordNameButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.backgroundColor = .black
+//        button.setTitle("Enter password...", for: .normal)
+//        button.tintColor = .white
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//        button.layer.cornerRadius = 20
+////        button.addTarget(self, action: #selector(passwordNameButtonTapped), for: .touchUpInside)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
     
-    //создали кнопку loginButton
-    let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .red
-        button.setTitle("Login", for: .normal)
-        button.tintColor = .black
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.layer.cornerRadius = 20
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+//    //создали кнопку loginButton
+//    let loginButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.backgroundColor = .red
+//        button.setTitle("Login", for: .normal)
+//        button.tintColor = .black
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//        button.layer.cornerRadius = 20
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
     
     
     private var emailNameButtonContraint: NSLayoutConstraint!
@@ -81,11 +81,11 @@ class registrationView: UIViewController {
         setupBlurView()
         
         blurView.contentView.addSubview(emailNameButton)
-        blurView.contentView.addSubview(passwordNameButton)
-        blurView.contentView.addSubview(loginButton)
+//        blurView.contentView.addSubview(passwordNameButton)
+//        blurView.contentView.addSubview(loginButton)
         setupEmailButton()
-        setupPasswordButton()
-        setupLoginButton()
+//        setupPasswordButton()
+//        setupLoginButton()
         
        // emailNameButtonContraint.constant -= view.bounds.width
     }
@@ -116,21 +116,21 @@ class registrationView: UIViewController {
         emailNameButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
     }
     
-    //разместили кнопку setupPasswordButton
-    fileprivate func setupPasswordButton() {
-        passwordNameButton.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-        passwordNameButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        passwordNameButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
-    }
-    
-    //разместили кнопку setupLoginButton
-    fileprivate func setupLoginButton() {
-        loginButton.centerXAnchor.constraint(equalTo: blurView.centerXAnchor).isActive = true
-        loginButton.bottomAnchor.constraint(equalTo: blurView.bottomAnchor).isActive = true
-        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        loginButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-       
-    }
+//    //разместили кнопку setupPasswordButton
+//    fileprivate func setupPasswordButton() {
+//        passwordNameButton.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+//        passwordNameButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        passwordNameButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
+//    }
+//    
+//    //разместили кнопку setupLoginButton
+//    fileprivate func setupLoginButton() {
+//        loginButton.centerXAnchor.constraint(equalTo: blurView.centerXAnchor).isActive = true
+//        loginButton.bottomAnchor.constraint(equalTo: blurView.bottomAnchor).isActive = true
+//        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        loginButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+//       
+//    }
     /// Открытие окна регистрации
     @objc private func emailButtonTapped() {
         let EmailView = EmailView()
