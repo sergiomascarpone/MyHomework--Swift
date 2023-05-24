@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     
-    /// Создание и размещение вью
+    /// Создание и размещение Label
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Book store"

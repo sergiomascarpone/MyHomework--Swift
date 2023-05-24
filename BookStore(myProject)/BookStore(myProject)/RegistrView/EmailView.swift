@@ -69,54 +69,71 @@ class EmailView: UIViewController {
 //
 //class registrationView: UIViewController {
     
-    //создали вью
-    let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "viewLogo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+//    /// Создание и размещение Label
+//    let titleLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Book store"
+//        label.textColor = .white
+//        label.font = UIFont(name: "AmericanTypewriter", size: 40)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
+    
+    //создали imageView
+    let imageView: UIView = {
+        let imageView = UIView()
+        imageView.backgroundColor = .cyan
         return imageView
     }()
-
-    var emailTextField: UITextField {
-        let textField = UITextField()
-        textField.placeholder = "Enter email"
-        return textField
-    }
     
-    private var emailNameButtonContraint: NSLayoutConstraint!
+//    private var emailNameButtonContraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //passwordNameButton
+        //setup emailTextField
+        let emailTextField = UITextField(frame: CGRect(x: 0, y: 50, width: self.view.frame.width - 70, height: 50))
+        emailTextField.placeholder = " Enter email..."
+        
+        emailTextField.center = self.view.center
+        emailTextField.resignFirstResponder()
+        emailTextField.textColor = .black
+        emailTextField.backgroundColor = .cyan
+        emailTextField.layer.cornerRadius = 10
+        emailTextField.font = .boldSystemFont(ofSize: 20)
+        self.view.addSubview(emailTextField)
+        
         
         setupImageView()
-        setupTextField()
 
-        
-
-//        blurView.contentView.addSubview(passwordNameButton)
-//        blurView.contentView.addSubview(loginButton)
-//        setupPasswordButton()
-//        setupLoginButton()
-        
-       // emailNameButtonContraint.constant -= view.bounds.width
-    }
-
-    //разместили картинку на весь экран
-    fileprivate func  setupImageView() {
-        view.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
-    fileprivate func setupTextField() {
-        view.addSubview(emailTextField)
-        emailTextField.backgroundColor = .white
-    }
+    //разместили картинку на весь экран
+    fileprivate func  setupImageView() {
 
+        view.addSubview(imageView)
+        imageView.backgroundColor = .cyan
+
+        view.addSubview(imageView)
+
+    }
+   
 }
+//extension EmailView {
+//
+//
+//    func setConstraints() {
+//
+//
+//        NSLayoutConstraint.activate([
+//
+//            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+//            titleLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+//            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
+//            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+//
+//        ])
+//    }
+//
+//}

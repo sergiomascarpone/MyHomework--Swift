@@ -41,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B154DEE2A1E360C00BC23E7 /* RegistrView */ = {
+			isa = PBXGroup;
+			children = (
+				1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */,
+				1BD4C7192A16D29B006BEE78 /* EmailView.swift */,
+			);
+			path = RegistrView;
+			sourceTree = "<group>";
+		};
+		1B154DEF2A1E364500BC23E7 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1B3BDBE42A0BCCC200D70199 /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1B154DF02A1E365B00BC23E7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1B3BDBE22A0BCCC200D70199 /* SceneDelegate.swift */,
+				1B3BDBE02A0BCCC200D70199 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		1B3BDBD42A0BCCC200D70199 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +86,9 @@
 		1B3BDBDF2A0BCCC200D70199 /* BookStore(myProject) */ = {
 			isa = PBXGroup;
 			children = (
-				1B3BDBE02A0BCCC200D70199 /* AppDelegate.swift */,
-				1B3BDBE22A0BCCC200D70199 /* SceneDelegate.swift */,
-				1B3BDBE42A0BCCC200D70199 /* MainViewController.swift */,
-				1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */,
-				1BD4C7192A16D29B006BEE78 /* EmailView.swift */,
+				1B154DF02A1E365B00BC23E7 /* AppDelegate */,
+				1B154DEF2A1E364500BC23E7 /* MainView */,
+				1B154DEE2A1E360C00BC23E7 /* RegistrView */,
 				1B3BDBE62A0BCCC200D70199 /* Main.storyboard */,
 				1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */,
 				1B3BDBEB2A0BCCC300D70199 /* LaunchScreen.storyboard */,
