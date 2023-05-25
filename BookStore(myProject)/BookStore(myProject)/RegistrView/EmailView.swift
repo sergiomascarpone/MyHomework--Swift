@@ -29,19 +29,35 @@ class EmailView: UIViewController {
         emailTextField.backgroundColor = .cyan
         emailTextField.layer.cornerRadius = 10
         emailTextField.font = .boldSystemFont(ofSize: 20)
+        emailTextField.clearButtonMode = .always
+        emailTextField.returnKeyType = .next
         self.view.addSubview(emailTextField)
         
+//        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboarfWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+//
         
         setupImageView()
 
     }
     
+//    @objc private func hideKeyboard() {
+//        self.view.endEditing(true)
+//    }
+//    
+//    @objc private func keyboarfWillShow(notification: NSNotification) {
+//        
+//    }
+//    
+//    @objc private func keyboardWillHide() {
+//        
+//    }
+    
     //разместили картинку на весь экран
     fileprivate func  setupImageView() {
 
         view.addSubview(imageView)
-
-        
     }
-
+    
 }
