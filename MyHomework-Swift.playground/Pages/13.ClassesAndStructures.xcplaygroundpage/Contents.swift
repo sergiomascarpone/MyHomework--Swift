@@ -45,7 +45,7 @@ class Human {
     var animal = Animal()
     var human = Human()
     human.pat = animal
-
+12
 
     
     // Классы - Classes
