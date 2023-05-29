@@ -28,7 +28,7 @@ class EmailView: UIViewController {
         emailTextField.center = self.view.center
         emailTextField.resignFirstResponder()
         emailTextField.textColor = .black
-        emailTextField.backgroundColor = .cyan
+        emailTextField.backgroundColor = .lightGray
         emailTextField.layer.cornerRadius = 10
         emailTextField.font = .boldSystemFont(ofSize: 20)
         emailTextField.clearButtonMode = .always
