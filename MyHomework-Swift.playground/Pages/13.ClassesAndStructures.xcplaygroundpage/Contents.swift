@@ -10,18 +10,37 @@ class Human {
     func increaseSalary() {
         print("increaseSalary")
     }
-    
     var pat: Animal?
 }
 
-class Animal {
-    var owner: Human?
+extension Human: AnimalsSignals {
+    func requestFood() {
+        print("requestFood")
+    }
     
-    func requestfood() {
-        owner?.feed()
-        owner?.increaseSalary()
+    func requestCleanToilet() {
+        print("requestCleanToilet")
     }
 }
+
+protocol AnimalsSignals: class {
+    func requestFood()
+    func requestCleanToilet()
+}
+
+class Animal {
+    weak var owner: AnimalsSignals?
+    
+    func requestfood() {
+        owner?.requestFood()
+    }
+}
+
+
+var animal = Animal()
+var human = Human()
+human.pat = animal
+animal.owner = human
 
 
 // Классы - Classes
