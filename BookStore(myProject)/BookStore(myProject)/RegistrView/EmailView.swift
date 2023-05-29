@@ -13,6 +13,8 @@ class EmailView: UIViewController {
     let imageView: UIView = {
         let imageView = UIView()
         return imageView
+        
+        
     }()
     
     
