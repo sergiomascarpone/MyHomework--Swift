@@ -15,7 +15,7 @@ class ViewController: UIViewController {
             recognizer.numberOfTapsRequired = 3
             GesterView.addGestureRecognizer(recognizer)
             
-            //подписались на все уведомления
+            //подписались на все уведомления...
             GesterView.delegate = self
         }
     }
