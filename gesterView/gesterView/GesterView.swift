@@ -8,6 +8,8 @@
 import UIKit
 
 class GesterView: UIView {
-
+   @objc func didTap() {
+        print("GestureViewTap")
+    }
 
 }

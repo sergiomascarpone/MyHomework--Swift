@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var GesterView: GesterView! {
         didSet {
-            let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-            
+            let recognizer = UITapGestureRecognizer(target: GesterView, action: #selector(GesterView.didTap))
+            recognizer.numberOfTapsRequired = 3
             GesterView.addGestureRecognizer(recognizer)
         }
     }
@@ -26,6 +26,5 @@ class ViewController: UIViewController {
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
         print("tap")
     }
-    
 }
 
