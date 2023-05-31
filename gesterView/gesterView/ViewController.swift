@@ -9,13 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var GesterView: GesterView! {
+        didSet {
+            let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+            
+            GesterView.addGestureRecognizer(recognizer)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-//kdjfkdjskfjkdsfs
-    //kfjkdsjfkdnmvkds
-    //kmdsmflsdmfdsm
 
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+        print("tap")
+    }
+    
 }
 
