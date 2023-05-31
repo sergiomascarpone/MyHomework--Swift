@@ -14,6 +14,9 @@ class ViewController: UIViewController {
             let recognizer = UITapGestureRecognizer(target: GesterView, action: #selector(GesterView.didTap))
             recognizer.numberOfTapsRequired = 3
             GesterView.addGestureRecognizer(recognizer)
+            
+            //подписались на все уведомления
+            GesterView.delegate = self
         }
     }
     
@@ -28,3 +31,8 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: GestureDelegate {
+    func didTap(_ view: GesterView) {
+        print("Delegate didTap")
+    }
+}

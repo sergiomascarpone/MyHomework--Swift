@@ -7,9 +7,17 @@
 
 import UIKit
 
-class GesterView: UIView {
-   @objc func didTap() {
-        print("GestureViewTap")
-    }
+//обьявление протокола
+protocol GestureDelegate: class {
+    func didTap(_ view: GesterView)
+}
 
+class GesterView: UIView {
+    
+   weak var delegate: GestureDelegate?
+    
+   @objc
+   func didTap() {
+       delegate?.didTap(self)
+    }
 }
