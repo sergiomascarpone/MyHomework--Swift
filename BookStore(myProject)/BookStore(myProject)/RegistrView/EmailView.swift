@@ -13,9 +13,6 @@ class EmailView: UIViewController {
     let imageView: UIView = {
         let imageView = UIView()
         return imageView
-        //kdkfjdsfdfsd
-        
-        
     }()
     
     
@@ -40,9 +37,7 @@ class EmailView: UIViewController {
 //        NotificationCenter.default.addObserver(self, selector: #selector(keyboarfWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 //
-        
         setupImageView()
-
     }
     
 //    @objc private func hideKeyboard() {

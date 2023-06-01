@@ -43,7 +43,6 @@ class MainViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
     
     private var springButtonContraint: NSLayoutConstraint!
     
@@ -58,6 +57,7 @@ class MainViewController: UIViewController {
         springButtonContraint.constant -= view.bounds.width
     }
     
+    
     //springButton
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -68,6 +68,7 @@ class MainViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
     
     /// Настройка обьектов
     func setupView() {
