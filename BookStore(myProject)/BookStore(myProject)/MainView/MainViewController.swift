@@ -44,6 +44,20 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    
+    /// Создание и размещение кнопки
+    let storeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .magenta
+        button.setTitle("Store", for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.layer.cornerRadius = 20
+        button.addTarget(self, action: #selector(storeButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private var springButtonContraint: NSLayoutConstraint!
     
     
@@ -77,6 +91,7 @@ class MainViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(springButton)
+        view.addSubview(storeButton)
     }
     
     
@@ -84,6 +99,13 @@ class MainViewController: UIViewController {
     @objc private func springButtonTapped() {
         let registrationView = registrationView()
         self.present(registrationView, animated: true)
+    }
+    
+    
+    /// Открытие окна магазина
+    @objc private func storeButtonTapped() {
+        let StoreView = StoreView()
+        self.present(StoreView, animated: true)
     }
 }
 
@@ -111,7 +133,16 @@ extension MainViewController {
             //springButton
             springButton.heightAnchor.constraint(equalToConstant: 50),
             springButton.widthAnchor.constraint(equalToConstant: 240),
-            springButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120)
+            springButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
+            
+            
+            //storeButton
+            storeButton.heightAnchor.constraint(equalToConstant: 50),
+            storeButton.widthAnchor.constraint(equalToConstant: 240),
+            storeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            storeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+            
+    
     
     ])
       
