@@ -14,7 +14,7 @@ class EmailView: UIViewController {
         let imageView = UIView()
         return imageView
         //kdkfjdsfdfsd
-        //lsdkfldkflsdk
+        
         
     }()
     
