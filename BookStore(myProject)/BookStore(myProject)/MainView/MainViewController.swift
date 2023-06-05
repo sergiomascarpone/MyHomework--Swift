@@ -97,7 +97,7 @@ class MainViewController: UIViewController {
     
     /// Открытие окна регистрации
     @objc private func springButtonTapped() {
-        let registrationView = registrationView()
+        let registrationView = RegistrationView()
         self.present(registrationView, animated: true)
     }
     
