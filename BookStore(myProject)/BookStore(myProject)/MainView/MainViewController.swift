@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     let storeButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .magenta
-        button.setTitle("Store", for: .normal)
+        button.setTitle("Book Collection", for: .normal)
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
@@ -104,7 +104,7 @@ class MainViewController: UIViewController {
     
     /// Открытие окна магазина
     @objc private func storeButtonTapped() {
-        let StoreView = StoreView()
+        let StoreView = BookCollectionViewController()
         self.present(StoreView, animated: true)
     }
 }
