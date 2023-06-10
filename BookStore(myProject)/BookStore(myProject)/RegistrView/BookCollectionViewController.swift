@@ -6,31 +6,31 @@
 //
 
 import UIKit
-//
+
 //class BookCollectionViewController: UICollectionViewController {
 //
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
 //        collectionView.backgroundColor = .cyan
-////        setupNavigationBar()
-////        setupCollectionView()
+//        setupNavigationBar()
+//        setupCollectionView()
 //    }
-////
-////    func setupCollectionView() {
-////            collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellId")
-////        }
-////
-////    func setupNavigationBar() {
-////            let titleLable = UILabel()
-////            titleLable.text = "BOOKS"
-////            titleLable.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-////            titleLable.textColor = .lightGray
-////        }
-////
-////    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-////           return 5
-////       }
+//
+//    func setupCollectionView() {
+//            collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CellId")
+//        }
+//
+//    func setupNavigationBar() {
+//            let titleLable = UILabel()
+//            titleLable.text = "BOOKS"
+//            titleLable.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+//            titleLable.textColor = .lightGray
+//        }
+//
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//           return 5
+//       }
 //}
 
 
