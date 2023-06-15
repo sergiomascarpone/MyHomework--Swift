@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         print("tap")
     }
 }
-
+///
+/// 
 extension ViewController: GestureDelegate {
     func didTap(_ view: GesterView) {
         print("Delegate didTap")
