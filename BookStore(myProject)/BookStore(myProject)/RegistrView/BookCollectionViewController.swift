@@ -26,11 +26,15 @@ class BookCollectionViewController: UIViewController {
         self.view = UIView()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupStoreView()
     }
+    
+    
     
     func setupStoreView() {
         view.addSubview(storeView)
