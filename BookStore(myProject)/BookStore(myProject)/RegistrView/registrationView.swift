@@ -39,6 +39,8 @@ class RegistrationView: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+
+    
     
 //    //создали кнопку passwordNameButton
 //    let passwordNameButton: UIButton = {

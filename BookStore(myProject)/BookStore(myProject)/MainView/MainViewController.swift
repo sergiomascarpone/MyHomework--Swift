@@ -142,8 +142,6 @@ extension MainViewController {
             storeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             storeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
             
-    
-    
     ])
       
   }
