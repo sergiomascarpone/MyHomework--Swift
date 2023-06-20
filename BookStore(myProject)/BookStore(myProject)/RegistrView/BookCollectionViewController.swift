@@ -19,6 +19,8 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
     
     let tableView = UITableView()
     
+    var data = [String]()
+    
     
 //    private lazy var collectionView: UICollectionView = {
 //        let layout = UICollectionViewFlowLayout()
@@ -29,6 +31,10 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for x in 0...100 {
+            data.append("Some data \(x)")
+        }
+        
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self,
                         forCellReuseIdentifier: "cell")
@@ -44,6 +50,7 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
     
     override func loadView() {
         self.view = UIView()
+        self.view = UITableView()
     }
     
     ///Настройка обьектов
@@ -57,13 +64,13 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+        cell.textLabel?.text = data[indexPath.row]
         return cell
     }
     
