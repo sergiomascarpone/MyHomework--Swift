@@ -7,8 +7,9 @@
 
 import UIKit
 
-class BookCollectionViewController: UIViewController {
-
+class BookCollectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
     let storeView: UIView = {
         let storeView = UIView()
         storeView.contentMode = .scaleAspectFill // изображение на всю вью
@@ -16,26 +17,36 @@ class BookCollectionViewController: UIViewController {
         return storeView
     }()
     
-    private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        return view
-    }()
+    let tableView = UITableView()
+    
+    
+//    private lazy var collectionView: UICollectionView = {
+//        let layout = UICollectionViewFlowLayout()
+//        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        return view
+//    }()
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(tableView)
+        tableView.register(UITableViewCell.self,
+                        forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        setupStoreView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
     
     override func loadView() {
         self.view = UIView()
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupStoreView()
-    }
-    
-    
-    
+    ///Настройка обьектов
     func setupStoreView() {
         view.addSubview(storeView)
         storeView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -43,6 +54,21 @@ class BookCollectionViewController: UIViewController {
         storeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         storeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         storeView.backgroundColor = .cyan
-
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("cell tapped")
     }
 }
