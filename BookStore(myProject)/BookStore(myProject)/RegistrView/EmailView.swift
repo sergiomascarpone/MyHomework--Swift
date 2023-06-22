@@ -29,10 +29,11 @@ class EmailView: UIViewController {
         emailTextField.backgroundColor = .lightGray
         emailTextField.layer.cornerRadius = 10
         emailTextField.font = .boldSystemFont(ofSize: 20)
-        emailTextField.clearButtonMode = .always
         emailTextField.keyboardType = .default
         emailTextField.returnKeyType = .next
+        emailTextField.clearButtonMode = .always
         self.view.addSubview(emailTextField)
+        
         
 //        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
 //        NotificationCenter.default.addObserver(self, selector: #selector(keyboarfWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -58,5 +59,4 @@ class EmailView: UIViewController {
 
         view.addSubview(imageView)
     }
-    
 }
