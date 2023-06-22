@@ -30,6 +30,7 @@ class EmailView: UIViewController {
         emailTextField.layer.cornerRadius = 10
         emailTextField.font = .boldSystemFont(ofSize: 20)
         emailTextField.clearButtonMode = .always
+        emailTextField.keyboardType = .default
         emailTextField.returnKeyType = .next
         self.view.addSubview(emailTextField)
         
