@@ -73,7 +73,6 @@ class RegistrationView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //passwordNameButton
         
         setupImageView()
@@ -133,6 +132,7 @@ class RegistrationView: UIViewController {
 //        loginButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
 //       
 //    }
+    
     /// Открытие окна регистрации
     @objc private func emailButtonTapped() {
         let EmailView = EmailView()

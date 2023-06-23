@@ -9,7 +9,7 @@ import UIKit
 
 class BookCollectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
+    //создание изображения
     let storeView: UIView = {
         let storeView = UIView()
         storeView.contentMode = .scaleAspectFill // изображение на всю вью
