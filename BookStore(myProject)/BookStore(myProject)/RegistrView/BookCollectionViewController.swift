@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookCollectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookCollectionViewController: UIViewController {
    
     //создание изображения
     let storeView: UIView = {
@@ -31,7 +31,7 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for x in 0...100 {
+        for x in 0...10 {
             data.append("Some data \(x)")
         }
         
@@ -62,6 +62,11 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
         storeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         storeView.backgroundColor = .cyan
     }
+  
+}
+
+
+extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -79,5 +84,4 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
         print("cell tapped")
     }
 }
-
-/// найти способ и понять как внедрить в таблицу книги и описание 
+/// найти способ и понять как внедрить в таблицу книги и описание
