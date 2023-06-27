@@ -40,6 +40,8 @@ class BookCollectionViewController: UIViewController {
                         forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 100
+        
         setupStoreView()
     }
     
