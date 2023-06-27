@@ -19,16 +19,21 @@ class ImageCell: UITableViewCell {
         
         configureImageView()
         configureTitleLable()
+        setImageConstraints()
+        setTitleLabelConstraints()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func configureImageView() {
         videoImageView.layer.cornerRadius = 10
         videoImageView.clipsToBounds      = true
     }
+    
     
     func configureTitleLable() {
         imageTitleLabel.numberOfLines             = 0
@@ -44,6 +49,11 @@ class ImageCell: UITableViewCell {
         videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/9).isActive = true
     }
     
-    
-    
+    func setTitleLabelConstraints() {
+        imageTitleLabel.translatesAutoresizingMaskIntoConstraints                                               = false
+        imageTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                               = true
+        imageTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
+        imageTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
+        imageTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive              = true
+    }
 }
