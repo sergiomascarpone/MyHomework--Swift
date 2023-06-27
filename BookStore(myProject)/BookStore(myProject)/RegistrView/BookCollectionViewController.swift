@@ -79,3 +79,5 @@ class BookCollectionViewController: UIViewController, UITableViewDelegate, UITab
         print("cell tapped")
     }
 }
+
+/// найти способ и понять как внедрить в таблицу книги и описание 
