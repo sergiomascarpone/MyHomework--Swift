@@ -96,16 +96,16 @@ class RegistrationView: UIViewController {
     fileprivate func setupBlurView() {
         blurView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
         blurView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        blurView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        blurView.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        blurView.heightAnchor.constraint(equalToConstant: 200).isActive              = true
+        blurView.widthAnchor.constraint(equalToConstant: 400).isActive               = true
     }
 
     //разместили картинку на весь экран
     fileprivate func  setupImageView() {
         view.addSubview(imageView)
-        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive           = true
+        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive     = true
+        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive   = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 
@@ -113,8 +113,8 @@ class RegistrationView: UIViewController {
     fileprivate func setupEmailButton() {
         emailNameButton.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
         emailNameButton.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        emailNameButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        emailNameButton.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        emailNameButton.heightAnchor.constraint(equalToConstant: 50).isActive               = true
+        emailNameButton.widthAnchor.constraint(equalToConstant: 300).isActive               = true
     }
     
 //    //разместили кнопку setupPasswordButton

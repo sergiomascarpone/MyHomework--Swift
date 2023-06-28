@@ -38,9 +38,9 @@ class BookCollectionViewController: UIViewController {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self,
                         forCellReuseIdentifier: "cell")
-        tableView.delegate = self
+        tableView.delegate   = self
         tableView.dataSource = self
-        tableView.rowHeight = 100
+        tableView.rowHeight  = 100
         
         setupStoreView()
     }
@@ -58,9 +58,9 @@ class BookCollectionViewController: UIViewController {
     ///Настройка обьектов
     func setupStoreView() {
         view.addSubview(storeView)
-        storeView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        storeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        storeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        storeView.topAnchor.constraint(equalTo: view.topAnchor).isActive           = true
+        storeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive     = true
+        storeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive   = true
         storeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         storeView.backgroundColor = .cyan
     }
