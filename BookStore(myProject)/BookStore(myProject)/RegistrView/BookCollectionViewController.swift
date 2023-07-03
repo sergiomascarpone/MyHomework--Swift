@@ -31,7 +31,7 @@ class BookCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for x in 0...10 {
+        for x in 1...10 {
             data.append("Some data \(x)")
         }
         
