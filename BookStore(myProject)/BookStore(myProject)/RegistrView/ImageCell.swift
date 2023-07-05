@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageCell: UITableViewCell {
+class imageCell: UITableViewCell {
     
     var videoImageView  = UIImageView()
     var imageTitleLabel = UILabel()
@@ -48,6 +48,7 @@ class ImageCell: UITableViewCell {
         videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
         videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/9).isActive = true
     }
+    
     
     func setTitleLabelConstraints() {
         imageTitleLabel.translatesAutoresizingMaskIntoConstraints                                               = false
