@@ -7,7 +7,7 @@
 
 import UIKit
 
-class imageCell: UITableViewCell {
+class ImageCell: UITableViewCell {
     
     var videoImageView  = UIImageView()
     var imageTitleLabel = UILabel()
@@ -26,6 +26,12 @@ class imageCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func set(image: Image) {
+        videoImageView.image = image.image
+        imageTitleLabel.text = image.title
     }
     
     
