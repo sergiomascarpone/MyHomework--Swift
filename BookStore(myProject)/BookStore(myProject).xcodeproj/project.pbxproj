@@ -13,8 +13,9 @@
 		1B3BDBE82A0BCCC200D70199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBE62A0BCCC200D70199 /* Main.storyboard */; };
 		1B3BDBEA2A0BCCC300D70199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */; };
 		1B3BDBED2A0BCCC300D70199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3BDBEB2A0BCCC300D70199 /* LaunchScreen.storyboard */; };
-		1B3BDC002A0E7EB200D70199 /* registrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */; };
+		1B3BDC002A0E7EB200D70199 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BDBFF2A0E7EB200D70199 /* RegistrationView.swift */; };
 		1B59A68E2A28962800DC8E77 /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B59A68D2A28962800DC8E77 /* BookCollectionViewController.swift */; };
+		1B6042B42A56D4510061E2E8 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6042B32A56D4510061E2E8 /* UIView+Ext.swift */; };
 		1BB545892A4AE04D00E86FBB /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB545882A4AE04D00E86FBB /* ImageCell.swift */; };
 		1BB5458B2A56BF0300E86FBB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5458A2A56BF0300E86FBB /* Image.swift */; };
 		1BB5458D2A56BFD400E86FBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5458C2A56BFD400E86FBB /* Constants.swift */; };
@@ -30,8 +31,9 @@
 		1B3BDBE92A0BCCC300D70199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B3BDBEC2A0BCCC300D70199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B3BDBEE2A0BCCC300D70199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationView.swift; sourceTree = "<group>"; };
+		1B3BDBFF2A0E7EB200D70199 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1B59A68D2A28962800DC8E77 /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
+		1B6042B32A56D4510061E2E8 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		1BB545882A4AE04D00E86FBB /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		1BB5458A2A56BF0300E86FBB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		1BB5458C2A56BFD400E86FBB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -52,12 +54,13 @@
 		1B154DEE2A1E360C00BC23E7 /* RegistrView */ = {
 			isa = PBXGroup;
 			children = (
-				1B3BDBFF2A0E7EB200D70199 /* registrationView.swift */,
+				1B3BDBFF2A0E7EB200D70199 /* RegistrationView.swift */,
 				1BD4C7192A16D29B006BEE78 /* EmailView.swift */,
 				1B59A68D2A28962800DC8E77 /* BookCollectionViewController.swift */,
 				1BB545882A4AE04D00E86FBB /* ImageCell.swift */,
 				1BB5458A2A56BF0300E86FBB /* Image.swift */,
 				1BB5458C2A56BFD400E86FBB /* Constants.swift */,
+				1B6042B32A56D4510061E2E8 /* UIView+Ext.swift */,
 			);
 			path = RegistrView;
 			sourceTree = "<group>";
@@ -182,9 +185,10 @@
 			files = (
 				1B3BDBE52A0BCCC200D70199 /* MainViewController.swift in Sources */,
 				1BB5458B2A56BF0300E86FBB /* Image.swift in Sources */,
+				1B6042B42A56D4510061E2E8 /* UIView+Ext.swift in Sources */,
 				1B3BDBE12A0BCCC200D70199 /* AppDelegate.swift in Sources */,
 				1B3BDBE32A0BCCC200D70199 /* SceneDelegate.swift in Sources */,
-				1B3BDC002A0E7EB200D70199 /* registrationView.swift in Sources */,
+				1B3BDC002A0E7EB200D70199 /* RegistrationView.swift in Sources */,
 				1B59A68E2A28962800DC8E77 /* BookCollectionViewController.swift in Sources */,
 				1BB545892A4AE04D00E86FBB /* ImageCell.swift in Sources */,
 				1BD4C71A2A16D29B006BEE78 /* EmailView.swift in Sources */,
