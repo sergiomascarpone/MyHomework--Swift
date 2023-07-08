@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Pendik_hello_8de216e3-e36c-49ee-8564-2ae9ecfb6f8d.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
