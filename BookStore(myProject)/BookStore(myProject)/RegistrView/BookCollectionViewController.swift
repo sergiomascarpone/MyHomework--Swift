@@ -24,37 +24,30 @@ class BookCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-
-        configureTableView()
-        setupStoreView()
-    }
-    
-    
-    func configureTableView() {
-        view.addSubview(tableView)
-        setTableViewDelegates()
-        tableView.rowHeight = 100
-        
-
-    }
-    
-    
-    func setTableViewDelegates() {
-        //tableView.delegate   = self
-        tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        tableView.delegate   = self
+        tableView.dataSource = self
+
+       
+        //setupStoreView()
     }
+   
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
     
     ///Настройка обьектов
-    func setupStoreView() {
-        view.addSubview(storeView)
-        storeView.topAnchor.constraint(equalTo: view.topAnchor).isActive           = true
-        storeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive     = true
-        storeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive   = true
-        storeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        storeView.backgroundColor = .cyan
-    }
+//    func setupStoreView() {
+//        view.addSubview(storeView)
+//        storeView.topAnchor.constraint(equalTo: view.topAnchor).isActive           = true
+//        storeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive     = true
+//        storeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive   = true
+//        storeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        storeView.backgroundColor = .cyan
+//    }
 }
 
 
@@ -64,9 +57,10 @@ extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = "Hello"
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+        return cell
     }
 }
 /// найти способ и понять как внедрить в таблицу книги и описание
