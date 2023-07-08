@@ -135,7 +135,7 @@ class RegistrationView: UIViewController {
     
     /// Открытие окна регистрации
     @objc private func emailButtonTapped() {
-        let EmailView = EmailView()
+        let EmailView = emailView()
         self.present(EmailView, animated: true)
     }
 }

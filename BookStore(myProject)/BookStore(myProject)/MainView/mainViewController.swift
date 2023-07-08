@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class mainViewController: UIViewController {
     
     
     /// Создание и размещение Label
@@ -109,7 +109,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController {
+extension mainViewController {
     
     
     /// Расположение обьектов
