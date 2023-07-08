@@ -7,7 +7,7 @@
 
 import UIKit
 
-class mainViewController: UIViewController {
+class MainViewController: UIViewController {
     
     
     /// Создание и размещение Label
@@ -97,19 +97,19 @@ class mainViewController: UIViewController {
     
     /// Открытие окна регистрации
     @objc private func springButtonTapped() {
-        let registrationView = registrationView()
+        let registrationView = RegistrationView()
         self.present(registrationView, animated: true)
     }
     
     
     /// Открытие окна магазина
     @objc private func storeButtonTapped() {
-        let StoreView = bookCollectionViewController()
+        let StoreView = BookCollectionViewController()
         self.present(StoreView, animated: true)
     }
 }
 
-extension mainViewController {
+extension MainViewController {
     
     
     /// Расположение обьектов
