@@ -97,14 +97,14 @@ class mainViewController: UIViewController {
     
     /// Открытие окна регистрации
     @objc private func springButtonTapped() {
-        let registrationView = RegistrationView()
+        let registrationView = registrationView()
         self.present(registrationView, animated: true)
     }
     
     
     /// Открытие окна магазина
     @objc private func storeButtonTapped() {
-        let StoreView = BookCollectionViewController()
+        let StoreView = bookCollectionViewController()
         self.present(StoreView, animated: true)
     }
 }
