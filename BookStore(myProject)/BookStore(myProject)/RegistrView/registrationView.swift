@@ -7,7 +7,7 @@
 
 import UIKit
 
-class registrationView: UIViewController {
+class RegistrationView: UIViewController {
     
     //создали вью
     let imageView: UIImageView = {
@@ -135,7 +135,7 @@ class registrationView: UIViewController {
     
     /// Открытие окна регистрации
     @objc private func emailButtonTapped() {
-        let EmailView = emailView()
+        let EmailView = EmailView()
         self.present(EmailView, animated: true)
     }
 }

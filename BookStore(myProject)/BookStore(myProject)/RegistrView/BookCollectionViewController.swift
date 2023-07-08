@@ -7,7 +7,7 @@
 
 import UIKit
 
-class bookCollectionViewController: UIViewController {
+class BookCollectionViewController: UIViewController {
    
     //создание изображения
     let storeView: UIView = {
@@ -51,7 +51,7 @@ class bookCollectionViewController: UIViewController {
 }
 
 
-extension bookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
+extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
