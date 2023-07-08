@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationView: UIViewController {
+class registrationView: UIViewController {
     
     //создали вью
     let imageView: UIImageView = {
