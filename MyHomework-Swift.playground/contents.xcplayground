@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' executeOnSourceChanges='true' importAppTypes='true'>
+    <pages>
+        <page name='4.SwiftCollectionsArray'/>
+        <page name='SwiftOptionals'/>
+        <page name='SwiftHomework01.01.23'/>
+        <page name='5.SwiftLoops'/>
+        <page name='9.SwiftSwitchOperator'/>
+        <page name='8.SwiftStringsAndCharacters'/>
+        <page name='SwiftLineInterpolation'/>
+        <page name='1.SwiftTypesAndVariables'/>
+        <page name='4.SwiftCollectionsDictionaryAndSet'/>
+        <page name='2.SwiftOperators'/>
+        <page name='3.SwiftLogicalAndCompairOperarorsWithIfElse'/>
+        <page name='6.SwiftFunctionsCollections'/>
+        <page name='6.SwiftQuickCollectionsFunctions'/>
+        <page name='7.SwiftOtherCollectionFunctions'/>
+        <page name='10.SwiftFunctions'/>
+        <page name='11.Closurese'/>
+        <page name='12.Enumerations'/>
+        <page name='13.ClassesAndStructures'/>
+        <page name='14.Properties'/>
+        <page name='15.Methods'/>
+        <page name='16.Subscripts'/>
+        <page name='17.Inheritance'/>
+        <page name='18.Initialization'/>
+        <page name='19.Deinitialization'/>
+        <page name='20.Automatic Reference Counting'/>
+        <page name='21.Optional Chaining'/>
+        <page name='22.Type Casting'/>
+        <page name='23.Extensions'/>
+        <page name='24.AdvancedOperators'/>
+        <page name='25.Operator Functions'/>
+        <page name='26.'/>
+    </pages>
+</playground>
