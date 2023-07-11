@@ -14,6 +14,7 @@ class BookCollectionViewController: UIViewController {
          let storeView = UIView()
          storeView.contentMode = .scaleAspectFill // изображение на всю вью
          storeView.translatesAutoresizingMaskIntoConstraints = false
+         storeView.backgroundColor = .cyan
          return storeView
      }()
     
@@ -62,7 +63,7 @@ class BookCollectionViewController: UIViewController {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
          
-         cell.textLabel?.text = "Cell \(indexPath.row + 1)"
+         cell.textLabel?.text = "BookName \(indexPath.row + 1)"
          return cell
      }
  }
