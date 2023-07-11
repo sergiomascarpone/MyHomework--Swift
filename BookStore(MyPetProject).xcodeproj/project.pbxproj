@@ -13,6 +13,9 @@
 		1B5E67EA2A59D47800BFAEC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E67E92A59D47800BFAEC4 /* Assets.xcassets */; };
 		1B5E67ED2A59D47800BFAEC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E67EB2A59D47800BFAEC4 /* LaunchScreen.storyboard */; };
 		1B5E67FD2A59DA2400BFAEC4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E67FC2A59DA2400BFAEC4 /* MainViewController.swift */; };
+		1B5E68022A5D5F1B00BFAEC4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */; };
+		1B5E68042A5D5FAB00BFAEC4 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */; };
+		1B5E68062A5D5FE500BFAEC4 /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1B5E67EC2A59D47800BFAEC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5E67EE2A59D47800BFAEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B5E67FC2A59DA2400BFAEC4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			children = (
 				1B5E67F42A59D51D00BFAEC4 /* AppDelegate */,
 				1B5E67F52A59D54000BFAEC4 /* MainView */,
+				1B5E68002A5D5ECB00BFAEC4 /* RegistrView */,
 				1B5E67E62A59D47700BFAEC4 /* Main.storyboard */,
 				1B5E67E92A59D47800BFAEC4 /* Assets.xcassets */,
 				1B5E67EB2A59D47800BFAEC4 /* LaunchScreen.storyboard */,
@@ -81,6 +88,16 @@
 				1B5E67FC2A59DA2400BFAEC4 /* MainViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		1B5E68002A5D5ECB00BFAEC4 /* RegistrView */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */,
+				1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */,
+				1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */,
+			);
+			path = RegistrView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +174,9 @@
 				1B5E67FD2A59DA2400BFAEC4 /* MainViewController.swift in Sources */,
 				1B5E67E12A59D47700BFAEC4 /* AppDelegate.swift in Sources */,
 				1B5E67E32A59D47700BFAEC4 /* SceneDelegate.swift in Sources */,
+				1B5E68042A5D5FAB00BFAEC4 /* EmailView.swift in Sources */,
+				1B5E68022A5D5F1B00BFAEC4 /* RegistrationView.swift in Sources */,
+				1B5E68062A5D5FE500BFAEC4 /* BookCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

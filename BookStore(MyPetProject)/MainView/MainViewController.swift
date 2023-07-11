@@ -8,7 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
         
         /// Создание и размещение Label
         let titleLabel: UILabel = {
@@ -39,7 +38,7 @@ class MainViewController: UIViewController {
             button.tintColor = .white
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
             button.layer.cornerRadius = 20
-          //  button.addTarget(self, action: #selector(springButtonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(springButtonTapped), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
             return button
         }()
@@ -53,7 +52,7 @@ class MainViewController: UIViewController {
             button.tintColor = .white
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
             button.layer.cornerRadius = 20
-           // button.addTarget(self, action: #selector(storeButtonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(storeButtonTapped), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
             return button
         }()
@@ -95,18 +94,18 @@ class MainViewController: UIViewController {
         }
         
         
-        /// Открытие окна регистрации
-    //    @objc private func springButtonTapped() {
-    //        let registrationView = RegistrationView()
-    //        self.present(registrationView, animated: true)
-    //    }
+        // Открытие окна регистрации
+        @objc private func springButtonTapped() {
+            let registrationView = RegistrationView()
+            self.present(registrationView, animated: true)
+        }
 
 
-        /// Открытие окна магазина
-    //    @objc private func storeButtonTapped() {
-    //        let StoreView = BookCollectionViewController()
-    //        self.present(StoreView, animated: true)
-    //    }
+        // Открытие окна магазина
+        @objc private func storeButtonTapped() {
+            let StoreView = BookCollectionViewController()
+            self.present(StoreView, animated: true)
+        }
     }
 
     extension MainViewController {
