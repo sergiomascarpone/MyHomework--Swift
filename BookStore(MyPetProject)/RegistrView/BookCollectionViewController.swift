@@ -53,7 +53,7 @@ class BookCollectionViewController: UIViewController {
 
  extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 10
+         return 100
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
