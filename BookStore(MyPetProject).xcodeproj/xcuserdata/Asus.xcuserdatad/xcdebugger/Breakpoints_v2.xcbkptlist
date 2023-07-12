@@ -14,10 +14,10 @@
             filePath = "BookStore(MyPetProject)/RegistrView/BookCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "BookCollectionViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +30,42 @@
             filePath = "BookStore(MyPetProject)/RegistrView/BookCollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "79EB61E8-14B9-4642-9BA7-E48406F87AA4 - 72c9b2cf5eedacb2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookStore_MyPetProject_.BookCollectionViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "BookStore(MyPetProject)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Asus/Documents/MyPetProject(BookStore)/BookStore(MyPetProject)/BookStore(MyPetProject)/RegistrView/BookCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "79EB61E8-14B9-4642-9BA7-E48406F87AA4 - 72c9b2cf5eedacb2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BookStore_MyPetProject_.BookCollectionViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "BookStore(MyPetProject)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Asus/Documents/MyPetProject(BookStore)/BookStore(MyPetProject)/BookStore(MyPetProject)/RegistrView/BookCollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

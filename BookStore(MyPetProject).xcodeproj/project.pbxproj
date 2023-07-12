@@ -16,6 +16,10 @@
 		1B5E68022A5D5F1B00BFAEC4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */; };
 		1B5E68042A5D5FAB00BFAEC4 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */; };
 		1B5E68062A5D5FE500BFAEC4 /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */; };
+		1BA2F7D62A5EE2FF002F6857 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2F7D52A5EE2FF002F6857 /* UIView+Ext.swift */; };
+		1BA2F7D82A5EE604002F6857 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2F7D72A5EE604002F6857 /* ImageCell.swift */; };
+		1BA2F7DA2A5EEC99002F6857 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2F7D92A5EEC99002F6857 /* Video.swift */; };
+		1BA2F7DC2A5EED15002F6857 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2F7DB2A5EED15002F6857 /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
+		1BA2F7D52A5EE2FF002F6857 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1BA2F7D72A5EE604002F6857 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		1BA2F7D92A5EEC99002F6857 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		1BA2F7DB2A5EED15002F6857 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		1B5E67DF2A59D47700BFAEC4 /* BookStore(MyPetProject) */ = {
 			isa = PBXGroup;
 			children = (
+				1BA2F7D22A5EE1A1002F6857 /* Extensions-Utilitiles */,
 				1B5E67F42A59D51D00BFAEC4 /* AppDelegate */,
 				1B5E67F52A59D54000BFAEC4 /* MainView */,
 				1B5E68002A5D5ECB00BFAEC4 /* RegistrView */,
@@ -96,8 +105,19 @@
 				1B5E68012A5D5F1B00BFAEC4 /* RegistrationView.swift */,
 				1B5E68032A5D5FAB00BFAEC4 /* EmailView.swift */,
 				1B5E68052A5D5FE500BFAEC4 /* BookCollectionViewController.swift */,
+				1BA2F7D92A5EEC99002F6857 /* Video.swift */,
+				1BA2F7D72A5EE604002F6857 /* ImageCell.swift */,
 			);
 			path = RegistrView;
+			sourceTree = "<group>";
+		};
+		1BA2F7D22A5EE1A1002F6857 /* Extensions-Utilitiles */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2F7D52A5EE2FF002F6857 /* UIView+Ext.swift */,
+				1BA2F7DB2A5EED15002F6857 /* Constraints.swift */,
+			);
+			path = "Extensions-Utilitiles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +193,12 @@
 			files = (
 				1B5E67FD2A59DA2400BFAEC4 /* MainViewController.swift in Sources */,
 				1B5E67E12A59D47700BFAEC4 /* AppDelegate.swift in Sources */,
+				1BA2F7DC2A5EED15002F6857 /* Constraints.swift in Sources */,
 				1B5E67E32A59D47700BFAEC4 /* SceneDelegate.swift in Sources */,
 				1B5E68042A5D5FAB00BFAEC4 /* EmailView.swift in Sources */,
+				1BA2F7DA2A5EEC99002F6857 /* Video.swift in Sources */,
+				1BA2F7D62A5EE2FF002F6857 /* UIView+Ext.swift in Sources */,
+				1BA2F7D82A5EE604002F6857 /* ImageCell.swift in Sources */,
 				1B5E68022A5D5F1B00BFAEC4 /* RegistrationView.swift in Sources */,
 				1B5E68062A5D5FE500BFAEC4 /* BookCollectionViewController.swift in Sources */,
 			);
