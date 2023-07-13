@@ -14,11 +14,10 @@ class MainViewController: UIViewController {
             let label = UILabel()
             label.text = "Book store"
             label.textColor = .white
-            label.font = UIFont(name: "AmericanTypewriter", size: 40)
+            label.font = UIFont(name: "Athelas Bold", size: 60)
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
-        
         
         /// Создание и размещение imageView
         let imageView: UIImageView = {
@@ -28,7 +27,6 @@ class MainViewController: UIViewController {
             imageView.translatesAutoresizingMaskIntoConstraints = false
             return imageView
         }()
-
         
         /// Создание и размещение кнопки
         let springButton: UIButton = {
@@ -43,7 +41,6 @@ class MainViewController: UIViewController {
             return button
         }()
         
-        
         /// Создание и размещение кнопки
         let storeButton: UIButton = {
             let button = UIButton(type: .system)
@@ -57,8 +54,9 @@ class MainViewController: UIViewController {
             return button
         }()
         
+    
         private var springButtonContraint: NSLayoutConstraint!
-
+        private var storeButtonConstraint: NSLayoutConstraint!
         
 
         override func viewDidLoad() {
@@ -69,19 +67,25 @@ class MainViewController: UIViewController {
             
             ///springButton
             springButtonContraint.constant -= view.bounds.width
+            storeButtonConstraint.constant -= view.bounds.width
         }
        
         ///springButton
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             
-            //появление кнопки настройка
+            //появление кнопки анимация Let`s go.
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
                 self.springButtonContraint.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
             }
+            
+            //появление кнопки анимация Book Collection/
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut) {
+                self.storeButtonConstraint.constant += self.view.bounds.width
+                self.view.layoutIfNeeded()
+            }
         }
-        
         
         /// Настройка обьектов
         func setupView() {
@@ -93,13 +97,11 @@ class MainViewController: UIViewController {
             view.addSubview(storeButton)
         }
         
-        
         // Открытие окна регистрации
         @objc private func springButtonTapped() {
             let registrationView = RegistrationView()
             self.present(registrationView, animated: true)
         }
-
 
         // Открытие окна магазина
         @objc private func storeButtonTapped() {
@@ -108,23 +110,28 @@ class MainViewController: UIViewController {
         }
     }
 
-    extension MainViewController {
-        
+    extension MainViewController {        
         
         /// Расположение обьектов
         func setConstraints() {
             
-            //springButton
+            //springButton - Расположение обьектов
             springButtonContraint = NSLayoutConstraint(item: springButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
             self.view.addConstraint(springButtonContraint)
             
+            //storeButton - Расположение обьектов
+            storeButtonConstraint = NSLayoutConstraint(item: storeButton, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+            self.view.addConstraint(storeButtonConstraint)
+            
             NSLayoutConstraint.activate([
                 
+                //imageView
                 imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
                 imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
                 imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 260),
                 imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 260),
                 
+                //titleLabel
                 titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
                 titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), //расположение текста по центру по оси Х
                 titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
@@ -133,7 +140,6 @@ class MainViewController: UIViewController {
                 springButton.heightAnchor.constraint(equalToConstant: 50),
                 springButton.widthAnchor.constraint(equalToConstant: 240),
                 springButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
-                
                 
                 //storeButton
                 storeButton.heightAnchor.constraint(equalToConstant: 50),

@@ -91,7 +91,6 @@ class RegistrationView: UIViewController {
        // emailNameButtonContraint.constant -= view.bounds.width
     }
     
-    
     //настроки блюра
     fileprivate func setupBlurView() {
         blurView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
@@ -100,7 +99,7 @@ class RegistrationView: UIViewController {
         blurView.widthAnchor.constraint(equalToConstant: 400).isActive               = true
     }
 
-    //разместили картинку на весь экран
+    //разместил картинку на весь экран
     fileprivate func  setupImageView() {
         view.addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive           = true
@@ -109,7 +108,7 @@ class RegistrationView: UIViewController {
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 
-    //разместили кнопку setupEmailButton
+    //разместил кнопку setupEmailButton
     fileprivate func setupEmailButton() {
         emailNameButton.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
         emailNameButton.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true

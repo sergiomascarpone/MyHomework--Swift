@@ -38,32 +38,32 @@ class ImageCell: UITableViewCell {
     
     
     func configureImageView() {
-        videoImageView.layer.cornerRadius = 11
+        videoImageView.layer.cornerRadius = 10
         videoImageView.clipsToBounds      = true
     }
     
     
     func configureTitleLabel() {
-        videoTitleLabel.numberOfLines = 0
+        videoTitleLabel.numberOfLines             = 0
         videoTitleLabel.adjustsFontSizeToFitWidth = true
         
     }
     
-    
+    //настройка и размещение Image в таблице.
     func setImageConstraints() {
-        videoImageView.translatesAutoresizingMaskIntoConstraints = false
-        videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        videoImageView.translatesAutoresizingMaskIntoConstraints                                               = false
+        videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                               = true
+        videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive                 = true
+        videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
         videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/9).isActive = true
     }
 
-
+    //настройка и размещение Title в таблице.
     func setTitleLabelConstraints() {
-        videoTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        videoTitleLabel.translatesAutoresizingMaskIntoConstraints                                               = false
+        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                               = true
         videoTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
-        videoTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        videoTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        videoTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
+        videoTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive              = true
     }
 }

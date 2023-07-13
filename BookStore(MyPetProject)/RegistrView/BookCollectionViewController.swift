@@ -29,7 +29,6 @@ class BookCollectionViewController: UIViewController {
      
      override func viewDidLoad() {
          super.viewDidLoad()
-         title = "Sean`s Books"
          videos = fetchData()
          
          
@@ -93,21 +92,21 @@ class BookCollectionViewController: UIViewController {
  }
  /// найти способ и понять как внедрить в таблицу книги и описание
 
-
+//размещение картинки и текста описания.
 extension BookCollectionViewController {
     
     func fetchData() -> [Video] {
-        let video1  = Video(image: Images.noStoryboard, title: "No storyboards")
-        let video2  = Video(image: Images.ios, title: "No storyboards")
-        let video3  = Video(image: Images.ninety, title: "No storyboards")
-        let video4  = Video(image: Images.patreon, title: "No storyboards")
-        let video5  = Video(image: Images.raise, title: "No storyboards")
-        let video6  = Video(image: Images.salaries, title: "No storyboards")
-        let video7  = Video(image: Images.snake, title: "No storyboards")
-        let video8  = Video(image: Images.softSkills, title: "No storyboards")
-        let video9  = Video(image: Images.swiftNews, title: "No storyboards")
-        let video10 = Video(image: Images.wireless, title: "No storyboards")
-        let video11 = Video(image: Images.xcode, title: "No storyboards")
+        let video1  = Video(image: Images.noStoryboard, title: "Война и Мир")
+        let video2  = Video(image: Images.ios, title: "Цикл времени")
+        let video3  = Video(image: Images.ninety, title: "Цикл времени - Последствия")
+        let video4  = Video(image: Images.patreon, title: "Бегущий по лезвию")
+        let video5  = Video(image: Images.raise, title: "Маленький принц")
+        let video6  = Video(image: Images.salaries, title: "Криминальное чтиво")
+        let video7  = Video(image: Images.snake, title: "Обливион")
+        let video8  = Video(image: Images.softSkills, title: "Темная башня")
+        let video9  = Video(image: Images.swiftNews, title: "1408 - Стивен Кинг")
+        let video10 = Video(image: Images.wireless, title: "Оно")
+        let video11 = Video(image: Images.xcode, title: "Зеленый свет")
         
         return [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
     }
