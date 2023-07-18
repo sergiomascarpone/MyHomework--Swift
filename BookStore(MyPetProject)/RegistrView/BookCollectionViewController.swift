@@ -99,13 +99,13 @@ extension BookCollectionViewController {
         let video2  = Image(image: Images.ios, name: "Фантастика, рассказ.", title: "Цикл времени")
         let video3  = Image(image: Images.ninety, name: "Фантастика, рассказ.", title: "Цикл времени - Последствия")
         let video4  = Image(image: Images.patreon, name: "Драмма, приключения.", title: "Бегущий по лезвию")
-        let video5  = Image(image: Images.raise, name: "War", title: "Маленький принц")
-        let video6  = Image(image: Images.salaries, name: "War", title: "Криминальное чтиво")
-        let video7  = Image(image: Images.snake, name: "War", title: "Обливион")
-        let video8  = Image(image: Images.softSkills, name: "War", title: "Темная башня")
-        let video9  = Image(image: Images.swiftNews, name: "War", title: "1408 - Стивен Кинг")
-        let video10 = Image(image: Images.wireless, name: "War", title: "Оно")
-        let video11 = Image(image: Images.xcode, name: "War", title: "Зеленый свет")
+        let video5  = Image(image: Images.raise, name: "Сказка, рассказ.", title: "Маленький принц")
+        let video6  = Image(image: Images.salaries, name: "Детектив.", title: "Криминальное чтиво")
+        let video7  = Image(image: Images.snake, name: "Фантастика.", title: "Обливион")
+        let video8  = Image(image: Images.softSkills, name: "Фантастика,триллер.", title: "Темная башня")
+        let video9  = Image(image: Images.swiftNews, name: "Биография.", title: "1408 - Стивен Кинг")
+        let video10 = Image(image: Images.wireless, name: "Ужасы, драмма.", title: "Оно")
+        let video11 = Image(image: Images.xcode, name: "Драмма, приключения.", title: "Зеленый свет")
         
         return [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
     }
