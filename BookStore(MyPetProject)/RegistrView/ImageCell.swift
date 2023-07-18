@@ -12,17 +12,22 @@ class ImageCell: UITableViewCell {
     
     var videoImageView  = UIImageView()
     var videoTitleLabel = UILabel()
+    var videoNameLabel = UILabel()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(videoImageView)
         addSubview(videoTitleLabel)
+        addSubview(videoNameLabel)
+
         
         configureImageView()
         configureTitleLabel()
+        configureNameLabel()
         setImageConstraints()
         setTitleLabelConstraints()
+        setNameLabelConstraints()
     }
     
     
@@ -31,9 +36,10 @@ class ImageCell: UITableViewCell {
     }
     
     
-    func set(video: Video) {
+    func set(video: Image) {
         videoImageView.image = video.image
         videoTitleLabel.text = video.title
+        videoNameLabel.text = video.name
     }
     
     
@@ -49,6 +55,12 @@ class ImageCell: UITableViewCell {
         
     }
     
+    func configureNameLabel() {
+        videoNameLabel.numberOfLines             = 0
+        videoNameLabel.adjustsFontSizeToFitWidth = true
+        
+    }
+    
     //настройка и размещение Image в таблице.
     func setImageConstraints() {
         videoImageView.translatesAutoresizingMaskIntoConstraints                                               = false
@@ -61,9 +73,18 @@ class ImageCell: UITableViewCell {
     //настройка и размещение Title в таблице.
     func setTitleLabelConstraints() {
         videoTitleLabel.translatesAutoresizingMaskIntoConstraints                                               = false
-        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                               = true
+        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -20).isActive                = true
         videoTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
         videoTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
         videoTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive              = true
+    }
+    
+    //настройка и размещение Name в таблице.
+    func setNameLabelConstraints() {
+        videoNameLabel.translatesAutoresizingMaskIntoConstraints                                                = false
+        videoNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 30).isActive                  = true
+        videoNameLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive  = true
+        videoNameLabel.heightAnchor.constraint(equalToConstant: 80).isActive                                    = true
+        videoNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive               = true
     }
 }

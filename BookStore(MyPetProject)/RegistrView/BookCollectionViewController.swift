@@ -19,7 +19,7 @@ class BookCollectionViewController: UIViewController {
     
      ///создание таблицы
      let tableView = UITableView()
-     var videos: [Video] = []
+     var images: [Image] = []
     
     
     struct Cells {
@@ -29,7 +29,7 @@ class BookCollectionViewController: UIViewController {
      
      override func viewDidLoad() {
          super.viewDidLoad()
-         videos = fetchData()
+         images = fetchData()
          
          
          view.addSubview(tableView)
@@ -69,12 +69,11 @@ class BookCollectionViewController: UIViewController {
  }
 
 
-
  extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
      
      
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return videos.count
+         return images.count
      }
      
      
@@ -84,7 +83,7 @@ class BookCollectionViewController: UIViewController {
 //         cell.textLabel?.text = "BookName \(indexPath.row + 1)"
          
          let cell = tableView.dequeueReusableCell(withIdentifier: Cells.imageCell) as! ImageCell
-         let video = videos[indexPath.row]
+         let video = images[indexPath.row]
          cell.set(video: video)
          
          return cell
@@ -95,18 +94,18 @@ class BookCollectionViewController: UIViewController {
 //размещение картинки и текста описания.
 extension BookCollectionViewController {
     
-    func fetchData() -> [Video] {
-        let video1  = Video(image: Images.noStoryboard, title: "Война и Мир")
-        let video2  = Video(image: Images.ios, title: "Цикл времени")
-        let video3  = Video(image: Images.ninety, title: "Цикл времени - Последствия")
-        let video4  = Video(image: Images.patreon, title: "Бегущий по лезвию")
-        let video5  = Video(image: Images.raise, title: "Маленький принц")
-        let video6  = Video(image: Images.salaries, title: "Криминальное чтиво")
-        let video7  = Video(image: Images.snake, title: "Обливион")
-        let video8  = Video(image: Images.softSkills, title: "Темная башня")
-        let video9  = Video(image: Images.swiftNews, title: "1408 - Стивен Кинг")
-        let video10 = Video(image: Images.wireless, title: "Оно")
-        let video11 = Video(image: Images.xcode, title: "Зеленый свет")
+    func fetchData() -> [Image] {
+        let video1  = Image(image: Images.noStoryboard, name: "Трагедия, роман.", title: "Война и Мир.")
+        let video2  = Image(image: Images.ios, name: "Фантастика, рассказ.", title: "Цикл времени")
+        let video3  = Image(image: Images.ninety, name: "Фантастика, рассказ.", title: "Цикл времени - Последствия")
+        let video4  = Image(image: Images.patreon, name: "Драмма, приключения.", title: "Бегущий по лезвию")
+        let video5  = Image(image: Images.raise, name: "War", title: "Маленький принц")
+        let video6  = Image(image: Images.salaries, name: "War", title: "Криминальное чтиво")
+        let video7  = Image(image: Images.snake, name: "War", title: "Обливион")
+        let video8  = Image(image: Images.softSkills, name: "War", title: "Темная башня")
+        let video9  = Image(image: Images.swiftNews, name: "War", title: "1408 - Стивен Кинг")
+        let video10 = Image(image: Images.wireless, name: "War", title: "Оно")
+        let video11 = Image(image: Images.xcode, name: "War", title: "Зеленый свет")
         
         return [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
     }

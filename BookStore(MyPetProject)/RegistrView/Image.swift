@@ -7,7 +7,8 @@
 
 import UIKit
 
-struct Video {
+struct Image {
     var image: UIImage
+    var name: String
     var title: String
 }
