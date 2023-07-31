@@ -40,8 +40,6 @@ class RegistrationView: UIViewController {
         return button
     }()
 
-    
-    
 //    //создали кнопку passwordNameButton
 //    let passwordNameButton: UIButton = {
 //        let button = UIButton(type: .system)
