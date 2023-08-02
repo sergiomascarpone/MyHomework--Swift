@@ -27,7 +27,7 @@ class EmailView: UIViewController {
           emailTextField.resignFirstResponder()
           emailTextField.textColor = .black
           emailTextField.backgroundColor = .lightGray
-          emailTextField.layer.cornerRadius = 10
+          emailTextField.layer.cornerRadius = 11
           emailTextField.font = .boldSystemFont(ofSize: 20)
           emailTextField.keyboardType = .default
           emailTextField.returnKeyType = .next
