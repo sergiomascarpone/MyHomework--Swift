@@ -95,17 +95,17 @@ class BookCollectionViewController: UIViewController {
 extension BookCollectionViewController {
     
     func fetchData() -> [Image] {
-        let video1  = Image(image: Images.noStoryboard, name: "Трагедия, роман.", title: "Война и Мир.")
-        let video2  = Image(image: Images.ios, name: "Фантастика, рассказ.", title: "Цикл времени")
-        let video3  = Image(image: Images.ninety, name: "Фантастика, рассказ.", title: "Цикл времени - Последствия")
-        let video4  = Image(image: Images.patreon, name: "Драмма, приключения.", title: "Бегущий по лезвию")
-        let video5  = Image(image: Images.raise, name: "Сказка, рассказ.", title: "Маленький принц")
-        let video6  = Image(image: Images.salaries, name: "Детектив.", title: "Криминальное чтиво")
+        let video1  = Image(image: Images.noStoryboard, name: "Трагедия, роман. 1863 - 1869г.", title: "Война и Мир.")
+        let video2  = Image(image: Images.ios, name: "Фантастика, рассказ. 2020г.", title: "Цикл времени")
+        let video3  = Image(image: Images.ninety, name: "Фантастика, рассказ. 2021г.", title: "Цикл времени - Последствия")
+        let video4  = Image(image: Images.patreon, name: "Драмма, приключения. 1988г.", title: "Бегущий по лезвию")
+        let video5  = Image(image: Images.raise, name: "Сказка, рассказ. 1942 - 1943г.", title: "Маленький принц")
+        let video6  = Image(image: Images.salaries, name: "Детектив. 1841г.", title: "Убийство на улице Морг")
         let video7  = Image(image: Images.snake, name: "Фантастика.", title: "Обливион")
-        let video8  = Image(image: Images.softSkills, name: "Фантастика,триллер.", title: "Темная башня")
+        let video8  = Image(image: Images.softSkills, name: "Фантастика,триллер. 1982 - 2012г.", title: "Темная башня")
         let video9  = Image(image: Images.swiftNews, name: "Биография.", title: "1408 - Стивен Кинг")
-        let video10 = Image(image: Images.wireless, name: "Ужасы, драмма.", title: "Оно")
-        let video11 = Image(image: Images.xcode, name: "Драмма, приключения.", title: "Зеленый свет")
+        let video10 = Image(image: Images.wireless, name: "Ужасы, драмма, триллер. 2013г.", title: "Доктор сон")
+        let video11 = Image(image: Images.xcode, name: "Драмма, приключения. 2020г.", title: "Зеленый свет")
         
         return [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
     }
