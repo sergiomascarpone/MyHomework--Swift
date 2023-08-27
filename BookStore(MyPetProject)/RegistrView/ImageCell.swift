@@ -12,7 +12,7 @@ class ImageCell: UITableViewCell {
     
     var videoImageView  = UIImageView()
     var videoTitleLabel = UILabel()
-    var videoNameLabel = UILabel()
+    var videoNameLabel  = UILabel()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,7 +39,7 @@ class ImageCell: UITableViewCell {
     func set(video: Image) {
         videoImageView.image = video.image
         videoTitleLabel.text = video.title
-        videoNameLabel.text = video.name
+        videoNameLabel.text  = video.name
     }
     
     
@@ -63,11 +63,11 @@ class ImageCell: UITableViewCell {
     
     //настройка и размещение Image в таблице.
     func setImageConstraints() {
-        videoImageView.translatesAutoresizingMaskIntoConstraints                                               = false
-        videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                               = true
-        videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive                 = true
-        videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive                                   = true
-        videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/9).isActive = true
+        videoImageView.translatesAutoresizingMaskIntoConstraints                                                = false
+        videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                                = true
+        videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive                  = true
+        videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive                                    = true
+        videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/9).isActive  = true
     }
 
     //настройка и размещение Title в таблице.

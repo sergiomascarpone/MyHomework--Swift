@@ -23,15 +23,15 @@ class EmailView: UIViewController {
           let emailTextField = UITextField(frame: CGRect(x: 0, y: 50, width: self.view.frame.width - 70, height: 50))
           emailTextField.placeholder = " Enter email..."
           
-          emailTextField.center = self.view.center
+          emailTextField.center              = self.view.center
           emailTextField.resignFirstResponder()
-          emailTextField.textColor = .black
-          emailTextField.backgroundColor = .lightGray
-          emailTextField.layer.cornerRadius = 11
-          emailTextField.font = .boldSystemFont(ofSize: 20)
-          emailTextField.keyboardType = .default
-          emailTextField.returnKeyType = .next
-          emailTextField.clearButtonMode = .always
+          emailTextField.textColor           = .black
+          emailTextField.backgroundColor     = .lightGray
+          emailTextField.layer.cornerRadius  = 11
+          emailTextField.font                = .boldSystemFont(ofSize: 20)
+          emailTextField.keyboardType        = .default
+          emailTextField.returnKeyType       = .next
+          emailTextField.clearButtonMode     = .always
           self.view.addSubview(emailTextField)
           
           

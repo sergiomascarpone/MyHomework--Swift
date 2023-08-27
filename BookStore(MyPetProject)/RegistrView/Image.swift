@@ -9,6 +9,6 @@ import UIKit
 
 struct Image {
     var image: UIImage
-    var name: String
+    var name:  String
     var title: String
 }
