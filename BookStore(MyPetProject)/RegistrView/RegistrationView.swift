@@ -5,7 +5,9 @@
 //  Created by Sergio Mascarpone on 11.07.23.
 //
 
+
 import UIKit
+
 
 class RegistrationView: UIViewController {
 
@@ -18,7 +20,7 @@ class RegistrationView: UIViewController {
         return imageView
     }()
     
-    //создали блюр вью
+    //создали блюр вью...
     let blurView: UIVisualEffectView = {
         let view = UIVisualEffectView()
         view.layer.cornerRadius = 20
@@ -27,7 +29,7 @@ class RegistrationView: UIViewController {
         return view
     }()
     
-    //создали кнопку emailNameButton
+    //создали кнопку emailNameButton...
     let emailNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .black
