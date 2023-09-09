@@ -42,17 +42,6 @@ class EmailView: UIViewController {
           setupImageView()
       }
       
-  //    @objc private func hideKeyboard() {
-  //        self.view.endEditing(true)
-  //    }
-  //
-  //    @objc private func keyboarfWillShow(notification: NSNotification) {
-  //
-  //    }
-  //
-  //    @objc private func keyboardWillHide() {
-  //
-  //    }
       
       //разместили картинку на весь экран
       fileprivate func  setupImageView() {
