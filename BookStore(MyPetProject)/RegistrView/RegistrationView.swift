@@ -86,6 +86,7 @@ class RegistrationView: UIViewController {
 //        setupPasswordButton()
 //        setupLoginButton()
         
+        
        // emailNameButtonContraint.constant -= view.bounds.width
     }
     
