@@ -9,7 +9,7 @@ import UIKit
 
 class BookCollectionViewController: UIViewController {
     
-     //создание изображения
+     //создание изображения...
      let storeView: UIView = {
          let storeView = UIView()
          storeView.contentMode = .scaleAspectFill // изображение на всю вью
@@ -17,7 +17,7 @@ class BookCollectionViewController: UIViewController {
          return storeView
      }()
     
-     ///создание таблицы
+     ///создание таблицы...
      let tableView = UITableView()
      var images: [Image] = []
     
@@ -35,7 +35,7 @@ class BookCollectionViewController: UIViewController {
          view.addSubview(tableView)
          tableView.register(UITableViewCell.self, forCellReuseIdentifier: Cells.imageCell)
          
-         //Высота Столбца
+         //Высота Столбца...
          tableView.rowHeight = 100
          tableView.register(ImageCell.self, forCellReuseIdentifier: "ImageCell")
          
