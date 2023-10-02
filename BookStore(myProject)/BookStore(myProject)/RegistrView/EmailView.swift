@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class emailView: UIViewController {
+class EmailView: UIViewController {
   
     //создали imageView
     let imageView: UIView = {
