@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
         /// Создание и размещение Label
         let titleLabel: UILabel = {
             let label = UILabel()
-            label.text = "Book store"
+            label.text = "Book Store"
             label.textColor = .white
             label.font = UIFont(name: "Athelas Bold", size: 60)
             label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
         let imageView: UIImageView = {
             let imageView = UIImageView(frame: UIScreen.main.bounds)
             imageView.image = UIImage(named: "viewLogo")
-            imageView.contentMode = .scaleAspectFill // изображение на всю вью
+            imageView.contentMode = .scaleAspectFill /// изображение на всю вью
             imageView.translatesAutoresizingMaskIntoConstraints = false
             return imageView
         }()
@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
             button.backgroundColor = .magenta
             button.setTitle("Let`s go!", for: .normal)
             button.tintColor = .white
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
             button.layer.cornerRadius = 20
             button.addTarget(self, action: #selector(springButtonTapped), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
             button.backgroundColor = .magenta
             button.setTitle("Book Collection", for: .normal)
             button.tintColor = .white
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
             button.layer.cornerRadius = 20
             button.addTarget(self, action: #selector(storeButtonTapped), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
