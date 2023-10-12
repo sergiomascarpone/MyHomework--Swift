@@ -70,7 +70,7 @@ class MainViewController: UIViewController {
             storeButtonConstraint.constant -= view.bounds.width
         }
        
-        ///springButton
+            ///springButton
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             

@@ -37,7 +37,7 @@ class RegistrationView: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
-        button.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        button.addTarget(RegistrationView.self, action: #selector(emailButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
