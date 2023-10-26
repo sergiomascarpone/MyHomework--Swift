@@ -37,11 +37,12 @@ class RegistrationView: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 20
-        button.addTarget(RegistrationView.self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
+    
 //    //создали кнопку passwordNameButton
 //    let passwordNameButton: UIButton = {
 //        let button = UIButton(type: .system)
