@@ -133,7 +133,7 @@ class MainViewController: UIViewController {
                 
                 //titleLabel
                 titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), //расположение текста по центру по оси Х
+                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),  //расположение текста по центру по оси Х
                 titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
                 
                 //springButton
