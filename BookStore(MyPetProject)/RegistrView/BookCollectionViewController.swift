@@ -74,7 +74,7 @@ class BookCollectionViewController: UIViewController {
  extension BookCollectionViewController: UITableViewDelegate, UITableViewDataSource {
      
      
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return images.count
      }
      

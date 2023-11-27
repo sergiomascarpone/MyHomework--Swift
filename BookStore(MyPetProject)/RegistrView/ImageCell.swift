@@ -67,7 +67,7 @@ class ImageCell: UITableViewCell {
         videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive                                = true
         videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive                  = true
         videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive                                    = true
-        videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/16).isActive  = true
+        videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 16/16).isActive = true
     }
 
     //настройка и размещение Title в таблице.
