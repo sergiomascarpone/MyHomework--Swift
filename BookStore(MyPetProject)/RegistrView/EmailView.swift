@@ -43,7 +43,7 @@ class EmailView: UIViewController {
       }
       
       
-      //разместили картинку на весь экран
+      //разместили картинку на весь экран продолжаем дальше
       fileprivate func  setupImageView() {
 
           view.addSubview(imageView)

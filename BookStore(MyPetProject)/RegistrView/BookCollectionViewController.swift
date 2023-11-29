@@ -9,10 +9,10 @@ import UIKit
 
 class BookCollectionViewController: UIViewController {
     
-     //создание изображения...
+     ///создание изображения...
      let storeView: UIView = {
          let storeView = UIView()
-         storeView.contentMode = .scaleAspectFill // изображение на всю вью
+         storeView.contentMode = .scaleAspectFill /// изображение на всю вью
          storeView.translatesAutoresizingMaskIntoConstraints = false
          return storeView
      }()
@@ -35,7 +35,7 @@ class BookCollectionViewController: UIViewController {
          view.addSubview(tableView)
          tableView.register(UITableViewCell.self, forCellReuseIdentifier: Cells.imageCell)
          
-         //Высота Столбца...
+         ///Высота Столбца...
          tableView.rowHeight = 100
          tableView.register(ImageCell.self, forCellReuseIdentifier: "ImageCell")
          
@@ -93,7 +93,7 @@ class BookCollectionViewController: UIViewController {
  }
  /// найти способ и понять как внедрить в таблицу книги и описание
 
-//размещение картинки и текста описания.
+///размещение картинки и текста описания.
 extension BookCollectionViewController {
     
     func fetchData() -> [Image] {
