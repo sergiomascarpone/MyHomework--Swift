@@ -74,13 +74,13 @@ class MainViewController: UIViewController {
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
             
-            //появление кнопки анимация Let`s go.
+            ///появление кнопки анимация Let`s go.
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
                 self.springButtonContraint.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
             }
             
-            //появление кнопки анимация Book Collection/
+            ///появление кнопки анимация Book Collection
             UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut) {
                 self.storeButtonConstraint.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
         
         /// Настройка обьектов
         func setupView() {
-            view.backgroundColor = .gray //Цвет всей вью
+            view.backgroundColor = .gray ///Цвет всей вью
             
             view.addSubview(imageView)
             view.addSubview(titleLabel)
